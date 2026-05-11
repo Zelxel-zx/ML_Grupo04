@@ -1,0 +1,1491 @@
+Producto,Categoria,Stock_Actual,Punto_Reorden,Cantidad_Pedido,Fecha_Recepcion,Ultimo_Pedido,Fecha_Vencimiento,Volumen_Consumo,Tasa_Rotacion,Estado,Lead_Time_Check,Dias_para_Vencimiento,Estado_Vencimiento
+Sushi Rice,Grains & Pulses,22,72,70,2026-08-16,2026-08-09,2026-09-19,32,19.0,Discontinued,48.0,143,Seguro
+Arabica Coffee,Beverages,45,77,2,2026-11-01,2026-10-25,2026-05-08,85,1.0,Discontinued,156.0,9,Crítico (15 días)
+Black Rice,Grains & Pulses,30,38,83,2026-08-03,2026-07-27,2026-09-22,31,34.0,Backordered,54.0,146,Seguro
+Long Grain Rice,Grains & Pulses,12,59,62,2026-12-08,2026-12-01,2026-04-17,95,99.0,Active,-73.0,-12,Vencido
+Plum,Fruits & Vegetables,37,30,74,2026-07-03,2026-06-26,2026-10-05,62,25.0,Backordered,-100.0,159,Seguro
+All-Purpose Flour,Grains & Pulses,55,33,14,2026-12-03,2026-11-26,2026-09-05,34,62.0,Discontinued,191.0,129,Seguro
+Corn Oil,Oils & Fats,96,52,16,2026-03-18,2026-03-11,2026-06-20,67,13.0,Active,-50.0,52,Seguro
+Egg (Goose),Dairy,44,90,17,2027-02-03,2027-01-27,2027-02-05,21,91.0,Discontinued,300.0,282,Seguro
+Greek Yogurt,Dairy,91,84,11,2026-12-04,2026-11-27,2027-01-08,56,90.0,Active,185.0,254,Seguro
+Egg (Duck),Dairy,43,10,15,2026-11-18,2026-11-11,2026-07-08,27,69.0,Active,4.0,70,Seguro
+Long Grain Rice,Grains & Pulses,62,81,91,2026-12-18,2026-12-11,2027-01-07,100,42.0,Discontinued,208.0,253,Seguro
+White Sugar,Grains & Pulses,91,98,6,2026-10-19,2026-10-12,2026-10-14,100,20.0,Backordered,-53.0,168,Seguro
+Rye Bread,Bakery,26,79,31,2026-12-13,2026-12-06,2026-07-18,47,41.0,Discontinued,-58.0,80,Seguro
+Plum,Fruits & Vegetables,95,50,76,2026-04-05,2026-03-29,2026-05-06,69,5.0,Active,-169.0,7,Crítico (15 días)
+Strawberries,Fruits & Vegetables,54,26,16,2026-03-11,2026-03-04,2026-06-14,63,97.0,Active,-111.0,46,Seguro
+Feta Cheese,Dairy,94,13,15,2026-02-26,2026-02-19,2026-10-05,20,24.0,Backordered,-35.0,159,Seguro
+Bread Flour,Grains & Pulses,27,93,88,2026-11-16,2026-11-09,2026-04-05,66,13.0,Active,252.0,-24,Vencido
+Swiss Cheese,Dairy,49,49,26,2026-09-10,2026-09-03,2026-07-01,78,61.0,Discontinued,114.0,63,Seguro
+Arabica Coffee,Beverages,55,93,84,2026-05-29,2026-05-22,2026-05-05,46,84.0,Active,-163.0,6,Crítico (15 días)
+White Sugar,Grains & Pulses,65,61,82,2026-05-31,2026-05-24,2026-12-28,29,11.0,Backordered,-253.0,243,Seguro
+Spinach,Fruits & Vegetables,72,70,99,2026-10-07,2026-09-30,2026-06-22,82,32.0,Discontinued,132.0,54,Seguro
+Trout,Seafood,49,73,48,2026-08-17,2026-08-10,2026-09-03,52,62.0,Active,-45.0,127,Seguro
+Green Beans,Fruits & Vegetables,81,99,28,2026-09-30,2026-09-23,2026-04-25,20,85.0,Discontinued,-137.0,-4,Vencido
+Cabbage,Fruits & Vegetables,88,46,55,2026-04-09,2026-04-02,2026-08-12,73,63.0,Active,34.0,105,Seguro
+Parmesan Cheese,Dairy,63,4,85,2026-12-21,2026-12-14,2026-09-30,59,71.0,Active,-23.0,154,Seguro
+Raw Sugar,Grains & Pulses,31,43,80,2026-05-28,2026-05-21,2026-05-30,46,78.0,Backordered,-270.0,31,Seguro
+Egg (Quail),Dairy,97,88,81,2026-11-05,2026-10-29,2026-06-26,97,18.0,Discontinued,121.0,58,Seguro
+Mushrooms,Fruits & Vegetables,72,87,39,2026-06-24,2026-06-17,2026-03-17,94,57.0,Active,-245.0,-43,Vencido
+Oatmeal Biscuit,Bakery,16,9,32,2026-07-16,2026-07-09,2027-02-07,50,98.0,Backordered,-36.0,284,Seguro
+Pear,Fruits & Vegetables,77,20,5,2026-08-18,2026-08-11,2026-12-20,61,62.0,Discontinued,-93.0,235,Seguro
+Cucumber,Fruits & Vegetables,19,36,72,2026-05-03,2026-04-26,2026-03-06,31,81.0,Backordered,36.0,-54,Vencido
+Pineapple,Fruits & Vegetables,18,52,22,2026-08-23,2026-08-16,2026-09-28,42,32.0,Backordered,-51.0,152,Seguro
+Olive Oil,Oils & Fats,47,48,73,2026-08-13,2026-08-06,2026-03-05,42,51.0,Discontinued,46.0,-55,Vencido
+Herbal Tea,Beverages,77,45,75,2026-11-05,2026-10-29,2026-06-23,25,37.0,Discontinued,78.0,55,Seguro
+Haddock,Seafood,46,28,73,2026-05-28,2026-05-21,2026-12-26,65,57.0,Discontinued,-153.0,241,Seguro
+Onion,Fruits & Vegetables,39,22,73,2026-06-11,2026-06-04,2026-10-28,60,2.0,Active,-42.0,182,Seguro
+Sushi Rice,Grains & Pulses,75,69,100,2026-07-11,2026-07-04,2027-02-16,43,18.0,Backordered,-192.0,293,Seguro
+Pineapple,Fruits & Vegetables,48,48,39,2026-03-17,2026-03-10,2026-10-30,51,50.0,Discontinued,-314.0,184,Seguro
+Zucchini,Fruits & Vegetables,61,90,26,2026-12-22,2026-12-15,2026-09-19,79,84.0,Discontinued,106.0,143,Seguro
+Short Grain Rice,Grains & Pulses,60,90,85,2027-01-21,2027-01-14,2026-08-24,47,9.0,Discontinued,307.0,117,Seguro
+Mango,Fruits & Vegetables,24,55,51,2026-04-26,2026-04-19,2026-11-25,39,15.0,Discontinued,-304.0,210,Seguro
+Lemon,Fruits & Vegetables,12,7,48,2026-06-24,2026-06-17,2026-06-05,66,4.0,Discontinued,-184.0,37,Seguro
+Black Coffee,Beverages,84,13,88,2027-01-26,2027-01-19,2026-07-22,25,34.0,Backordered,53.0,84,Seguro
+Butter,Dairy,51,100,70,2026-04-30,2026-04-23,2026-09-22,40,21.0,Discontinued,-174.0,146,Seguro
+Multigrain Bread,Bakery,65,36,37,2026-04-21,2026-04-14,2027-01-24,32,70.0,Backordered,-52.0,270,Seguro
+Long Grain Rice,Grains & Pulses,67,88,32,2026-04-06,2026-03-30,2026-11-17,66,42.0,Discontinued,-25.0,202,Seguro
+Bread Flour,Grains & Pulses,14,74,71,2026-08-18,2026-08-11,2026-05-16,37,22.0,Discontinued,-96.0,17,Próximo (30 días)
+Kiwi,Fruits & Vegetables,45,24,61,2027-01-21,2027-01-14,2027-02-15,44,34.0,Backordered,-17.0,292,Seguro
+Mango,Fruits & Vegetables,92,46,13,2026-07-28,2026-07-21,2026-03-26,24,75.0,Discontinued,-82.0,-34,Vencido
+Sourdough Bread,Bakery,41,84,90,2027-01-28,2027-01-21,2026-11-12,42,65.0,Active,61.0,197,Seguro
+Short Grain Rice,Grains & Pulses,41,36,78,2026-07-04,2026-06-27,2026-05-15,38,75.0,Backordered,-92.0,16,Próximo (30 días)
+Orange,Fruits & Vegetables,85,45,71,2026-03-20,2026-03-13,2027-02-02,95,72.0,Discontinued,-283.0,279,Seguro
+Pineapple,Fruits & Vegetables,44,80,84,2026-08-30,2026-08-23,2026-03-05,96,68.0,Discontinued,-48.0,-55,Vencido
+White Bread,Bakery,92,87,84,2026-10-19,2026-10-12,2026-05-22,61,31.0,Backordered,127.0,23,Próximo (30 días)
+Green Coffee,Beverages,62,89,18,2026-03-12,2026-03-05,2026-11-28,35,36.0,Active,-337.0,213,Seguro
+Zucchini,Fruits & Vegetables,26,18,62,2026-07-28,2026-07-21,2027-02-02,57,86.0,Discontinued,7.0,279,Seguro
+Sourdough Bread,Bakery,59,78,6,2026-11-03,2026-10-27,2026-11-26,32,3.0,Active,146.0,211,Seguro
+Orange,Fruits & Vegetables,88,37,61,2027-02-03,2027-01-27,2026-03-19,63,35.0,Discontinued,82.0,-41,Vencido
+Sardines,Seafood,91,59,49,2026-10-23,2026-10-16,2026-06-26,30,63.0,Active,201.0,58,Seguro
+Olive Oil,Oils & Fats,28,17,28,2026-10-24,2026-10-17,2026-08-27,38,25.0,Active,65.0,120,Seguro
+Carrot,Fruits & Vegetables,51,60,98,2026-05-01,2026-04-24,2026-09-26,44,95.0,Discontinued,-225.0,150,Seguro
+Black Tea,Beverages,46,27,76,2026-09-15,2026-09-08,2027-01-13,64,96.0,Active,-8.0,259,Seguro
+Pear,Fruits & Vegetables,82,65,69,2026-04-11,2026-04-04,2026-08-08,30,78.0,Backordered,-215.0,101,Seguro
+Olive Oil,Oils & Fats,100,92,26,2026-05-05,2026-04-28,2027-02-16,84,9.0,Active,-263.0,293,Seguro
+Ricotta Cheese,Dairy,51,53,88,2027-01-31,2027-01-24,2026-09-24,54,59.0,Discontinued,215.0,148,Seguro
+Black Coffee,Beverages,61,43,29,2027-02-03,2027-01-27,2026-03-03,67,6.0,Discontinued,101.0,-57,Vencido
+White Tea,Beverages,99,87,10,2026-12-08,2026-12-01,2026-03-17,93,70.0,Active,283.0,-43,Vencido
+Cucumber,Fruits & Vegetables,13,60,100,2026-07-18,2026-07-11,2026-06-24,44,32.0,Backordered,-182.0,56,Seguro
+Mozzarella Cheese,Dairy,45,63,75,2027-01-28,2027-01-21,2027-02-09,83,5.0,Discontinued,69.0,286,Seguro
+Broccoli,Fruits & Vegetables,73,87,46,2026-09-24,2026-09-17,2026-05-11,47,67.0,Discontinued,-113.0,12,Crítico (15 días)
+Eggplant,Fruits & Vegetables,39,21,5,2026-11-24,2026-11-17,2027-01-08,51,98.0,Backordered,207.0,254,Seguro
+Trout,Seafood,29,72,96,2026-05-03,2026-04-26,2027-01-09,85,52.0,Active,-207.0,255,Seguro
+Heavy Cream,Dairy,12,60,73,2027-02-03,2027-01-27,2026-09-01,20,35.0,Discontinued,324.0,125,Seguro
+Bell Pepper,Fruits & Vegetables,96,33,72,2026-03-10,2026-03-03,2026-07-12,74,100.0,Active,-67.0,74,Seguro
+Onion,Fruits & Vegetables,35,92,74,2026-11-25,2026-11-18,2026-11-14,76,32.0,Active,-70.0,199,Seguro
+Sardines,Seafood,89,34,15,2026-12-31,2026-12-24,2026-08-24,60,2.0,Discontinued,298.0,117,Seguro
+Mango,Fruits & Vegetables,60,36,28,2026-06-30,2026-06-23,2026-12-20,26,29.0,Active,-80.0,235,Seguro
+Arborio Rice,Grains & Pulses,20,34,74,2026-09-21,2026-09-14,2027-02-15,50,83.0,Discontinued,-33.0,292,Seguro
+Potato,Fruits & Vegetables,28,40,27,2026-12-14,2026-12-07,2026-10-27,30,56.0,Active,138.0,181,Seguro
+Corn Oil,Oils & Fats,20,55,15,2026-12-09,2026-12-02,2026-09-09,86,61.0,Backordered,241.0,133,Seguro
+Butter Biscuit,Bakery,38,93,61,2026-12-10,2026-12-03,2026-08-30,67,100.0,Active,148.0,123,Seguro
+Peas,Fruits & Vegetables,99,1,4,2026-12-13,2026-12-06,2026-08-19,50,53.0,Backordered,-45.0,112,Seguro
+Cream,Dairy,92,52,80,2026-06-03,2026-05-27,2026-03-21,72,96.0,Discontinued,-141.0,-39,Vencido
+Spinach,Fruits & Vegetables,41,29,76,2026-02-25,2026-02-18,2026-10-01,59,4.0,Discontinued,-200.0,155,Seguro
+Sardines,Seafood,44,67,48,2026-09-05,2026-08-29,2026-03-24,90,11.0,Active,-16.0,-36,Vencido
+White Sugar,Grains & Pulses,47,7,63,2026-05-18,2026-05-11,2026-04-30,29,20.0,Backordered,-125.0,1,Crítico (15 días)
+Bread Flour,Grains & Pulses,21,63,65,2026-10-08,2026-10-01,2027-02-22,38,73.0,Discontinued,-33.0,299,Seguro
+Cucumber,Fruits & Vegetables,85,33,50,2026-03-06,2026-02-27,2027-01-21,64,38.0,Discontinued,-131.0,267,Seguro
+Swiss Cheese,Dairy,29,4,17,2027-01-19,2027-01-12,2026-06-17,59,52.0,Active,67.0,49,Seguro
+Peanut Oil,Oils & Fats,64,21,13,2027-01-30,2027-01-23,2026-11-16,51,26.0,Backordered,111.0,201,Seguro
+Blueberries,Fruits & Vegetables,66,40,96,2026-02-27,2026-02-20,2027-02-06,24,61.0,Active,-115.0,283,Seguro
+Chocolate Biscuit,Bakery,75,81,17,2026-07-09,2026-07-02,2027-02-20,69,38.0,Active,-223.0,297,Seguro
+Cheese,Dairy,53,63,2,2026-08-02,2026-07-26,2026-03-20,56,95.0,Active,-71.0,-40,Vencido
+Palm Oil,Oils & Fats,43,63,80,2026-06-23,2026-06-16,2027-02-11,33,96.0,Discontinued,-38.0,288,Seguro
+Eggplant,Fruits & Vegetables,74,30,24,2026-08-09,2026-08-02,2026-07-31,82,12.0,Active,-65.0,93,Seguro
+Garlic,Fruits & Vegetables,27,22,89,2026-05-01,2026-04-24,2026-05-20,91,77.0,Discontinued,-88.0,21,Próximo (30 días)
+Jasmine Rice,Grains & Pulses,91,73,77,2027-02-01,2027-01-25,2026-12-07,51,49.0,Discontinued,161.0,222,Seguro
+Rice Flour,Grains & Pulses,52,81,53,2026-08-28,2026-08-21,2027-02-24,95,88.0,Backordered,-91.0,301,Seguro
+Zucchini,Fruits & Vegetables,43,66,85,2026-04-20,2026-04-13,2026-04-19,66,65.0,Discontinued,-147.0,-10,Vencido
+Multigrain Bread,Bakery,56,86,23,2026-04-15,2026-04-08,2026-04-09,67,56.0,Backordered,-14.0,-20,Vencido
+Ricotta Cheese,Dairy,66,40,8,2026-11-27,2026-11-20,2027-01-06,43,49.0,Active,-52.0,252,Seguro
+Bread Flour,Grains & Pulses,84,92,18,2026-10-29,2026-10-22,2026-02-24,92,69.0,Active,-61.0,-64,Vencido
+Cottage Cheese,Dairy,37,5,1,2027-01-02,2026-12-26,2026-11-28,68,99.0,Active,311.0,213,Seguro
+Whipped Cream,Dairy,29,36,40,2026-11-08,2026-11-01,2026-09-07,60,96.0,Backordered,223.0,131,Seguro
+Almond Flour,Grains & Pulses,13,88,7,2026-07-28,2026-07-21,2026-07-03,24,21.0,Backordered,74.0,65,Seguro
+Lemon,Fruits & Vegetables,63,81,94,2026-06-04,2026-05-28,2026-11-19,56,2.0,Active,45.0,204,Seguro
+Tilapia,Seafood,95,63,73,2026-11-17,2026-11-10,2026-03-08,61,38.0,Backordered,165.0,-52,Vencido
+Lettuce,Fruits & Vegetables,58,5,1,2026-10-02,2026-09-25,2026-04-06,53,80.0,Active,-12.0,-23,Vencido
+Peanut Oil,Oils & Fats,57,36,53,2026-06-04,2026-05-28,2026-03-28,56,32.0,Backordered,-12.0,-32,Vencido
+Sardines,Seafood,33,18,92,2026-06-03,2026-05-27,2026-07-18,98,56.0,Discontinued,-115.0,80,Seguro
+Arabica Coffee,Beverages,62,89,6,2026-09-08,2026-09-01,2027-01-15,23,11.0,Discontinued,94.0,261,Seguro
+Coconut,Fruits & Vegetables,89,57,92,2026-08-15,2026-08-08,2026-12-23,38,16.0,Active,62.0,238,Seguro
+Cod,Seafood,23,42,87,2027-02-01,2027-01-25,2026-03-24,63,5.0,Backordered,201.0,-36,Vencido
+Banana,Fruits & Vegetables,56,12,59,2026-09-17,2026-09-10,2027-02-02,35,16.0,Active,21.0,279,Seguro
+Black Rice,Grains & Pulses,86,100,74,2026-03-25,2026-03-18,2026-05-30,80,94.0,Active,-298.0,31,Seguro
+Pomegranate,Fruits & Vegetables,60,61,2,2026-05-13,2026-05-06,2026-08-27,96,50.0,Active,-91.0,120,Seguro
+Pineapple,Fruits & Vegetables,70,30,69,2026-08-13,2026-08-06,2026-07-14,44,42.0,Discontinued,-174.0,76,Seguro
+Peach,Fruits & Vegetables,47,72,73,2026-05-21,2026-05-14,2026-04-30,93,27.0,Backordered,52.0,1,Crítico (15 días)
+Arborio Rice,Grains & Pulses,95,93,16,2026-11-26,2026-11-19,2026-09-21,60,19.0,Active,81.0,145,Seguro
+Plum,Fruits & Vegetables,20,42,21,2026-11-28,2026-11-21,2027-02-20,61,25.0,Discontinued,-60.0,297,Seguro
+Sushi Rice,Grains & Pulses,19,17,14,2026-08-30,2026-08-23,2026-03-10,58,23.0,Active,62.0,-50,Vencido
+Arabica Coffee,Beverages,74,72,18,2026-11-15,2026-11-08,2027-02-05,83,54.0,Active,262.0,282,Seguro
+Pear,Fruits & Vegetables,61,50,9,2026-10-08,2026-10-01,2027-01-19,24,92.0,Active,225.0,265,Seguro
+Sourdough Bread,Bakery,34,42,86,2026-05-16,2026-05-09,2026-04-01,28,23.0,Discontinued,-144.0,-28,Vencido
+Pear,Fruits & Vegetables,29,20,85,2026-10-27,2026-10-20,2026-03-02,31,31.0,Active,-116.0,-58,Vencido
+Heavy Cream,Dairy,14,99,97,2026-04-21,2026-04-14,2026-06-26,28,45.0,Discontinued,-260.0,58,Seguro
+White Rice,Grains & Pulses,20,20,56,2027-01-06,2026-12-30,2026-05-06,62,69.0,Backordered,219.0,7,Crítico (15 días)
+Cauliflower,Grains & Pulses,40,38,32,2026-10-25,2026-10-18,2027-01-03,21,45.0,Backordered,139.0,249,Seguro
+Canola Oil,Oils & Fats,91,82,58,2026-04-27,2026-04-20,2027-02-22,43,45.0,Discontinued,-177.0,299,Seguro
+Avocado Oil,Oils & Fats,99,96,39,2026-06-22,2026-06-15,2026-09-28,94,89.0,Backordered,3.0,152,Seguro
+Bread Flour,Grains & Pulses,34,46,45,2026-10-09,2026-10-02,2026-12-22,49,25.0,Backordered,-63.0,237,Seguro
+Gouda Cheese,Dairy,100,21,64,2026-06-19,2026-06-12,2026-08-29,20,13.0,Backordered,100.0,122,Seguro
+Black Rice,Grains & Pulses,79,98,97,2026-12-10,2026-12-03,2026-05-17,26,21.0,Backordered,-38.0,18,Próximo (30 días)
+Greek Yogurt,Dairy,62,2,98,2026-05-23,2026-05-16,2026-09-05,50,11.0,Discontinued,-148.0,129,Seguro
+Tuna,Seafood,25,44,96,2026-07-04,2026-06-27,2026-09-01,36,16.0,Active,117.0,125,Seguro
+Buttermilk,Dairy,47,2,76,2026-05-13,2026-05-06,2026-03-06,48,36.0,Discontinued,-47.0,-54,Vencido
+Orange,Fruits & Vegetables,15,44,88,2026-08-31,2026-08-24,2026-04-28,56,12.0,Discontinued,-166.0,-1,Vencido
+Pomegranate,Fruits & Vegetables,19,65,48,2026-09-09,2026-09-02,2026-09-12,59,53.0,Discontinued,-158.0,136,Seguro
+Tuna,Seafood,58,77,96,2026-09-11,2026-09-04,2026-03-30,25,17.0,Discontinued,147.0,-30,Vencido
+Sour Cream,Dairy,11,30,4,2026-08-02,2026-07-26,2026-12-14,84,4.0,Active,-58.0,229,Seguro
+Rice Flour,Grains & Pulses,99,44,52,2026-10-25,2026-10-18,2026-06-20,36,2.0,Discontinued,157.0,52,Seguro
+Long Grain Rice,Grains & Pulses,26,82,19,2026-09-23,2026-09-16,2026-03-30,76,88.0,Active,75.0,-30,Vencido
+Bell Pepper,Fruits & Vegetables,70,31,55,2026-07-31,2026-07-24,2026-07-07,23,80.0,Discontinued,4.0,69,Seguro
+Bell Pepper,Fruits & Vegetables,50,3,88,2026-07-21,2026-07-14,2026-09-22,69,73.0,Discontinued,21.0,146,Seguro
+Pineapple,Fruits & Vegetables,55,91,35,2026-05-08,2026-05-01,2027-02-17,81,19.0,Active,-14.0,294,Seguro
+Cod,Seafood,31,87,19,2026-05-23,2026-05-16,2026-05-01,41,10.0,Active,-51.0,2,Crítico (15 días)
+Green Tea,Beverages,63,92,26,2026-08-18,2026-08-11,2026-04-29,93,99.0,Active,-178.0,0,Crítico (15 días)
+Sardines,Seafood,73,31,49,2027-01-26,2027-01-19,2026-03-06,22,47.0,Discontinued,330.0,-54,Vencido
+Sourdough Bread,Bakery,12,86,98,2026-10-10,2026-10-03,2026-09-29,75,86.0,Discontinued,103.0,153,Seguro
+Short Grain Rice,Grains & Pulses,53,86,54,2026-08-14,2026-08-07,2026-11-06,44,3.0,Discontinued,-174.0,191,Seguro
+Powdered Sugar,Grains & Pulses,68,7,37,2026-08-08,2026-08-01,2026-12-28,69,1.0,Discontinued,119.0,243,Seguro
+Swiss Cheese,Dairy,80,9,29,2026-08-26,2026-08-19,2026-10-09,54,62.0,Active,-86.0,163,Seguro
+Tuna,Seafood,92,68,79,2026-12-24,2026-12-17,2026-04-04,40,57.0,Discontinued,128.0,-25,Vencido
+Cucumber,Fruits & Vegetables,31,98,72,2026-08-26,2026-08-19,2026-12-04,91,29.0,Active,-42.0,219,Seguro
+Eggplant,Fruits & Vegetables,31,44,9,2026-05-30,2026-05-23,2026-08-05,46,9.0,Discontinued,14.0,98,Seguro
+Garlic,Fruits & Vegetables,76,97,20,2026-03-27,2026-03-20,2026-05-11,52,82.0,Discontinued,-150.0,12,Crítico (15 días)
+Vegetable Oil,Oils & Fats,57,99,23,2026-07-25,2026-07-18,2026-04-19,89,21.0,Backordered,61.0,-10,Vencido
+Whipped Cream,Dairy,92,99,93,2027-02-19,2027-02-12,2026-03-26,43,90.0,Discontinued,221.0,-34,Vencido
+Cheddar Cheese,Dairy,88,74,97,2026-05-28,2026-05-21,2026-08-24,79,5.0,Active,-3.0,117,Seguro
+Coconut,Fruits & Vegetables,99,8,27,2026-07-16,2026-07-09,2026-08-10,41,50.0,Discontinued,3.0,103,Seguro
+Egg (Turkey),Dairy,44,84,63,2026-07-29,2026-07-22,2026-09-25,51,67.0,Discontinued,109.0,149,Seguro
+Herbal Tea,Beverages,48,77,81,2027-01-28,2027-01-21,2026-12-07,70,74.0,Backordered,115.0,222,Seguro
+Sesame Oil,Oils & Fats,27,92,56,2026-04-18,2026-04-11,2026-12-18,29,32.0,Discontinued,-184.0,233,Seguro
+Black Rice,Grains & Pulses,34,96,76,2026-10-03,2026-09-26,2027-01-15,90,34.0,Discontinued,-64.0,261,Seguro
+Orange,Fruits & Vegetables,41,94,4,2027-02-04,2027-01-28,2026-04-23,88,92.0,Discontinued,193.0,-6,Vencido
+Black Tea,Beverages,56,12,85,2026-12-10,2026-12-03,2026-04-19,52,46.0,Active,265.0,-10,Vencido
+Asparagus,Fruits & Vegetables,22,40,7,2026-09-12,2026-09-05,2027-01-26,98,60.0,Active,-110.0,272,Seguro
+Palm Oil,Oils & Fats,40,2,58,2026-10-31,2026-10-24,2026-11-08,71,10.0,Active,79.0,193,Seguro
+Swiss Cheese,Dairy,50,99,73,2026-05-12,2026-05-05,2026-05-17,42,1.0,Backordered,-103.0,18,Próximo (30 días)
+Mango,Fruits & Vegetables,89,92,62,2026-03-02,2026-02-23,2026-11-11,46,11.0,Backordered,-128.0,196,Seguro
+Egg (Turkey),Dairy,76,54,76,2026-10-01,2026-09-24,2026-05-26,69,27.0,Backordered,45.0,27,Próximo (30 días)
+Whole Wheat Flour,Grains & Pulses,67,60,21,2026-04-03,2026-03-27,2026-09-06,30,6.0,Active,-47.0,130,Seguro
+Robusta Coffee,Beverages,62,78,97,2026-04-08,2026-04-01,2026-03-26,62,97.0,Discontinued,-143.0,-34,Vencido
+Watermelon,Fruits & Vegetables,75,10,68,2026-09-11,2026-09-04,2026-12-03,90,42.0,Active,-121.0,218,Seguro
+Green Coffee,Beverages,75,47,33,2026-06-26,2026-06-19,2026-05-23,33,12.0,Discontinued,-166.0,24,Próximo (30 días)
+Cream,Dairy,29,32,26,2026-09-21,2026-09-14,2026-09-15,64,85.0,Discontinued,98.0,139,Seguro
+Oatmeal Biscuit,Bakery,34,55,22,2026-10-11,2026-10-04,2026-11-15,77,85.0,Active,104.0,200,Seguro
+Green Tea,Beverages,15,66,85,2026-10-18,2026-10-11,2026-03-15,60,40.0,Backordered,107.0,-45,Vencido
+Anchovies,Seafood,88,56,81,2026-05-10,2026-05-03,2026-09-14,98,86.0,Discontinued,61.0,138,Seguro
+Cheddar Cheese,Dairy,40,81,40,2026-10-09,2026-10-02,2026-10-30,40,48.0,Backordered,164.0,184,Seguro
+Avocado Oil,Oils & Fats,10,86,23,2026-06-29,2026-06-22,2026-12-13,24,52.0,Backordered,-150.0,228,Seguro
+Arabica Coffee,Beverages,21,87,12,2026-11-17,2026-11-10,2026-09-07,20,38.0,Discontinued,76.0,131,Seguro
+Trout,Seafood,75,25,99,2026-10-20,2026-10-13,2026-07-13,89,42.0,Active,144.0,75,Seguro
+Cod,Seafood,56,50,80,2027-02-24,2027-02-17,2026-10-22,99,5.0,Discontinued,349.0,176,Seguro
+Rye Bread,Bakery,69,65,91,2026-07-05,2026-06-28,2026-04-08,98,50.0,Backordered,-21.0,-21,Vencido
+Basmati Rice,Grains & Pulses,56,53,77,2026-07-12,2026-07-05,2027-01-28,69,69.0,Active,-12.0,274,Seguro
+White Sugar,Grains & Pulses,24,69,2,2026-10-05,2026-09-28,2026-12-23,20,20.0,Backordered,175.0,238,Seguro
+Sourdough Bread,Bakery,30,85,21,2026-12-19,2026-12-12,2026-11-20,32,83.0,Discontinued,86.0,205,Seguro
+White Tea,Beverages,36,90,57,2026-12-11,2026-12-04,2026-05-18,35,68.0,Backordered,126.0,19,Próximo (30 días)
+White Bread,Bakery,93,76,82,2026-05-25,2026-05-18,2027-01-19,76,51.0,Backordered,-64.0,265,Seguro
+Mozzarella Cheese,Dairy,96,38,17,2026-04-19,2026-04-12,2026-11-11,72,84.0,Active,-165.0,196,Seguro
+Peanut Oil,Oils & Fats,60,88,65,2026-08-29,2026-08-22,2026-06-15,94,15.0,Active,-140.0,47,Seguro
+Gouda Cheese,Dairy,97,77,13,2026-11-11,2026-11-04,2026-07-02,43,40.0,Backordered,57.0,64,Seguro
+Chocolate Biscuit,Bakery,11,6,100,2026-03-05,2026-02-26,2026-02-24,88,24.0,Discontinued,-195.0,-64,Vencido
+Pomegranate,Fruits & Vegetables,14,66,1,2026-08-13,2026-08-06,2026-02-26,86,15.0,Backordered,-122.0,-62,Vencido
+Sunflower Oil,Oils & Fats,88,100,17,2026-12-11,2026-12-04,2026-12-09,25,28.0,Discontinued,44.0,224,Seguro
+Jasmine Rice,Grains & Pulses,24,15,6,2027-02-22,2027-02-15,2026-05-07,35,4.0,Discontinued,251.0,8,Crítico (15 días)
+Haddock,Seafood,93,62,65,2026-06-09,2026-06-02,2026-04-17,78,87.0,Active,-13.0,-12,Vencido
+Black Rice,Grains & Pulses,68,68,97,2026-07-08,2026-07-01,2026-06-23,37,31.0,Discontinued,-7.0,55,Seguro
+Rye Bread,Bakery,28,94,80,2026-05-23,2026-05-16,2026-06-19,31,1.0,Backordered,-245.0,51,Seguro
+Lime,Fruits & Vegetables,21,30,32,2027-01-22,2027-01-15,2026-03-10,43,54.0,Backordered,-16.0,-50,Vencido
+Pomegranate,Fruits & Vegetables,92,96,56,2026-11-18,2026-11-11,2026-07-20,32,22.0,Discontinued,146.0,82,Seguro
+Robusta Coffee,Beverages,68,12,42,2026-12-05,2026-11-28,2026-12-22,39,6.0,Backordered,-78.0,237,Seguro
+Multigrain Bread,Bakery,46,43,46,2027-01-10,2027-01-03,2026-09-17,68,59.0,Backordered,97.0,141,Seguro
+Cucumber,Fruits & Vegetables,47,20,65,2027-01-19,2027-01-12,2026-03-31,49,19.0,Backordered,7.0,-29,Vencido
+Olive Oil,Oils & Fats,52,88,55,2026-05-27,2026-05-20,2026-11-13,100,46.0,Discontinued,22.0,198,Seguro
+Mushrooms,Fruits & Vegetables,51,62,95,2026-04-07,2026-03-31,2027-01-15,52,21.0,Active,10.0,261,Seguro
+Egg (Goose),Dairy,14,63,74,2026-04-28,2026-04-21,2026-11-28,59,63.0,Backordered,-297.0,213,Seguro
+Greek Yogurt,Fruits & Vegetables,62,44,11,2027-01-08,2027-01-01,2026-07-13,92,37.0,Discontinued,267.0,75,Seguro
+Peach,Fruits & Vegetables,40,53,7,2027-02-21,2027-02-14,2026-06-21,70,20.0,Backordered,352.0,53,Seguro
+White Tea,Beverages,50,100,91,2026-12-28,2026-12-21,2026-12-05,29,31.0,Active,164.0,220,Seguro
+Sushi Rice,Grains & Pulses,77,20,37,2026-07-03,2026-06-26,2026-11-05,42,19.0,Backordered,119.0,190,Seguro
+Strawberries,Fruits & Vegetables,31,89,7,2026-08-26,2026-08-19,2026-05-21,46,54.0,Discontinued,-103.0,22,Próximo (30 días)
+Mushrooms,Fruits & Vegetables,35,19,30,2027-01-06,2026-12-30,2026-11-09,88,6.0,Backordered,37.0,194,Seguro
+Broccoli,Fruits & Vegetables,31,54,52,2027-02-20,2027-02-13,2026-12-13,69,77.0,Active,74.0,228,Seguro
+White Bread,Bakery,56,62,64,2026-08-22,2026-08-15,2027-01-20,56,73.0,Backordered,-12.0,266,Seguro
+Greek Yogurt,Dairy,90,62,54,2027-01-20,2027-01-13,2026-12-15,70,83.0,Discontinued,135.0,230,Seguro
+Canola Oil,Oils & Fats,79,31,66,2026-04-10,2026-04-03,2026-08-20,92,13.0,Discontinued,-186.0,113,Seguro
+Lime,Fruits & Vegetables,29,83,91,2026-11-29,2026-11-22,2027-01-04,81,53.0,Backordered,-70.0,250,Seguro
+Canola Oil,Oils & Fats,46,51,92,2026-05-07,2026-04-30,2026-06-09,47,25.0,Discontinued,-231.0,41,Seguro
+Blueberries,Fruits & Vegetables,42,4,53,2027-01-10,2027-01-03,2026-04-12,37,53.0,Active,189.0,-17,Vencido
+Mozzarella Cheese,Dairy,16,56,13,2027-02-10,2027-02-03,2026-10-02,56,28.0,Discontinued,337.0,156,Seguro
+Tuna,Seafood,89,95,41,2026-09-24,2026-09-17,2026-10-15,76,96.0,Discontinued,80.0,169,Seguro
+White Tea,Beverages,20,43,43,2027-01-07,2026-12-31,2026-03-29,73,6.0,Active,315.0,-31,Vencido
+Black Coffee,Beverages,37,94,76,2026-06-17,2026-06-10,2027-02-04,94,66.0,Backordered,-216.0,281,Seguro
+Bread Flour,Grains & Pulses,97,41,68,2027-01-14,2027-01-07,2027-01-07,35,16.0,Discontinued,102.0,253,Seguro
+Feta Cheese,Dairy,98,77,7,2026-10-02,2026-09-25,2026-08-05,92,29.0,Discontinued,-48.0,98,Seguro
+Kiwi,Fruits & Vegetables,37,8,50,2026-07-06,2026-06-29,2027-01-23,47,62.0,Discontinued,50.0,269,Seguro
+Digestive Biscuit,Bakery,97,99,96,2026-04-25,2026-04-18,2026-11-27,57,42.0,Backordered,-272.0,212,Seguro
+Arabica Coffee,Beverages,97,77,99,2026-11-22,2026-11-15,2026-03-18,74,98.0,Backordered,212.0,-42,Vencido
+Lemon,Fruits & Vegetables,90,92,56,2026-07-28,2026-07-21,2026-03-14,71,13.0,Active,92.0,-46,Vencido
+Arabica Coffee,Beverages,46,31,89,2027-01-04,2026-12-28,2026-03-06,59,65.0,Backordered,289.0,-54,Vencido
+Broccoli,Fruits & Vegetables,40,8,98,2026-07-26,2026-07-19,2026-06-09,86,12.0,Discontinued,-195.0,41,Seguro
+Kale,Fruits & Vegetables,77,52,28,2026-12-19,2026-12-12,2026-05-01,48,43.0,Active,30.0,2,Crítico (15 días)
+Bread Flour,Grains & Pulses,62,79,23,2026-07-22,2026-07-15,2026-10-18,32,80.0,Active,145.0,172,Seguro
+Herbal Tea,Beverages,59,17,1,2026-07-21,2026-07-14,2026-12-03,69,82.0,Active,-36.0,218,Seguro
+Blueberries,Fruits & Vegetables,23,38,54,2027-01-17,2027-01-10,2026-04-15,40,15.0,Active,187.0,-14,Vencido
+Digestive Biscuit,Bakery,39,16,57,2026-12-21,2026-12-14,2026-06-22,98,12.0,Active,256.0,54,Seguro
+Gouda Cheese,Dairy,68,29,31,2026-08-06,2026-07-30,2026-09-09,53,20.0,Backordered,64.0,133,Seguro
+Almond Flour,Grains & Pulses,75,46,75,2026-08-26,2026-08-19,2026-10-26,43,77.0,Backordered,-35.0,180,Seguro
+Chocolate Biscuit,Bakery,96,16,48,2026-11-04,2026-10-28,2027-01-26,45,68.0,Active,214.0,272,Seguro
+Haddock,Seafood,17,38,93,2027-02-14,2027-02-07,2026-07-28,100,63.0,Active,178.0,90,Seguro
+Egg (Duck),Dairy,23,38,25,2026-05-13,2026-05-06,2027-01-15,84,78.0,Discontinued,-284.0,261,Seguro
+Peach,Fruits & Vegetables,15,27,21,2026-06-11,2026-06-04,2026-09-03,37,67.0,Backordered,-255.0,127,Seguro
+Mackerel,Seafood,71,7,6,2026-08-29,2026-08-22,2026-09-04,52,68.0,Backordered,-95.0,128,Seguro
+Egg (Goose),Dairy,97,26,15,2026-08-21,2026-08-14,2026-11-10,33,58.0,Discontinued,-166.0,195,Seguro
+Zucchini,Fruits & Vegetables,29,18,86,2026-10-24,2026-10-17,2026-05-11,53,69.0,Active,-23.0,12,Crítico (15 días)
+Bell Pepper,Fruits & Vegetables,46,64,17,2026-03-01,2026-02-22,2027-01-31,96,55.0,Discontinued,-311.0,277,Seguro
+Cheese,Dairy,76,15,99,2027-02-01,2027-01-25,2026-05-06,60,49.0,Discontinued,190.0,7,Crítico (15 días)
+Zucchini,Fruits & Vegetables,59,91,24,2026-10-27,2026-10-20,2026-12-16,54,87.0,Active,120.0,231,Seguro
+Orange,Fruits & Vegetables,92,54,73,2027-02-07,2027-01-31,2026-12-13,79,1.0,Backordered,21.0,228,Seguro
+Kiwi,Fruits & Vegetables,28,27,22,2026-05-15,2026-05-08,2026-05-11,70,30.0,Discontinued,-92.0,12,Crítico (15 días)
+Coconut,Fruits & Vegetables,19,47,25,2026-12-18,2026-12-11,2027-01-28,96,37.0,Discontinued,-68.0,274,Seguro
+Butter,Dairy,85,28,21,2026-08-20,2026-08-13,2026-06-12,45,89.0,Active,51.0,44,Seguro
+Bread Flour,Grains & Pulses,57,63,41,2026-08-25,2026-08-18,2026-10-30,53,94.0,Discontinued,-176.0,184,Seguro
+Broccoli,Fruits & Vegetables,95,29,28,2026-07-20,2026-07-13,2026-05-20,52,46.0,Discontinued,-180.0,21,Próximo (30 días)
+Sushi Rice,Grains & Pulses,84,69,77,2027-01-22,2027-01-15,2026-06-01,39,69.0,Backordered,25.0,33,Seguro
+Rice Flour,Grains & Pulses,31,32,69,2026-02-28,2026-02-21,2026-11-21,38,23.0,Active,-96.0,206,Seguro
+Pear,Fruits & Vegetables,41,52,75,2026-04-06,2026-03-30,2026-10-13,57,62.0,Backordered,-18.0,167,Seguro
+Feta Cheese,Dairy,97,57,84,2026-09-27,2026-09-20,2027-02-06,95,28.0,Active,29.0,283,Seguro
+Milk,Dairy,43,88,33,2026-07-19,2026-07-12,2026-12-23,84,75.0,Discontinued,-199.0,238,Seguro
+Palm Oil,Oils & Fats,74,4,67,2026-03-26,2026-03-19,2026-05-24,31,34.0,Backordered,-18.0,25,Próximo (30 días)
+Bread Flour,Grains & Pulses,70,96,92,2026-04-18,2026-04-11,2026-05-28,27,58.0,Backordered,-190.0,29,Próximo (30 días)
+Cheese,Dairy,69,53,32,2026-09-11,2026-09-04,2026-06-13,28,56.0,Active,106.0,45,Seguro
+Carrot,Fruits & Vegetables,67,68,50,2026-09-23,2026-09-16,2026-04-09,67,82.0,Discontinued,-59.0,-20,Vencido
+Short Grain Rice,Grains & Pulses,18,62,2,2026-03-26,2026-03-19,2026-09-06,61,78.0,Discontinued,-33.0,130,Seguro
+Arabica Coffee,Beverages,22,89,25,2026-02-24,2026-02-17,2026-07-20,30,62.0,Discontinued,-276.0,82,Seguro
+Grapes,Fruits & Vegetables,88,99,41,2026-07-30,2026-07-23,2026-07-21,93,99.0,Backordered,71.0,83,Seguro
+Tilapia,Seafood,78,75,3,2026-08-08,2026-08-01,2026-07-05,63,100.0,Active,-132.0,67,Seguro
+Olive Oil,Oils & Fats,83,52,32,2026-10-17,2026-10-10,2026-03-21,47,7.0,Active,52.0,-39,Vencido
+Robusta Coffee,Beverages,42,88,17,2026-10-19,2026-10-12,2026-06-24,34,51.0,Discontinued,-48.0,56,Seguro
+Peas,Fruits & Vegetables,49,46,8,2026-10-22,2026-10-15,2026-12-10,82,21.0,Discontinued,205.0,225,Seguro
+Brown Rice,Grains & Pulses,17,88,41,2026-10-21,2026-10-14,2027-01-18,45,29.0,Backordered,-121.0,264,Seguro
+Buttermilk,Dairy,52,64,54,2026-11-22,2026-11-15,2026-10-23,21,55.0,Backordered,74.0,177,Seguro
+Mushrooms,Fruits & Vegetables,79,45,39,2026-10-29,2026-10-22,2026-05-11,55,20.0,Backordered,-9.0,12,Crítico (15 días)
+Palm Oil,Oils & Fats,35,41,84,2026-08-17,2026-08-10,2026-11-23,62,14.0,Backordered,20.0,208,Seguro
+Cucumber,Fruits & Vegetables,76,11,15,2026-10-20,2026-10-13,2026-09-17,22,91.0,Active,148.0,141,Seguro
+Swiss Cheese,Dairy,93,8,51,2026-02-27,2026-02-20,2027-02-04,93,85.0,Backordered,-77.0,281,Seguro
+Halibut,Seafood,40,81,78,2027-02-17,2027-02-10,2026-03-04,39,65.0,Backordered,216.0,-56,Vencido
+Trout,Seafood,19,94,17,2026-08-22,2026-08-15,2026-06-14,96,74.0,Discontinued,75.0,46,Seguro
+Vegetable Oil,Oils & Fats,70,96,21,2026-11-26,2026-11-19,2026-08-03,100,15.0,Discontinued,77.0,96,Seguro
+Digestive Biscuit,Bakery,90,52,50,2026-06-29,2026-06-22,2026-05-07,63,14.0,Discontinued,75.0,8,Crítico (15 días)
+Digestive Biscuit,Bakery,77,79,65,2026-09-01,2026-08-25,2026-07-31,62,75.0,Backordered,168.0,93,Seguro
+Apricot,Fruits & Vegetables,38,22,71,2026-10-07,2026-09-30,2026-05-08,33,62.0,Active,144.0,9,Crítico (15 días)
+Tilapia,Seafood,93,25,23,2026-06-21,2026-06-14,2026-04-29,72,83.0,Backordered,-57.0,0,Crítico (15 días)
+Evaporated Milk,Dairy,23,100,77,2026-05-10,2026-05-03,2026-03-04,63,26.0,Discontinued,-92.0,-56,Vencido
+Green Tea,Beverages,51,1,61,2026-03-29,2026-03-22,2026-11-17,96,26.0,Active,-81.0,202,Seguro
+Heavy Cream,Dairy,57,62,72,2027-02-21,2027-02-14,2026-08-10,23,4.0,Backordered,149.0,103,Seguro
+Papaya,Fruits & Vegetables,59,74,100,2026-03-26,2026-03-19,2026-11-12,63,69.0,Active,-173.0,197,Seguro
+Blueberries,Fruits & Vegetables,89,15,22,2026-11-17,2026-11-10,2026-05-03,79,42.0,Discontinued,-86.0,4,Crítico (15 días)
+Blueberries,Fruits & Vegetables,53,98,25,2026-09-23,2026-09-16,2026-12-20,55,51.0,Active,19.0,235,Seguro
+Plum,Fruits & Vegetables,11,56,62,2026-04-14,2026-04-07,2026-10-10,40,5.0,Backordered,-271.0,164,Seguro
+Yogurt,Dairy,59,27,63,2026-06-15,2026-06-08,2027-02-01,92,82.0,Discontinued,-12.0,278,Seguro
+Onion,Fruits & Vegetables,34,29,65,2026-05-03,2026-04-26,2026-11-22,90,23.0,Discontinued,-154.0,207,Seguro
+Tuna,Seafood,25,75,27,2027-01-02,2026-12-26,2026-05-04,31,36.0,Active,89.0,5,Crítico (15 días)
+Anchovies,Seafood,81,22,20,2026-06-01,2026-05-25,2026-08-22,95,77.0,Discontinued,-267.0,115,Seguro
+Apple,Fruits & Vegetables,81,74,45,2027-01-20,2027-01-13,2027-01-12,42,23.0,Discontinued,-7.0,258,Seguro
+Watermelon,Fruits & Vegetables,71,4,37,2026-09-15,2026-09-08,2026-12-27,81,25.0,Discontinued,-39.0,242,Seguro
+Cauliflower,Fruits & Vegetables,52,22,37,2026-10-28,2026-10-21,2026-03-24,56,44.0,Active,110.0,-36,Vencido
+Greek Yogurt,Dairy,26,54,90,2026-10-15,2026-10-08,2027-01-21,25,81.0,Active,118.0,267,Seguro
+Haddock,Seafood,84,8,54,2027-01-14,2027-01-07,2026-03-09,60,38.0,Active,266.0,-51,Vencido
+Blueberries,Fruits & Vegetables,28,86,44,2026-05-23,2026-05-16,2026-07-29,48,12.0,Backordered,-179.0,91,Seguro
+Strawberries,Fruits & Vegetables,94,77,89,2026-09-30,2026-09-23,2026-06-21,40,84.0,Discontinued,102.0,53,Seguro
+Kiwi,Fruits & Vegetables,47,75,53,2027-02-06,2027-01-30,2026-07-03,70,20.0,Discontinued,126.0,65,Seguro
+Coconut Sugar,Grains & Pulses,20,51,21,2026-03-19,2026-03-12,2026-06-18,71,26.0,Backordered,-131.0,50,Seguro
+Tomato,Fruits & Vegetables,84,20,58,2026-04-08,2026-04-01,2026-04-02,86,64.0,Backordered,-277.0,-27,Vencido
+Cheese,Dairy,100,31,43,2026-09-13,2026-09-06,2026-12-26,88,52.0,Backordered,-115.0,241,Seguro
+Milk,Dairy,74,90,26,2026-05-23,2026-05-16,2026-07-17,24,11.0,Discontinued,-260.0,79,Seguro
+Green Coffee,Beverages,27,12,93,2026-03-04,2026-02-25,2026-03-27,88,83.0,Discontinued,-130.0,-33,Vencido
+Eggplant,Fruits & Vegetables,91,55,94,2026-03-11,2026-03-04,2026-04-26,42,93.0,Active,-30.0,-3,Vencido
+Grapes,Fruits & Vegetables,82,21,85,2026-04-14,2026-04-07,2026-07-08,39,18.0,Backordered,26.0,70,Seguro
+Bread Flour,Grains & Pulses,84,91,86,2027-01-08,2027-01-01,2026-11-22,83,95.0,Backordered,32.0,207,Seguro
+Halibut,Seafood,18,46,26,2026-04-10,2026-04-03,2026-09-13,57,95.0,Backordered,-183.0,137,Seguro
+Sourdough Bread,Bakery,12,59,62,2026-06-03,2026-05-27,2026-08-05,75,92.0,Backordered,-227.0,98,Seguro
+Black Rice,Grains & Pulses,85,4,75,2026-08-18,2026-08-11,2026-11-03,95,70.0,Backordered,137.0,188,Seguro
+Butter Biscuit,Bakery,33,60,67,2026-06-16,2026-06-09,2026-12-28,20,7.0,Discontinued,23.0,243,Seguro
+Tilapia,Seafood,59,59,10,2026-08-18,2026-08-11,2026-03-15,57,50.0,Active,-84.0,-45,Vencido
+Grapes,Fruits & Vegetables,22,69,87,2027-02-09,2027-02-02,2027-02-20,34,26.0,Backordered,239.0,297,Seguro
+Gouda Cheese,Dairy,67,79,98,2027-02-13,2027-02-06,2026-04-06,73,36.0,Active,186.0,-23,Vencido
+Cheese,Dairy,78,24,31,2026-06-01,2026-05-25,2026-03-07,60,41.0,Active,-2.0,-53,Vencido
+Lemon,Fruits & Vegetables,72,32,80,2026-07-06,2026-06-29,2026-04-10,25,9.0,Backordered,-134.0,-19,Vencido
+Heavy Cream,Dairy,63,48,22,2026-05-30,2026-05-23,2026-07-18,21,90.0,Discontinued,-264.0,80,Seguro
+White Bread,Bakery,30,91,34,2026-07-11,2026-07-04,2026-05-06,97,88.0,Active,-130.0,7,Crítico (15 días)
+Arabica Coffee,Beverages,36,64,63,2026-03-15,2026-03-08,2026-03-30,91,35.0,Backordered,-340.0,-30,Vencido
+Grapes,Fruits & Vegetables,88,27,92,2026-11-27,2026-11-20,2026-06-22,57,37.0,Discontinued,211.0,54,Seguro
+Banana,Fruits & Vegetables,95,25,91,2026-09-04,2026-08-28,2026-10-18,87,5.0,Discontinued,133.0,172,Seguro
+Broccoli,Fruits & Vegetables,30,59,76,2026-03-20,2026-03-13,2026-04-11,61,3.0,Discontinued,-300.0,-18,Vencido
+Green Beans,Fruits & Vegetables,31,55,5,2026-09-10,2026-09-03,2026-10-29,71,46.0,Active,-161.0,183,Seguro
+Cod,Seafood,16,20,45,2026-04-30,2026-04-23,2026-06-07,81,62.0,Active,-171.0,39,Seguro
+White Sugar,Grains & Pulses,14,16,93,2026-07-23,2026-07-16,2026-06-21,39,30.0,Active,142.0,53,Seguro
+Tomato,Fruits & Vegetables,44,67,15,2026-03-13,2026-03-06,2026-03-23,82,51.0,Active,3.0,-37,Vencido
+Long Grain Rice,Grains & Pulses,69,82,58,2026-07-07,2026-06-30,2026-04-30,34,22.0,Discontinued,69.0,1,Crítico (15 días)
+Long Grain Rice,Grains & Pulses,71,10,49,2026-08-11,2026-08-04,2026-05-26,66,43.0,Active,148.0,27,Próximo (30 días)
+Carrot,Fruits & Vegetables,92,39,50,2026-12-27,2026-12-20,2026-11-09,30,41.0,Backordered,20.0,194,Seguro
+Peanut Oil,Oils & Fats,49,17,54,2026-09-23,2026-09-16,2026-11-27,45,96.0,Discontinued,-68.0,212,Seguro
+Pomegranate,Fruits & Vegetables,52,8,37,2026-08-31,2026-08-24,2026-08-16,38,81.0,Active,16.0,109,Seguro
+Egg (Turkey),Dairy,56,97,29,2026-02-27,2026-02-20,2026-11-29,82,100.0,Backordered,-140.0,214,Seguro
+Strawberries,Fruits & Vegetables,16,23,76,2026-07-21,2026-07-14,2027-02-08,50,27.0,Backordered,-203.0,285,Seguro
+Zucchini,Fruits & Vegetables,52,79,87,2026-06-11,2026-06-04,2026-03-10,36,100.0,Discontinued,68.0,-50,Vencido
+Trout,Seafood,91,68,80,2026-08-12,2026-08-05,2026-11-19,81,85.0,Backordered,-63.0,204,Seguro
+Mango,Fruits & Vegetables,58,58,28,2026-03-18,2026-03-11,2027-01-29,85,63.0,Active,-140.0,275,Seguro
+Halibut,Seafood,47,29,70,2026-08-09,2026-08-02,2026-07-25,61,44.0,Active,-120.0,87,Seguro
+Rye Bread,Bakery,50,56,63,2026-03-27,2026-03-20,2026-09-17,70,100.0,Discontinued,-50.0,141,Seguro
+Sour Cream,Dairy,43,73,14,2026-07-28,2026-07-21,2026-08-26,59,65.0,Active,-41.0,119,Seguro
+Cheddar Cheese,Dairy,68,60,21,2026-02-26,2026-02-19,2026-04-29,79,46.0,Active,-218.0,0,Crítico (15 días)
+Egg (Turkey),Dairy,19,100,83,2026-04-25,2026-04-18,2026-03-22,66,28.0,Discontinued,-87.0,-38,Vencido
+Swiss Cheese,Dairy,70,84,72,2026-07-20,2026-07-13,2026-07-14,71,20.0,Active,-141.0,76,Seguro
+Eggplant,Fruits & Vegetables,97,20,72,2026-02-28,2026-02-21,2026-12-10,29,59.0,Backordered,-343.0,225,Seguro
+Sunflower Oil,Oils & Fats,87,24,19,2026-05-11,2026-05-04,2026-04-17,83,3.0,Discontinued,-216.0,-12,Vencido
+White Tea,Beverages,58,81,66,2026-06-24,2026-06-17,2027-01-02,85,78.0,Active,-234.0,248,Seguro
+Coconut,Fruits & Vegetables,16,53,12,2026-06-11,2026-06-04,2026-06-06,21,29.0,Discontinued,-223.0,38,Seguro
+Pineapple,Fruits & Vegetables,65,35,3,2026-08-11,2026-08-04,2026-09-27,25,13.0,Active,-160.0,151,Seguro
+Basmati Rice,Grains & Pulses,15,49,40,2026-12-06,2026-11-29,2026-09-14,68,74.0,Discontinued,175.0,138,Seguro
+Bell Pepper,Fruits & Vegetables,75,85,27,2026-05-30,2026-05-23,2026-06-24,26,68.0,Discontinued,-10.0,56,Seguro
+Vanilla Biscuit,Bakery,80,61,23,2026-07-27,2026-07-20,2026-03-04,63,75.0,Backordered,-4.0,-56,Vencido
+Orange,Fruits & Vegetables,84,95,22,2026-06-20,2026-06-13,2026-10-07,48,82.0,Discontinued,37.0,161,Seguro
+Eggplant,Fruits & Vegetables,17,3,33,2026-03-21,2026-03-14,2026-05-31,49,17.0,Backordered,-177.0,32,Seguro
+Evaporated Milk,Dairy,64,31,91,2026-06-19,2026-06-12,2026-10-10,85,42.0,Discontinued,-46.0,164,Seguro
+Whipped Cream,Dairy,76,81,85,2026-03-04,2026-02-25,2026-09-08,65,68.0,Active,-281.0,132,Seguro
+Sesame Oil,Oils & Fats,77,95,82,2026-04-17,2026-04-10,2026-07-18,29,46.0,Backordered,-185.0,80,Seguro
+Cream,Dairy,18,14,77,2027-01-05,2026-12-29,2026-05-25,78,4.0,Backordered,238.0,26,Próximo (30 días)
+Coconut Sugar,Grains & Pulses,51,55,76,2027-02-19,2027-02-12,2027-01-24,21,13.0,Discontinued,146.0,270,Seguro
+Asparagus,Fruits & Vegetables,68,12,73,2026-08-05,2026-07-29,2026-07-04,84,95.0,Backordered,-159.0,66,Seguro
+Wild Rice,Grains & Pulses,46,6,64,2026-07-23,2026-07-16,2026-12-22,63,29.0,Discontinued,30.0,237,Seguro
+Long Grain Rice,Grains & Pulses,98,40,93,2027-02-19,2027-02-12,2026-10-20,30,53.0,Active,8.0,174,Seguro
+Onion,Fruits & Vegetables,50,20,74,2027-02-13,2027-02-06,2026-10-05,30,57.0,Backordered,194.0,159,Seguro
+Salmon,Seafood,88,83,42,2026-05-29,2026-05-22,2026-10-25,61,59.0,Discontinued,-103.0,179,Seguro
+Potato,Fruits & Vegetables,26,16,69,2026-06-30,2026-06-23,2026-08-19,64,79.0,Discontinued,96.0,112,Seguro
+Green Coffee,Beverages,43,38,63,2026-03-31,2026-03-24,2026-04-09,88,65.0,Backordered,-308.0,-20,Vencido
+Powdered Sugar,Grains & Pulses,46,20,30,2026-03-06,2026-02-27,2026-09-13,54,24.0,Backordered,6.0,137,Seguro
+Cauliflower,Fruits & Vegetables,19,73,60,2026-03-12,2026-03-05,2026-06-12,70,48.0,Backordered,-152.0,44,Seguro
+Kale,Fruits & Vegetables,61,100,94,2026-07-20,2026-07-13,2026-10-04,76,2.0,Backordered,-178.0,158,Seguro
+Garlic,Fruits & Vegetables,43,40,30,2026-07-13,2026-07-06,2026-12-19,95,26.0,Active,-81.0,234,Seguro
+Green Tea,Beverages,80,54,21,2026-08-24,2026-08-17,2026-04-16,81,37.0,Active,-37.0,-13,Vencido
+Green Tea,Beverages,34,47,99,2027-01-23,2027-01-16,2026-11-23,97,47.0,Backordered,204.0,208,Seguro
+Green Tea,Beverages,88,50,88,2026-08-23,2026-08-16,2026-11-03,78,28.0,Discontinued,-82.0,188,Seguro
+Cottage Cheese,Dairy,89,42,76,2026-12-15,2026-12-08,2026-12-10,94,81.0,Backordered,15.0,225,Seguro
+Wild Rice,Grains & Pulses,26,21,47,2026-08-03,2026-07-27,2026-05-02,40,59.0,Discontinued,-13.0,3,Crítico (15 días)
+Pear,Fruits & Vegetables,26,95,36,2026-07-29,2026-07-22,2027-02-10,92,14.0,Active,-161.0,287,Seguro
+Peach,Fruits & Vegetables,37,38,24,2026-06-15,2026-06-08,2026-08-20,93,32.0,Active,-79.0,113,Seguro
+Yogurt,Dairy,76,98,41,2026-11-14,2026-11-07,2026-10-14,62,48.0,Backordered,175.0,168,Seguro
+Feta Cheese,Dairy,80,43,80,2026-06-26,2026-06-19,2026-04-12,64,53.0,Active,-71.0,-17,Vencido
+Sweet Potato,Fruits & Vegetables,100,3,32,2026-08-19,2026-08-12,2027-02-10,98,91.0,Backordered,-43.0,287,Seguro
+Butter,Dairy,21,87,67,2027-01-03,2026-12-27,2026-03-31,64,69.0,Discontinued,-20.0,-29,Vencido
+Coconut Oil,Oils & Fats,33,78,79,2026-11-05,2026-10-29,2026-04-21,60,25.0,Discontinued,117.0,-8,Vencido
+Apple,Fruits & Vegetables,43,63,99,2026-11-08,2026-11-01,2027-01-12,39,77.0,Discontinued,-35.0,258,Seguro
+Mushrooms,Fruits & Vegetables,34,1,79,2026-06-12,2026-06-05,2026-09-08,58,36.0,Discontinued,-191.0,132,Seguro
+Mackerel,Seafood,82,25,94,2026-03-30,2026-03-23,2027-02-15,66,14.0,Backordered,14.0,292,Seguro
+Whole Wheat Bread,Bakery,17,63,3,2026-08-02,2026-07-26,2026-12-27,93,26.0,Backordered,-22.0,242,Seguro
+Sushi Rice,Grains & Pulses,36,81,54,2026-07-07,2026-06-30,2026-08-31,73,60.0,Discontinued,-166.0,124,Seguro
+Cod,Seafood,65,79,52,2026-05-12,2026-05-05,2026-05-30,56,94.0,Discontinued,-144.0,31,Seguro
+Papaya,Fruits & Vegetables,45,28,6,2026-03-18,2026-03-11,2026-08-22,35,16.0,Discontinued,-311.0,115,Seguro
+Egg (Goose),Dairy,35,78,68,2026-04-12,2026-04-05,2026-07-04,95,91.0,Discontinued,-282.0,66,Seguro
+Bread Flour,Grains & Pulses,96,83,50,2026-10-04,2026-09-27,2026-05-30,81,89.0,Discontinued,188.0,31,Seguro
+Coconut,Fruits & Vegetables,56,75,13,2026-09-04,2026-08-28,2026-05-21,42,53.0,Backordered,153.0,22,Próximo (30 días)
+Ricotta Cheese,Dairy,49,94,18,2026-12-12,2026-12-05,2026-04-16,38,11.0,Active,124.0,-13,Vencido
+Raw Sugar,Grains & Pulses,100,10,89,2026-04-23,2026-04-16,2026-06-21,76,38.0,Backordered,-253.0,53,Seguro
+Haddock,Seafood,30,81,99,2026-07-22,2026-07-15,2026-06-15,99,3.0,Backordered,-192.0,47,Seguro
+Papaya,Fruits & Vegetables,20,91,12,2026-11-26,2026-11-19,2026-12-01,35,50.0,Active,-17.0,216,Seguro
+Sesame Oil,Oils & Fats,85,15,16,2026-05-13,2026-05-06,2026-07-15,46,24.0,Discontinued,-282.0,77,Seguro
+Green Beans,Fruits & Vegetables,86,90,39,2026-10-20,2026-10-13,2026-09-07,98,85.0,Active,235.0,131,Seguro
+Sourdough Bread,Bakery,65,79,49,2026-04-02,2026-03-26,2026-10-17,100,9.0,Discontinued,-69.0,171,Seguro
+Cottage Cheese,Dairy,67,98,92,2026-04-22,2026-04-15,2026-12-07,35,98.0,Backordered,-131.0,222,Seguro
+Ricotta Cheese,Dairy,88,4,79,2026-04-24,2026-04-17,2026-08-14,23,39.0,Discontinued,-39.0,107,Seguro
+Robusta Coffee,Beverages,14,77,78,2026-08-02,2026-07-26,2026-09-01,32,24.0,Discontinued,-26.0,125,Seguro
+Tilapia,Seafood,85,92,66,2026-03-28,2026-03-21,2026-05-03,54,85.0,Backordered,-279.0,4,Crítico (15 días)
+Feta Cheese,Dairy,74,65,5,2027-01-30,2027-01-23,2026-03-16,21,42.0,Discontinued,187.0,-44,Vencido
+Cheddar Cheese,Dairy,21,28,72,2027-01-28,2027-01-21,2026-02-24,69,51.0,Backordered,335.0,-64,Vencido
+Butter Biscuit,Bakery,22,24,94,2026-07-19,2026-07-12,2026-11-13,47,71.0,Active,-2.0,198,Seguro
+Ricotta Cheese,Dairy,91,14,99,2027-02-10,2027-02-03,2027-01-22,50,5.0,Backordered,16.0,268,Seguro
+Multigrain Bread,Bakery,85,57,25,2027-02-18,2027-02-11,2026-06-20,30,42.0,Discontinued,145.0,52,Seguro
+Peas,Fruits & Vegetables,12,28,11,2026-05-18,2026-05-11,2026-04-17,46,88.0,Backordered,-232.0,-12,Vencido
+Pomegranate,Fruits & Vegetables,43,65,66,2026-12-21,2026-12-14,2027-01-16,78,73.0,Backordered,109.0,262,Seguro
+Yogurt,Dairy,92,92,28,2027-01-21,2027-01-14,2026-12-22,50,67.0,Discontinued,133.0,237,Seguro
+Watermelon,Fruits & Vegetables,23,85,94,2026-10-12,2026-10-05,2027-01-28,92,72.0,Backordered,81.0,274,Seguro
+Egg (Duck),Dairy,77,1,41,2026-11-05,2026-10-29,2026-03-21,58,55.0,Discontinued,-92.0,-39,Vencido
+Sweet Potato,Fruits & Vegetables,65,10,81,2026-08-27,2026-08-20,2026-05-08,71,61.0,Backordered,-169.0,9,Crítico (15 días)
+Banana,Fruits & Vegetables,82,29,62,2026-08-08,2026-08-01,2026-12-09,77,27.0,Backordered,143.0,224,Seguro
+Swiss Cheese,Dairy,20,17,71,2026-10-22,2026-10-15,2026-11-16,50,65.0,Active,-77.0,201,Seguro
+Cheddar Cheese,Dairy,31,65,94,2026-12-03,2026-11-26,2026-03-06,63,7.0,Backordered,47.0,-54,Vencido
+Butter,Dairy,36,75,35,2026-04-13,2026-04-06,2026-11-23,26,41.0,Discontinued,-65.0,208,Seguro
+Black Tea,Beverages,59,20,17,2026-12-06,2026-11-29,2026-06-12,45,15.0,Discontinued,159.0,44,Seguro
+Long Grain Rice,Grains & Pulses,11,10,80,2026-06-05,2026-05-29,2026-08-02,48,65.0,Discontinued,-114.0,95,Seguro
+Black Coffee,Beverages,24,77,32,2026-03-18,2026-03-11,2026-03-04,80,42.0,Discontinued,-84.0,-56,Vencido
+Haddock,Seafood,75,80,87,2026-07-06,2026-06-29,2026-08-24,49,40.0,Backordered,-89.0,117,Seguro
+Black Coffee,Beverages,11,72,5,2026-07-08,2026-07-01,2027-02-11,89,4.0,Active,-95.0,288,Seguro
+Anchovies,Seafood,60,64,36,2026-09-02,2026-08-26,2027-02-15,34,48.0,Discontinued,190.0,292,Seguro
+Lemon,Fruits & Vegetables,91,6,37,2026-05-01,2026-04-24,2026-08-06,38,70.0,Backordered,-98.0,99,Seguro
+Egg (Goose),Dairy,43,78,85,2026-03-09,2026-03-02,2026-06-22,48,98.0,Backordered,-174.0,54,Seguro
+Bread Flour,Grains & Pulses,25,60,36,2027-02-16,2027-02-09,2026-10-30,31,41.0,Backordered,174.0,184,Seguro
+Parmesan Cheese,Dairy,96,9,57,2027-01-26,2027-01-19,2026-08-06,78,67.0,Active,224.0,99,Seguro
+Mackerel,Seafood,30,29,70,2026-06-22,2026-06-15,2026-09-20,80,43.0,Backordered,-113.0,144,Seguro
+Arborio Rice,Grains & Pulses,56,4,74,2026-03-15,2026-03-08,2026-09-22,61,73.0,Active,-111.0,146,Seguro
+Whole Wheat Bread,Bakery,91,71,17,2027-01-10,2027-01-03,2026-06-03,74,57.0,Active,162.0,35,Seguro
+White Sugar,Grains & Pulses,27,64,78,2026-08-17,2026-08-10,2026-05-23,57,4.0,Active,105.0,24,Próximo (30 días)
+Buttermilk,Dairy,28,90,70,2026-11-05,2026-10-29,2027-01-28,76,78.0,Active,-101.0,274,Seguro
+Sour Cream,Dairy,92,67,51,2026-04-05,2026-03-29,2026-05-19,23,78.0,Discontinued,-248.0,20,Próximo (30 días)
+Tuna,Seafood,37,33,80,2026-12-21,2026-12-14,2026-05-04,27,73.0,Backordered,225.0,5,Crítico (15 días)
+Powdered Sugar,Grains & Pulses,28,24,97,2026-09-22,2026-09-15,2026-07-09,82,5.0,Discontinued,133.0,71,Seguro
+Tilapia,Seafood,30,42,8,2026-05-02,2026-04-25,2026-07-11,48,23.0,Active,-249.0,73,Seguro
+Arabica Coffee,Beverages,98,83,5,2026-07-06,2026-06-29,2026-12-26,39,79.0,Active,-209.0,241,Seguro
+Lemon,Fruits & Vegetables,65,88,20,2027-01-28,2027-01-21,2026-07-29,89,37.0,Backordered,69.0,91,Seguro
+Rice Flour,Grains & Pulses,42,3,21,2026-09-19,2026-09-12,2026-09-25,35,22.0,Active,-130.0,149,Seguro
+Lemon,Fruits & Vegetables,63,60,54,2026-12-26,2026-12-19,2026-04-15,33,31.0,Backordered,219.0,-14,Vencido
+Broccoli,Fruits & Vegetables,85,54,18,2026-07-28,2026-07-21,2026-07-13,85,44.0,Discontinued,-87.0,75,Seguro
+Egg (Duck),Dairy,44,75,72,2026-12-14,2026-12-07,2026-08-02,96,38.0,Discontinued,15.0,95,Seguro
+Plum,Fruits & Vegetables,26,69,90,2026-12-12,2026-12-05,2026-07-19,47,35.0,Active,187.0,81,Seguro
+Coconut Sugar,Grains & Pulses,49,59,73,2026-04-18,2026-04-11,2026-05-26,93,45.0,Discontinued,12.0,27,Próximo (30 días)
+Pomegranate,Fruits & Vegetables,59,79,87,2026-09-03,2026-08-27,2026-07-31,47,18.0,Active,-30.0,93,Seguro
+Raw Sugar,Grains & Pulses,19,81,33,2026-06-29,2026-06-22,2026-12-24,39,85.0,Backordered,-238.0,239,Seguro
+Eggplant,Fruits & Vegetables,47,41,63,2026-04-15,2026-04-08,2027-01-09,39,54.0,Active,-47.0,255,Seguro
+Grapes,Fruits & Vegetables,98,62,97,2026-03-30,2026-03-23,2027-02-09,59,19.0,Active,-148.0,286,Seguro
+Watermelon,Fruits & Vegetables,51,72,85,2026-03-23,2026-03-16,2026-10-23,23,17.0,Active,-22.0,177,Seguro
+Anchovies,Seafood,100,99,8,2027-02-19,2027-02-12,2026-12-07,54,92.0,Discontinued,116.0,222,Seguro
+Yogurt,Dairy,55,50,56,2026-06-01,2026-05-25,2026-10-25,62,26.0,Backordered,-161.0,179,Seguro
+Whipped Cream,Dairy,14,87,8,2026-03-10,2026-03-03,2027-01-30,90,14.0,Active,-246.0,276,Seguro
+Egg (Quail),Dairy,29,33,88,2026-07-19,2026-07-12,2026-05-15,50,35.0,Discontinued,-35.0,16,Próximo (30 días)
+Chocolate Biscuit,Bakery,100,1,26,2026-08-02,2026-07-26,2026-07-19,47,79.0,Active,134.0,81,Seguro
+Ricotta Cheese,Dairy,49,28,74,2027-01-09,2027-01-02,2026-04-25,70,38.0,Discontinued,-5.0,-4,Vencido
+Vegetable Oil,Oils & Fats,75,61,19,2027-02-23,2027-02-16,2026-10-02,79,69.0,Backordered,25.0,156,Seguro
+Heavy Cream,Dairy,82,12,94,2026-02-27,2026-02-20,2027-01-21,69,93.0,Active,-113.0,267,Seguro
+Cottage Cheese,Dairy,68,82,58,2026-04-08,2026-04-01,2026-04-05,90,2.0,Backordered,-138.0,-24,Vencido
+Corn Oil,Oils & Fats,70,96,85,2026-02-25,2026-02-18,2026-10-27,34,3.0,Active,-190.0,181,Seguro
+Salmon,Seafood,49,48,62,2026-09-16,2026-09-09,2026-08-14,96,37.0,Active,204.0,107,Seguro
+Mackerel,Seafood,89,26,36,2026-10-24,2026-10-17,2026-06-14,48,94.0,Active,86.0,46,Seguro
+Cheese,Dairy,88,53,44,2027-01-04,2026-12-28,2027-02-06,56,14.0,Discontinued,11.0,283,Seguro
+Green Tea,Beverages,39,88,100,2026-11-25,2026-11-18,2026-05-15,28,18.0,Backordered,-66.0,16,Próximo (30 días)
+Cauliflower,Fruits & Vegetables,87,91,94,2026-07-04,2026-06-27,2026-06-25,47,4.0,Discontinued,-83.0,57,Seguro
+Oatmeal Biscuit,Bakery,93,50,43,2026-06-27,2026-06-20,2026-10-09,76,35.0,Discontinued,42.0,163,Seguro
+Egg (Turkey),Dairy,23,21,59,2026-08-15,2026-08-08,2026-10-07,81,8.0,Active,158.0,161,Seguro
+Vanilla Biscuit,Bakery,94,34,21,2026-03-18,2026-03-11,2026-11-01,74,70.0,Backordered,-2.0,186,Seguro
+Digestive Biscuit,Bakery,38,43,91,2026-04-20,2026-04-13,2027-02-18,72,64.0,Active,-120.0,295,Seguro
+Evaporated Milk,Dairy,11,9,65,2026-10-13,2026-10-06,2026-06-10,48,96.0,Discontinued,-52.0,42,Seguro
+White Tea,Beverages,60,27,58,2026-12-26,2026-12-19,2026-11-19,43,91.0,Active,182.0,204,Seguro
+Avocado Oil,Oils & Fats,50,36,81,2026-09-26,2026-09-19,2026-06-04,27,6.0,Discontinued,137.0,36,Seguro
+Egg (Goose),Dairy,90,3,49,2026-05-06,2026-04-29,2027-02-13,51,87.0,Discontinued,3.0,290,Seguro
+Arborio Rice,Grains & Pulses,86,80,80,2026-03-18,2026-03-11,2026-05-20,22,67.0,Discontinued,-56.0,21,Próximo (30 días)
+Cauliflower,Fruits & Vegetables,86,66,24,2026-07-29,2026-07-22,2027-01-20,30,6.0,Discontinued,-190.0,266,Seguro
+Almond Flour,Grains & Pulses,54,17,90,2027-01-23,2027-01-16,2027-02-08,60,20.0,Active,169.0,285,Seguro
+Watermelon,Fruits & Vegetables,27,64,43,2026-11-14,2026-11-07,2026-03-22,70,58.0,Discontinued,-16.0,-38,Vencido
+Rye Bread,Bakery,50,58,78,2026-10-14,2026-10-07,2026-05-29,83,49.0,Active,180.0,30,Próximo (30 días)
+Onion,Fruits & Vegetables,68,10,29,2026-10-31,2026-10-24,2026-03-23,37,11.0,Discontinued,146.0,-37,Vencido
+Sourdough Bread,Bakery,22,60,73,2026-07-09,2026-07-02,2026-07-12,62,3.0,Backordered,-122.0,74,Seguro
+Cheese,Dairy,50,14,6,2026-06-02,2026-05-26,2026-09-08,60,72.0,Backordered,-200.0,132,Seguro
+Bell Pepper,Fruits & Vegetables,26,12,43,2027-01-17,2027-01-10,2027-02-24,73,20.0,Backordered,123.0,301,Seguro
+White Tea,Beverages,62,31,24,2026-04-30,2026-04-23,2027-02-06,89,100.0,Backordered,-41.0,283,Seguro
+Broccoli,Fruits & Vegetables,79,72,6,2026-07-11,2026-07-04,2026-05-01,67,63.0,Active,66.0,2,Crítico (15 días)
+Peach,Fruits & Vegetables,73,90,77,2026-02-25,2026-02-18,2026-03-06,75,19.0,Backordered,-171.0,-54,Vencido
+Carrot,Fruits & Vegetables,18,50,77,2026-11-03,2026-10-27,2027-02-19,44,19.0,Active,65.0,296,Seguro
+Kale,Fruits & Vegetables,79,74,87,2026-08-07,2026-07-31,2026-10-18,80,26.0,Backordered,120.0,172,Seguro
+Arabica Coffee,Beverages,23,13,15,2026-03-27,2026-03-20,2026-11-21,31,28.0,Backordered,-55.0,206,Seguro
+Milk,Dairy,18,64,86,2026-09-13,2026-09-06,2026-11-09,73,38.0,Active,96.0,194,Seguro
+Sunflower Oil,Oils & Fats,24,35,14,2026-05-04,2026-04-27,2026-12-01,91,71.0,Backordered,-51.0,216,Seguro
+Watermelon,Fruits & Vegetables,53,41,30,2026-03-16,2026-03-09,2026-09-19,24,77.0,Discontinued,-303.0,143,Seguro
+Yogurt,Dairy,85,83,13,2026-04-05,2026-03-29,2027-02-02,49,75.0,Backordered,19.0,279,Seguro
+Sesame Oil,Oils & Fats,15,34,57,2026-08-22,2026-08-15,2027-01-16,49,96.0,Discontinued,-143.0,262,Seguro
+Anchovies,Seafood,66,49,41,2026-06-27,2026-06-20,2026-07-26,27,37.0,Discontinued,-103.0,88,Seguro
+Corn Oil,Oils & Fats,17,63,66,2027-01-25,2027-01-18,2026-11-21,23,46.0,Backordered,1.0,206,Seguro
+Grapes,Fruits & Vegetables,13,61,77,2026-07-22,2026-07-15,2027-01-29,42,18.0,Backordered,-214.0,275,Seguro
+Digestive Biscuit,Bakery,34,49,27,2026-03-09,2026-03-02,2027-02-13,78,20.0,Discontinued,-260.0,290,Seguro
+Swiss Cheese,Dairy,85,89,41,2026-04-22,2026-04-15,2027-02-15,68,93.0,Discontinued,15.0,292,Seguro
+Cabbage,Fruits & Vegetables,12,95,49,2026-06-09,2026-06-02,2026-11-10,25,23.0,Backordered,-4.0,195,Seguro
+Oatmeal Biscuit,Bakery,82,6,53,2026-11-07,2026-10-31,2026-05-09,21,58.0,Active,192.0,10,Crítico (15 días)
+Sourdough Bread,Bakery,71,97,44,2026-11-27,2026-11-20,2026-07-07,58,14.0,Discontinued,275.0,69,Seguro
+Mozzarella Cheese,Dairy,58,17,26,2026-06-23,2026-06-16,2027-01-03,62,89.0,Backordered,-14.0,249,Seguro
+Rice Flour,Grains & Pulses,15,76,81,2026-11-16,2026-11-09,2027-02-06,90,26.0,Backordered,152.0,283,Seguro
+Pineapple,Fruits & Vegetables,68,25,16,2026-04-04,2026-03-28,2026-06-27,25,83.0,Active,-137.0,59,Seguro
+White Sugar,Grains & Pulses,13,32,79,2026-05-07,2026-04-30,2026-10-11,38,61.0,Discontinued,-285.0,165,Seguro
+Sesame Oil,Oils & Fats,45,7,58,2026-09-02,2026-08-26,2026-08-26,86,77.0,Discontinued,150.0,119,Seguro
+Egg (Goose),Dairy,40,22,74,2026-03-22,2026-03-15,2026-03-16,76,70.0,Backordered,-185.0,-44,Vencido
+Black Coffee,Beverages,62,23,25,2026-07-23,2026-07-16,2026-03-08,34,68.0,Discontinued,85.0,-52,Vencido
+Peanut Oil,Oils & Fats,79,3,36,2026-08-16,2026-08-09,2026-08-30,46,29.0,Discontinued,-162.0,123,Seguro
+Peas,Fruits & Vegetables,75,91,68,2026-10-31,2026-10-24,2026-12-10,96,73.0,Backordered,191.0,225,Seguro
+Almond Flour,Grains & Pulses,76,8,2,2026-10-04,2026-09-27,2026-05-28,24,53.0,Active,-35.0,29,Próximo (30 días)
+Canola Oil,Oils & Fats,96,51,40,2026-03-16,2026-03-09,2026-11-26,61,4.0,Discontinued,-49.0,211,Seguro
+Canola Oil,Oils & Fats,69,17,27,2027-01-14,2027-01-07,2026-05-29,79,75.0,Backordered,210.0,30,Próximo (30 días)
+Butter,Dairy,48,71,86,2026-04-29,2026-04-22,2026-08-29,95,3.0,Discontinued,-64.0,122,Seguro
+Cream,Dairy,82,3,82,2026-10-03,2026-09-26,2026-08-26,48,31.0,Active,-68.0,119,Seguro
+Zucchini,Fruits & Vegetables,43,21,31,2027-02-19,2027-02-12,2027-01-17,22,25.0,Backordered,239.0,263,Seguro
+Green Coffee,Beverages,90,68,74,2026-04-02,2026-03-26,2026-10-30,81,26.0,Backordered,-238.0,184,Seguro
+Milk,Dairy,13,39,98,2026-06-02,2026-05-26,2026-09-18,46,46.0,Backordered,-156.0,142,Seguro
+Cabbage,Fruits & Vegetables,62,79,95,2026-05-16,2026-05-09,2026-12-30,34,12.0,Active,-51.0,245,Seguro
+Coconut Sugar,Grains & Pulses,17,85,74,2026-05-01,2026-04-24,2026-03-30,76,89.0,Active,-273.0,-30,Vencido
+Sesame Oil,Oils & Fats,100,86,94,2026-08-11,2026-08-04,2026-06-04,77,57.0,Active,121.0,36,Seguro
+All-Purpose Flour,Grains & Pulses,54,69,68,2026-07-24,2026-07-17,2026-05-13,77,56.0,Discontinued,-104.0,14,Crítico (15 días)
+Whipped Cream,Dairy,98,24,4,2026-03-08,2026-03-01,2026-05-23,89,80.0,Active,-288.0,24,Próximo (30 días)
+Herbal Tea,Beverages,20,9,12,2026-06-26,2026-06-19,2026-03-16,46,32.0,Discontinued,-241.0,-44,Vencido
+Haddock,Seafood,43,7,63,2026-09-26,2026-09-19,2026-03-08,66,71.0,Active,64.0,-52,Vencido
+Green Coffee,Beverages,29,91,48,2026-10-05,2026-09-28,2026-08-16,28,40.0,Active,87.0,109,Seguro
+Grapes,Fruits & Vegetables,37,45,62,2026-12-08,2026-12-01,2026-04-20,34,23.0,Backordered,-35.0,-9,Vencido
+Cheddar Cheese,Dairy,85,28,32,2027-01-17,2027-01-10,2027-01-28,57,41.0,Backordered,206.0,274,Seguro
+Basmati Rice,Grains & Pulses,26,67,46,2026-12-08,2026-12-01,2026-04-04,54,46.0,Backordered,87.0,-25,Vencido
+White Tea,Beverages,91,78,61,2026-05-05,2026-04-28,2026-08-10,63,15.0,Backordered,-175.0,103,Seguro
+Ricotta Cheese,Dairy,50,46,38,2026-10-01,2026-09-24,2026-07-31,88,70.0,Active,90.0,93,Seguro
+Trout,Seafood,98,65,76,2026-09-27,2026-09-20,2026-06-27,62,47.0,Active,70.0,59,Seguro
+Egg (Duck),Dairy,37,53,61,2026-04-03,2026-03-27,2026-03-21,90,89.0,Backordered,-105.0,-39,Vencido
+White Bread,Bakery,78,68,68,2026-09-12,2026-09-05,2026-12-25,89,24.0,Backordered,191.0,240,Seguro
+Cauliflower,Fruits & Vegetables,48,27,73,2027-01-13,2027-01-06,2026-05-30,52,97.0,Discontinued,276.0,31,Seguro
+Arabica Coffee,Beverages,74,10,74,2026-07-27,2026-07-20,2026-03-20,100,66.0,Backordered,-67.0,-40,Vencido
+Pineapple,Fruits & Vegetables,18,7,58,2026-11-26,2026-11-19,2026-06-26,88,96.0,Discontinued,113.0,58,Seguro
+Cauliflower,Fruits & Vegetables,95,66,69,2026-06-08,2026-06-01,2027-02-04,92,72.0,Backordered,72.0,281,Seguro
+Egg (Turkey),Dairy,39,93,57,2026-06-04,2026-05-28,2027-01-03,26,44.0,Backordered,7.0,249,Seguro
+Peas,Fruits & Vegetables,48,72,55,2026-09-18,2026-09-11,2026-06-30,51,41.0,Active,129.0,62,Seguro
+Strawberries,Fruits & Vegetables,58,15,87,2026-07-10,2026-07-03,2026-07-29,52,81.0,Backordered,10.0,91,Seguro
+Greek Yogurt,Dairy,39,55,39,2026-08-15,2026-08-08,2026-06-20,47,59.0,Backordered,39.0,52,Seguro
+Papaya,Fruits & Vegetables,84,28,29,2027-02-09,2027-02-02,2026-12-14,54,32.0,Discontinued,-6.0,229,Seguro
+Sardines,Seafood,30,55,4,2026-08-25,2026-08-18,2027-01-31,56,31.0,Active,28.0,277,Seguro
+Sesame Oil,Oils & Fats,14,84,15,2027-01-28,2027-01-21,2026-12-12,51,73.0,Active,-10.0,227,Seguro
+Powdered Sugar,Grains & Pulses,21,15,27,2027-02-05,2027-01-29,2026-08-08,37,41.0,Active,117.0,101,Seguro
+Jasmine Rice,Grains & Pulses,17,19,74,2026-10-04,2026-09-27,2026-07-23,58,27.0,Discontinued,-65.0,85,Seguro
+Cauliflower,Fruits & Vegetables,34,92,26,2026-09-01,2026-08-25,2026-12-27,28,71.0,Active,144.0,242,Seguro
+Jasmine Rice,Grains & Pulses,56,48,82,2026-10-18,2026-10-11,2027-01-11,71,65.0,Backordered,-64.0,257,Seguro
+Plum,Fruits & Vegetables,64,71,69,2026-10-10,2026-10-03,2026-10-10,60,67.0,Active,118.0,164,Seguro
+Grapes,Fruits & Vegetables,87,62,2,2026-07-09,2026-07-02,2026-09-30,22,38.0,Backordered,106.0,154,Seguro
+Papaya,Fruits & Vegetables,24,25,52,2026-05-25,2026-05-18,2026-09-17,24,77.0,Backordered,2.0,141,Seguro
+Sushi Rice,Grains & Pulses,47,1,60,2027-01-29,2027-01-22,2026-04-18,32,87.0,Discontinued,255.0,-11,Vencido
+Digestive Biscuit,Bakery,61,8,45,2026-06-20,2026-06-13,2026-09-17,73,64.0,Discontinued,-99.0,141,Seguro
+Rye Bread,Bakery,48,2,16,2026-03-26,2026-03-19,2026-06-08,27,1.0,Discontinued,-243.0,40,Seguro
+Chocolate Biscuit,Bakery,37,96,82,2026-10-06,2026-09-29,2026-12-06,35,23.0,Backordered,-100.0,221,Seguro
+Arabica Coffee,Beverages,45,36,97,2026-12-27,2026-12-20,2027-01-25,36,6.0,Active,215.0,271,Seguro
+Bread Flour,Grains & Pulses,87,97,28,2026-06-12,2026-06-05,2026-04-18,58,21.0,Active,-103.0,-11,Vencido
+Almond Flour,Grains & Pulses,37,47,34,2026-07-30,2026-07-23,2026-07-20,38,89.0,Backordered,-93.0,82,Seguro
+Robusta Coffee,Beverages,59,62,57,2026-09-11,2026-09-04,2026-02-24,90,94.0,Backordered,57.0,-64,Vencido
+Pomegranate,Fruits & Vegetables,62,40,86,2026-07-15,2026-07-08,2026-06-05,45,86.0,Backordered,-124.0,37,Seguro
+Yogurt,Dairy,63,12,82,2026-09-23,2026-09-16,2026-05-23,56,31.0,Backordered,84.0,24,Próximo (30 días)
+Grapes,Fruits & Vegetables,38,72,39,2026-07-10,2026-07-03,2026-10-10,59,8.0,Active,16.0,164,Seguro
+Mackerel,Seafood,76,21,3,2027-01-21,2027-01-14,2026-03-14,31,47.0,Discontinued,164.0,-46,Vencido
+Egg (Quail),Dairy,34,94,69,2027-01-03,2026-12-27,2026-07-17,96,30.0,Backordered,297.0,79,Seguro
+Eggplant,Fruits & Vegetables,25,62,11,2026-10-01,2026-09-24,2026-09-07,57,98.0,Backordered,-61.0,131,Seguro
+Egg (Turkey),Dairy,86,16,37,2026-03-27,2026-03-20,2026-12-20,34,66.0,Active,-43.0,235,Seguro
+Oatmeal Biscuit,Bakery,41,21,47,2026-03-07,2026-02-28,2026-04-26,50,99.0,Active,-300.0,-3,Vencido
+Cauliflower,Fruits & Vegetables,77,54,10,2026-07-27,2026-07-20,2026-12-22,64,73.0,Active,-67.0,237,Seguro
+Egg (Duck),Dairy,41,61,69,2026-07-26,2026-07-19,2026-07-27,30,100.0,Discontinued,-192.0,89,Seguro
+Orange,Fruits & Vegetables,44,8,52,2026-05-11,2026-05-04,2026-08-04,42,66.0,Active,-213.0,97,Seguro
+Avocado Oil,Oils & Fats,53,89,100,2026-07-01,2026-06-24,2026-10-06,22,83.0,Backordered,86.0,160,Seguro
+Chocolate Biscuit,Bakery,68,29,100,2026-11-13,2026-11-06,2026-07-16,70,26.0,Backordered,47.0,78,Seguro
+Swiss Cheese,Dairy,96,34,57,2026-11-23,2026-11-16,2026-06-19,71,17.0,Discontinued,34.0,51,Seguro
+Garlic,Fruits & Vegetables,33,4,31,2026-03-13,2026-03-06,2026-06-14,46,92.0,Active,-305.0,46,Seguro
+Cauliflower,Fruits & Vegetables,33,89,15,2026-08-27,2026-08-20,2026-10-28,90,52.0,Discontinued,68.0,182,Seguro
+Watermelon,Fruits & Vegetables,90,17,17,2026-03-31,2026-03-24,2026-03-10,82,84.0,Backordered,-156.0,-50,Vencido
+Brown Rice,Grains & Pulses,31,29,57,2026-10-26,2026-10-19,2026-10-11,25,22.0,Active,130.0,165,Seguro
+Asparagus,Fruits & Vegetables,92,3,81,2026-04-05,2026-03-29,2026-12-19,62,20.0,Backordered,40.0,234,Seguro
+Cauliflower,Fruits & Vegetables,66,31,18,2026-04-06,2026-03-30,2026-04-08,85,39.0,Backordered,-266.0,-21,Vencido
+Anchovies,Seafood,83,17,39,2026-06-03,2026-05-27,2026-03-31,33,20.0,Active,-38.0,-29,Vencido
+Mango,Fruits & Vegetables,84,9,46,2026-06-08,2026-06-01,2026-12-10,30,68.0,Backordered,20.0,225,Seguro
+Haddock,Seafood,76,57,78,2026-06-18,2026-06-11,2026-04-28,52,86.0,Discontinued,-9.0,-1,Vencido
+Pomegranate,Fruits & Vegetables,26,1,9,2027-02-10,2027-02-03,2026-12-02,82,8.0,Backordered,311.0,217,Seguro
+Green Coffee,Beverages,61,31,100,2026-12-30,2026-12-23,2026-09-26,95,61.0,Active,289.0,150,Seguro
+Evaporated Milk,Dairy,15,75,78,2027-02-01,2027-01-25,2027-02-14,71,21.0,Discontinued,-11.0,291,Seguro
+Apricot,Fruits & Vegetables,73,83,74,2026-03-29,2026-03-22,2026-07-22,87,10.0,Discontinued,-313.0,84,Seguro
+Whole Wheat Flour,Grains & Pulses,41,76,47,2026-09-15,2026-09-08,2026-06-06,50,50.0,Backordered,148.0,38,Seguro
+Avocado Oil,Oils & Fats,14,75,10,2026-10-04,2026-09-27,2026-07-01,65,62.0,Active,-113.0,63,Seguro
+Mango,Fruits & Vegetables,99,59,12,2026-06-24,2026-06-17,2027-02-12,52,57.0,Backordered,-88.0,289,Seguro
+Asparagus,Fruits & Vegetables,80,6,92,2027-01-14,2027-01-07,2026-09-16,26,71.0,Discontinued,-6.0,140,Seguro
+Eggplant,Fruits & Vegetables,49,89,65,2026-05-24,2026-05-17,2026-05-17,37,48.0,Active,-79.0,18,Próximo (30 días)
+Grapes,Fruits & Vegetables,25,74,100,2026-06-07,2026-05-31,2026-12-04,41,59.0,Discontinued,-183.0,219,Seguro
+Sesame Oil,Oils & Fats,39,78,97,2026-10-29,2026-10-22,2026-07-17,54,89.0,Backordered,10.0,79,Seguro
+Orange,Fruits & Vegetables,94,58,17,2026-08-01,2026-07-25,2026-12-19,57,74.0,Backordered,27.0,234,Seguro
+Sardines,Seafood,11,17,59,2026-07-20,2026-07-13,2026-04-08,69,100.0,Backordered,115.0,-21,Vencido
+Peanut Oil,Oils & Fats,21,52,80,2026-06-03,2026-05-27,2027-01-01,49,37.0,Backordered,-154.0,247,Seguro
+Kiwi,Fruits & Vegetables,38,91,94,2026-07-12,2026-07-05,2026-11-21,53,87.0,Discontinued,-220.0,206,Seguro
+Palm Oil,Oils & Fats,58,23,66,2026-04-29,2026-04-22,2027-02-24,82,61.0,Backordered,-13.0,301,Seguro
+Plum,Fruits & Vegetables,85,16,74,2026-11-18,2026-11-11,2026-12-03,58,36.0,Backordered,41.0,218,Seguro
+Cauliflower,Fruits & Vegetables,63,62,98,2026-05-30,2026-05-23,2027-01-22,62,45.0,Backordered,70.0,268,Seguro
+Coconut Oil,Oils & Fats,54,86,69,2026-11-26,2026-11-19,2026-04-08,29,8.0,Discontinued,103.0,-21,Vencido
+Cherry,Fruits & Vegetables,30,25,11,2026-12-25,2026-12-18,2026-06-28,42,76.0,Active,166.0,60,Seguro
+Cauliflower,Fruits & Vegetables,57,25,98,2026-06-14,2026-06-07,2026-05-14,78,37.0,Active,110.0,15,Crítico (15 días)
+Vegetable Oil,Oils & Fats,18,72,71,2026-05-05,2026-04-28,2026-06-20,25,81.0,Active,-99.0,52,Seguro
+Tuna,Seafood,16,34,89,2026-12-26,2026-12-19,2026-04-29,35,52.0,Backordered,303.0,0,Crítico (15 días)
+Buttermilk,Dairy,39,80,68,2026-07-20,2026-07-13,2026-08-15,46,54.0,Discontinued,-17.0,108,Seguro
+Lemon,Fruits & Vegetables,59,82,69,2026-05-04,2026-04-27,2026-03-03,30,34.0,Discontinued,40.0,-57,Vencido
+Salmon,Seafood,79,28,4,2027-02-01,2027-01-25,2026-05-17,42,46.0,Active,134.0,18,Próximo (30 días)
+Egg (Quail),Dairy,78,61,6,2026-05-27,2026-05-20,2026-12-18,49,60.0,Active,-132.0,233,Seguro
+Sushi Rice,Grains & Pulses,22,10,53,2026-08-08,2026-08-01,2026-04-14,64,7.0,Active,-79.0,-15,Vencido
+Egg (Chicken),Dairy,10,17,70,2026-12-29,2026-12-22,2026-09-08,100,63.0,Backordered,6.0,132,Seguro
+Arborio Rice,Grains & Pulses,34,32,22,2026-05-02,2026-04-25,2027-02-07,42,27.0,Active,-184.0,284,Seguro
+Heavy Cream,Dairy,74,62,6,2026-12-27,2026-12-20,2026-08-14,65,96.0,Active,-17.0,107,Seguro
+Sushi Rice,Grains & Pulses,10,11,29,2027-02-13,2027-02-06,2026-07-22,29,72.0,Backordered,128.0,84,Seguro
+Basmati Rice,Grains & Pulses,11,87,64,2026-08-30,2026-08-23,2026-06-05,29,6.0,Active,83.0,37,Seguro
+Grapes,Fruits & Vegetables,99,68,1,2026-07-13,2026-07-06,2026-09-08,59,16.0,Discontinued,139.0,132,Seguro
+Swiss Cheese,Dairy,64,14,44,2026-06-23,2026-06-16,2026-12-29,53,33.0,Active,38.0,244,Seguro
+Pear,Fruits & Vegetables,58,55,5,2026-12-31,2026-12-24,2027-01-06,62,89.0,Active,258.0,252,Seguro
+Corn Oil,Oils & Fats,26,100,13,2026-11-23,2026-11-16,2027-01-07,45,45.0,Discontinued,66.0,253,Seguro
+Raw Sugar,Grains & Pulses,72,72,68,2026-09-29,2026-09-22,2026-11-17,39,78.0,Active,95.0,202,Seguro
+Mozzarella Cheese,Dairy,36,82,85,2026-04-28,2026-04-21,2026-08-05,27,67.0,Discontinued,30.0,98,Seguro
+Mushrooms,Fruits & Vegetables,24,21,4,2026-04-05,2026-03-29,2026-10-28,85,17.0,Backordered,-83.0,182,Seguro
+Onion,Fruits & Vegetables,16,75,42,2026-07-23,2026-07-16,2026-05-24,22,46.0,Active,124.0,25,Próximo (30 días)
+Banana,Fruits & Vegetables,39,19,18,2026-03-30,2026-03-23,2027-01-20,58,90.0,Active,-110.0,266,Seguro
+Zucchini,Fruits & Vegetables,89,56,74,2026-11-10,2026-11-03,2026-10-01,27,51.0,Backordered,103.0,155,Seguro
+Cherry,Fruits & Vegetables,57,82,59,2026-09-10,2026-09-03,2026-06-11,44,57.0,Active,-71.0,43,Seguro
+Herbal Tea,Beverages,61,22,98,2026-03-07,2026-02-28,2026-11-09,90,11.0,Active,-209.0,194,Seguro
+Short Grain Rice,Grains & Pulses,56,28,76,2026-10-25,2026-10-18,2026-09-02,93,69.0,Active,-102.0,126,Seguro
+Cream,Dairy,21,24,2,2026-04-05,2026-03-29,2026-09-28,87,36.0,Backordered,-159.0,152,Seguro
+Grapes,Fruits & Vegetables,59,29,100,2026-04-04,2026-03-28,2027-01-01,74,16.0,Discontinued,-239.0,247,Seguro
+Green Coffee,Beverages,20,68,20,2027-01-09,2027-01-02,2026-11-02,38,51.0,Active,189.0,187,Seguro
+Rye Bread,Bakery,99,6,88,2026-05-15,2026-05-08,2026-12-14,49,9.0,Active,-62.0,229,Seguro
+Green Tea,Beverages,24,27,35,2026-10-14,2026-10-07,2026-11-20,49,58.0,Active,-109.0,205,Seguro
+Sushi Rice,Grains & Pulses,78,94,7,2026-09-06,2026-08-30,2026-05-22,69,40.0,Backordered,-58.0,23,Próximo (30 días)
+Egg (Duck),Dairy,52,31,18,2026-04-28,2026-04-21,2027-02-02,77,16.0,Backordered,-207.0,279,Seguro
+Spinach,Fruits & Vegetables,45,70,98,2026-08-10,2026-08-03,2026-05-09,25,39.0,Backordered,14.0,10,Crítico (15 días)
+Apricot,Fruits & Vegetables,89,35,19,2027-01-31,2027-01-24,2026-05-07,49,55.0,Discontinued,115.0,8,Crítico (15 días)
+Kiwi,Fruits & Vegetables,63,57,11,2027-01-11,2027-01-04,2026-05-10,20,100.0,Discontinued,19.0,11,Crítico (15 días)
+Black Rice,Grains & Pulses,49,3,7,2026-09-19,2026-09-12,2026-03-13,75,46.0,Backordered,-42.0,-47,Vencido
+Green Tea,Beverages,26,59,54,2026-08-10,2026-08-03,2026-03-19,92,49.0,Active,-106.0,-41,Vencido
+Egg (Quail),Dairy,93,68,71,2027-02-09,2027-02-02,2026-09-17,30,37.0,Discontinued,335.0,141,Seguro
+Papaya,Fruits & Vegetables,81,16,69,2027-01-06,2026-12-30,2026-07-25,23,96.0,Backordered,155.0,87,Seguro
+Heavy Cream,Dairy,74,60,27,2026-06-17,2026-06-10,2026-11-17,99,68.0,Backordered,26.0,202,Seguro
+Black Tea,Beverages,19,78,90,2026-12-24,2026-12-17,2026-07-29,72,84.0,Discontinued,253.0,91,Seguro
+Short Grain Rice,Grains & Pulses,64,97,91,2026-11-25,2026-11-18,2026-08-02,48,100.0,Active,97.0,95,Seguro
+Bell Pepper,Fruits & Vegetables,49,93,15,2026-04-27,2026-04-20,2026-04-27,52,31.0,Backordered,-4.0,-2,Vencido
+Parmesan Cheese,Dairy,99,10,88,2026-07-14,2026-07-07,2027-01-20,69,98.0,Active,-144.0,266,Seguro
+Buttermilk,Dairy,60,1,42,2026-11-16,2026-11-09,2026-10-15,42,91.0,Active,81.0,169,Seguro
+Cabbage,Fruits & Vegetables,90,1,40,2026-10-20,2026-10-13,2027-02-16,52,19.0,Discontinued,-83.0,293,Seguro
+Haddock,Seafood,79,53,12,2026-08-18,2026-08-11,2027-01-10,45,95.0,Discontinued,81.0,256,Seguro
+Egg (Chicken),Dairy,22,58,2,2027-02-07,2027-01-31,2026-11-14,33,68.0,Active,224.0,199,Seguro
+Brown Rice,Grains & Pulses,51,47,6,2026-11-23,2026-11-16,2026-06-18,53,4.0,Backordered,104.0,50,Seguro
+Arabica Coffee,Beverages,65,63,41,2026-04-02,2026-03-26,2026-03-29,28,26.0,Backordered,-280.0,-31,Vencido
+Whipped Cream,Dairy,55,25,87,2026-05-13,2026-05-06,2027-01-29,69,48.0,Backordered,72.0,275,Seguro
+White Rice,Grains & Pulses,18,86,20,2026-12-26,2026-12-19,2026-11-29,64,34.0,Discontinued,22.0,214,Seguro
+Parmesan Cheese,Dairy,37,3,45,2026-10-25,2026-10-18,2026-11-21,39,28.0,Discontinued,186.0,206,Seguro
+Salmon,Seafood,88,40,29,2027-02-24,2027-02-17,2026-02-24,96,87.0,Discontinued,245.0,-64,Vencido
+Pineapple,Fruits & Vegetables,20,51,33,2026-04-03,2026-03-27,2027-02-12,80,41.0,Active,-296.0,289,Seguro
+Bread Flour,Grains & Pulses,99,54,71,2026-10-22,2026-10-15,2026-11-21,80,10.0,Discontinued,69.0,206,Seguro
+Asparagus,Fruits & Vegetables,46,88,20,2026-10-08,2026-10-01,2026-04-01,59,79.0,Backordered,-61.0,-28,Vencido
+Wild Rice,Grains & Pulses,19,77,66,2026-11-07,2026-10-31,2026-08-25,62,100.0,Active,-101.0,118,Seguro
+Yogurt,Dairy,12,83,93,2026-10-27,2026-10-20,2026-07-24,22,9.0,Backordered,121.0,86,Seguro
+Buttermilk,Dairy,69,98,89,2026-10-29,2026-10-22,2026-06-01,29,34.0,Discontinued,203.0,33,Seguro
+Egg (Duck),Dairy,63,38,77,2026-12-23,2026-12-16,2026-04-26,23,18.0,Active,-51.0,-3,Vencido
+Asparagus,Fruits & Vegetables,78,16,37,2026-10-12,2026-10-05,2026-06-01,25,96.0,Backordered,-53.0,33,Seguro
+White Bread,Bakery,72,20,71,2026-06-29,2026-06-22,2026-10-29,87,68.0,Discontinued,43.0,183,Seguro
+Wild Rice,Grains & Pulses,58,24,25,2026-08-24,2026-08-17,2026-03-21,75,26.0,Active,-85.0,-39,Vencido
+Egg (Goose),Dairy,88,22,61,2027-01-04,2026-12-28,2027-02-08,54,100.0,Discontinued,97.0,285,Seguro
+White Rice,Grains & Pulses,54,53,33,2026-04-07,2026-03-31,2026-07-05,94,82.0,Backordered,-285.0,67,Seguro
+Powdered Sugar,Grains & Pulses,64,10,100,2026-10-14,2026-10-07,2026-10-27,97,52.0,Active,131.0,181,Seguro
+Milk,Dairy,12,54,48,2026-11-06,2026-10-30,2026-04-21,31,88.0,Backordered,-44.0,-8,Vencido
+Mango,Fruits & Vegetables,61,14,49,2026-06-10,2026-06-03,2026-07-25,74,35.0,Discontinued,-185.0,87,Seguro
+Oatmeal Biscuit,Bakery,28,62,81,2026-03-27,2026-03-20,2026-10-07,28,30.0,Discontinued,-90.0,161,Seguro
+Spinach,Fruits & Vegetables,23,6,40,2026-03-20,2026-03-13,2026-06-19,95,24.0,Backordered,-274.0,51,Seguro
+Blueberries,Fruits & Vegetables,87,51,67,2027-01-07,2026-12-31,2026-05-06,55,100.0,Backordered,216.0,7,Crítico (15 días)
+Robusta Coffee,Beverages,59,31,3,2026-09-15,2026-09-08,2026-10-22,48,51.0,Active,-128.0,176,Seguro
+Watermelon,Fruits & Vegetables,13,88,11,2026-11-19,2026-11-12,2026-12-14,100,52.0,Backordered,198.0,229,Seguro
+Pomegranate,Fruits & Vegetables,81,87,15,2027-01-08,2027-01-01,2026-09-09,94,10.0,Backordered,-17.0,133,Seguro
+White Bread,Bakery,61,77,45,2026-03-21,2026-03-14,2026-06-22,51,48.0,Backordered,21.0,54,Seguro
+Carrot,Fruits & Vegetables,80,91,36,2026-03-24,2026-03-17,2026-10-26,81,74.0,Active,-106.0,180,Seguro
+Brown Rice,Grains & Pulses,39,57,54,2026-12-06,2026-11-29,2026-08-11,77,32.0,Active,275.0,104,Seguro
+Cabbage,Otros,69,21,68,2026-12-23,2026-12-16,2026-09-21,36,35.0,Discontinued,27.0,145,Seguro
+Egg (Goose),Dairy,60,43,32,2026-07-05,2026-06-28,2026-07-09,77,60.0,Active,-91.0,71,Seguro
+Sour Cream,Dairy,22,43,3,2027-02-01,2027-01-25,2026-10-08,45,87.0,Backordered,190.0,162,Seguro
+Almond Flour,Grains & Pulses,79,47,51,2026-07-19,2026-07-12,2027-01-28,83,69.0,Discontinued,-212.0,274,Seguro
+Broccoli,Fruits & Vegetables,47,63,86,2026-05-19,2026-05-12,2026-05-07,76,29.0,Active,-270.0,8,Crítico (15 días)
+Jasmine Rice,Grains & Pulses,20,25,73,2026-10-08,2026-10-01,2026-09-25,78,1.0,Discontinued,98.0,149,Seguro
+Gouda Cheese,Dairy,41,22,11,2026-06-19,2026-06-12,2026-04-17,86,30.0,Active,57.0,-12,Vencido
+Tilapia,Seafood,46,80,88,2026-09-19,2026-09-12,2026-06-17,62,22.0,Discontinued,104.0,49,Seguro
+Palm Oil,Oils & Fats,67,57,36,2026-08-02,2026-07-26,2026-05-27,78,60.0,Active,114.0,28,Próximo (30 días)
+Arborio Rice,Grains & Pulses,51,19,96,2026-11-23,2026-11-16,2026-06-26,73,42.0,Active,-78.0,58,Seguro
+White Sugar,Grains & Pulses,42,12,28,2026-03-10,2026-03-03,2026-05-10,80,8.0,Discontinued,-22.0,11,Crítico (15 días)
+Sesame Oil,Oils & Fats,85,86,21,2026-06-30,2026-06-23,2026-07-18,78,53.0,Backordered,-24.0,80,Seguro
+Sunflower Oil,Oils & Fats,23,43,75,2026-11-08,2026-11-01,2026-04-03,91,86.0,Discontinued,8.0,-26,Vencido
+Bell Pepper,Fruits & Vegetables,84,26,37,2026-04-15,2026-04-08,2027-01-24,46,67.0,Backordered,48.0,270,Seguro
+Greek Yogurt,Fruits & Vegetables,28,38,23,2026-10-28,2026-10-21,2026-08-08,48,56.0,Backordered,-48.0,101,Seguro
+White Bread,Bakery,62,49,38,2026-12-16,2026-12-09,2026-10-09,42,44.0,Discontinued,201.0,163,Seguro
+Egg (Goose),Dairy,65,94,4,2026-07-31,2026-07-24,2026-12-28,66,36.0,Backordered,-183.0,243,Seguro
+Lime,Fruits & Vegetables,18,8,68,2026-06-02,2026-05-26,2026-04-19,54,45.0,Backordered,-123.0,-10,Vencido
+Egg (Chicken),Dairy,70,29,24,2026-03-31,2026-03-24,2026-09-17,62,55.0,Backordered,-209.0,141,Seguro
+Vegetable Oil,Oils & Fats,23,71,32,2026-04-14,2026-04-07,2026-08-18,63,23.0,Discontinued,-277.0,111,Seguro
+Jasmine Rice,Grains & Pulses,26,83,24,2027-02-07,2027-01-31,2026-05-17,75,12.0,Backordered,101.0,18,Próximo (30 días)
+Robusta Coffee,Beverages,20,42,45,2026-03-22,2026-03-15,2026-09-22,72,28.0,Discontinued,-95.0,146,Seguro
+Mozzarella Cheese,Dairy,55,58,6,2027-01-17,2027-01-10,2026-09-23,48,17.0,Discontinued,189.0,147,Seguro
+Whole Wheat Flour,Grains & Pulses,82,67,67,2026-03-25,2026-03-18,2026-10-19,26,1.0,Backordered,-104.0,173,Seguro
+Salmon,Seafood,73,12,28,2026-09-15,2026-09-08,2026-11-29,89,92.0,Active,99.0,214,Seguro
+White Tea,Beverages,81,83,36,2026-10-26,2026-10-19,2026-10-16,74,86.0,Backordered,-73.0,170,Seguro
+Onion,Fruits & Vegetables,20,65,61,2026-07-04,2026-06-27,2026-10-15,51,78.0,Active,-6.0,169,Seguro
+Black Coffee,Beverages,78,38,27,2026-04-06,2026-03-30,2026-09-12,54,42.0,Active,-94.0,136,Seguro
+Butter Biscuit,Bakery,84,58,28,2026-04-17,2026-04-10,2026-05-25,51,12.0,Active,-293.0,26,Próximo (30 días)
+Corn Oil,Oils & Fats,32,38,23,2026-06-16,2026-06-09,2027-02-02,52,11.0,Discontinued,18.0,279,Seguro
+Coconut Oil,Oils & Fats,90,75,6,2026-07-06,2026-06-29,2026-08-31,55,64.0,Active,-179.0,124,Seguro
+Evaporated Milk,Dairy,70,81,75,2026-09-08,2026-09-01,2026-02-28,24,54.0,Backordered,194.0,-60,Vencido
+Bell Pepper,Fruits & Vegetables,90,22,20,2026-06-30,2026-06-23,2027-01-13,81,88.0,Backordered,-237.0,259,Seguro
+Lettuce,Fruits & Vegetables,100,7,14,2026-12-16,2026-12-09,2026-07-25,26,33.0,Backordered,285.0,87,Seguro
+Brown Rice,Grains & Pulses,89,54,15,2026-10-09,2026-10-02,2026-05-03,64,63.0,Active,69.0,4,Crítico (15 días)
+Whole Wheat Flour,Grains & Pulses,38,43,28,2026-10-01,2026-09-24,2026-09-15,34,54.0,Backordered,67.0,139,Seguro
+Rye Bread,Bakery,61,20,29,2026-04-19,2026-04-12,2026-09-12,71,97.0,Backordered,37.0,136,Seguro
+Orange,Fruits & Vegetables,75,48,25,2026-12-11,2026-12-04,2026-08-29,96,65.0,Backordered,116.0,122,Seguro
+Multigrain Bread,Bakery,87,70,77,2026-05-08,2026-05-01,2027-02-02,73,44.0,Active,71.0,279,Seguro
+Bread Flour,Grains & Pulses,71,77,30,2026-07-17,2026-07-10,2027-01-20,34,57.0,Backordered,-115.0,266,Seguro
+Haddock,Seafood,98,100,34,2026-10-13,2026-10-06,2026-08-27,53,20.0,Active,228.0,120,Seguro
+Green Beans,Fruits & Vegetables,19,92,41,2027-01-05,2026-12-29,2026-10-13,51,79.0,Active,-6.0,167,Seguro
+Coconut,Fruits & Vegetables,85,90,16,2026-05-25,2026-05-18,2026-07-30,61,80.0,Backordered,-9.0,92,Seguro
+Apple,Fruits & Vegetables,71,36,45,2027-01-29,2027-01-22,2027-01-02,87,2.0,Backordered,73.0,248,Seguro
+Brown Rice,Grains & Pulses,44,48,77,2026-08-23,2026-08-16,2027-01-23,67,79.0,Discontinued,-25.0,269,Seguro
+Rice Flour,Grains & Pulses,25,95,71,2026-06-25,2026-06-18,2027-01-14,24,76.0,Backordered,-14.0,260,Seguro
+Peanut Oil,Oils & Fats,24,14,5,2026-06-20,2026-06-13,2026-06-17,98,9.0,Active,82.0,49,Seguro
+Anchovies,Seafood,44,97,76,2026-05-27,2026-05-20,2026-12-15,80,33.0,Discontinued,47.0,230,Seguro
+Powdered Sugar,Grains & Pulses,63,4,46,2026-08-17,2026-08-10,2026-03-09,40,69.0,Discontinued,149.0,-51,Vencido
+Palm Oil,Oils & Fats,69,59,29,2026-10-30,2026-10-23,2026-05-22,63,91.0,Active,160.0,23,Próximo (30 días)
+Tuna,Seafood,88,71,9,2026-03-14,2026-03-07,2026-03-16,28,14.0,Backordered,-289.0,-44,Vencido
+Robusta Coffee,Beverages,74,2,45,2026-02-28,2026-02-21,2026-04-06,37,99.0,Active,-340.0,-23,Vencido
+Bell Pepper,Fruits & Vegetables,98,43,9,2026-06-25,2026-06-18,2026-12-29,86,62.0,Backordered,111.0,244,Seguro
+Egg (Chicken),Dairy,22,19,4,2026-04-18,2026-04-11,2026-09-17,88,24.0,Discontinued,32.0,141,Seguro
+Apricot,Fruits & Vegetables,55,96,40,2026-05-16,2026-05-09,2026-06-06,23,47.0,Discontinued,5.0,38,Seguro
+Ricotta Cheese,Dairy,96,80,20,2026-12-19,2026-12-12,2027-01-28,94,49.0,Discontinued,142.0,274,Seguro
+Feta Cheese,Dairy,91,7,64,2026-11-09,2026-11-02,2027-02-24,32,65.0,Discontinued,89.0,301,Seguro
+Digestive Biscuit,Bakery,40,91,24,2026-07-29,2026-07-22,2026-11-30,28,47.0,Discontinued,-136.0,215,Seguro
+Salmon,Seafood,52,46,12,2026-12-18,2026-12-11,2026-04-16,43,34.0,Backordered,197.0,-13,Vencido
+Lettuce,Fruits & Vegetables,22,22,65,2027-01-15,2027-01-08,2026-06-12,62,78.0,Backordered,260.0,44,Seguro
+Black Rice,Grains & Pulses,98,41,98,2027-01-05,2026-12-29,2027-01-18,70,75.0,Backordered,127.0,264,Seguro
+Whole Wheat Flour,Grains & Pulses,59,73,86,2027-02-13,2027-02-06,2026-09-11,32,56.0,Backordered,43.0,135,Seguro
+Chocolate Biscuit,Bakery,99,3,79,2026-06-05,2026-05-29,2026-11-21,65,16.0,Backordered,-225.0,206,Seguro
+Black Tea,Beverages,18,36,53,2026-05-12,2026-05-05,2026-06-24,65,100.0,Active,11.0,56,Seguro
+Watermelon,Fruits & Vegetables,58,12,99,2027-01-22,2027-01-15,2026-05-26,71,30.0,Active,10.0,27,Próximo (30 días)
+Black Rice,Grains & Pulses,30,34,96,2026-11-04,2026-10-28,2026-04-22,61,13.0,Backordered,-45.0,-7,Vencido
+Papaya,Fruits & Vegetables,97,97,71,2026-07-12,2026-07-05,2026-08-22,53,31.0,Active,-79.0,115,Seguro
+Egg (Goose),Dairy,50,93,37,2027-01-11,2027-01-04,2026-05-12,78,79.0,Backordered,315.0,13,Crítico (15 días)
+Cheddar Cheese,Dairy,70,96,35,2027-02-08,2027-02-01,2027-01-17,63,84.0,Backordered,229.0,263,Seguro
+Blueberries,Fruits & Vegetables,40,61,47,2026-08-28,2026-08-21,2026-05-27,76,10.0,Discontinued,78.0,28,Próximo (30 días)
+Corn Oil,Oils & Fats,75,23,34,2026-06-22,2026-06-15,2026-07-04,100,54.0,Backordered,-74.0,66,Seguro
+Strawberries,Fruits & Vegetables,26,97,12,2026-09-25,2026-09-18,2026-06-12,94,58.0,Discontinued,-64.0,44,Seguro
+Arabica Coffee,Beverages,13,55,77,2026-10-17,2026-10-10,2026-11-03,67,68.0,Backordered,-60.0,188,Seguro
+Plum,Fruits & Vegetables,11,58,32,2026-02-27,2026-02-20,2026-11-24,99,94.0,Active,-132.0,209,Seguro
+Salmon,Seafood,98,67,49,2026-08-09,2026-08-02,2026-04-04,21,61.0,Active,-142.0,-25,Vencido
+Broccoli,Fruits & Vegetables,35,4,76,2026-08-09,2026-08-02,2026-08-16,90,30.0,Discontinued,-13.0,109,Seguro
+Mackerel,Seafood,45,56,64,2026-07-14,2026-07-07,2026-07-05,35,82.0,Discontinued,-43.0,67,Seguro
+Kale,Fruits & Vegetables,47,22,69,2026-03-02,2026-02-23,2026-06-03,26,59.0,Backordered,-134.0,35,Seguro
+Sesame Oil,Oils & Fats,89,66,28,2027-01-13,2027-01-06,2026-11-25,39,25.0,Active,55.0,210,Seguro
+Black Coffee,Beverages,33,22,94,2026-11-28,2026-11-21,2026-08-30,96,56.0,Discontinued,65.0,123,Seguro
+Apricot,Fruits & Vegetables,90,30,42,2026-08-19,2026-08-12,2026-03-02,76,69.0,Backordered,21.0,-58,Vencido
+Jasmine Rice,Grains & Pulses,44,26,60,2026-03-15,2026-03-08,2026-08-05,63,59.0,Discontinued,-161.0,98,Seguro
+Wild Rice,Grains & Pulses,41,56,12,2026-05-06,2026-04-29,2026-02-28,93,88.0,Active,-203.0,-60,Vencido
+Potato,Fruits & Vegetables,72,58,69,2026-10-16,2026-10-09,2027-02-23,96,23.0,Backordered,-110.0,300,Seguro
+Egg (Goose),Dairy,72,58,52,2027-02-15,2027-02-08,2026-10-23,36,14.0,Active,275.0,177,Seguro
+Black Coffee,Beverages,40,30,60,2026-09-05,2026-08-29,2026-05-03,33,84.0,Active,-48.0,4,Crítico (15 días)
+Whole Wheat Bread,Bakery,36,53,92,2026-07-07,2026-06-30,2026-03-22,67,43.0,Backordered,36.0,-38,Vencido
+Vegetable Oil,Oils & Fats,51,87,86,2026-04-01,2026-03-25,2026-06-11,24,83.0,Backordered,-48.0,43,Seguro
+Black Coffee,Beverages,87,91,23,2026-12-29,2026-12-22,2026-08-17,90,75.0,Backordered,220.0,110,Seguro
+Pear,Fruits & Vegetables,79,37,98,2026-09-01,2026-08-25,2026-03-30,33,20.0,Discontinued,183.0,-30,Vencido
+Tilapia,Seafood,14,52,80,2026-07-26,2026-07-19,2026-07-23,64,17.0,Discontinued,13.0,85,Seguro
+Orange,Fruits & Vegetables,81,35,82,2026-12-30,2026-12-23,2027-02-10,86,71.0,Backordered,280.0,287,Seguro
+Lime,Fruits & Vegetables,75,18,65,2027-02-17,2027-02-10,2026-03-15,32,92.0,Active,49.0,-45,Vencido
+Gouda Cheese,Dairy,48,12,62,2026-06-15,2026-06-08,2026-09-19,59,23.0,Active,42.0,143,Seguro
+Onion,Fruits & Vegetables,50,68,90,2026-12-12,2026-12-05,2026-06-05,40,13.0,Discontinued,217.0,37,Seguro
+Haddock,Seafood,11,87,43,2027-01-02,2026-12-26,2027-02-09,86,91.0,Active,210.0,286,Seguro
+Almond Flour,Grains & Pulses,74,22,91,2026-08-25,2026-08-18,2026-06-19,24,12.0,Active,-150.0,51,Seguro
+Tomato,Fruits & Vegetables,11,10,60,2026-10-10,2026-10-03,2026-12-25,93,53.0,Discontinued,157.0,240,Seguro
+Heavy Cream,Dairy,85,15,30,2026-04-16,2026-04-09,2026-12-06,95,63.0,Active,-192.0,221,Seguro
+Cauliflower,Fruits & Vegetables,57,43,46,2026-06-13,2026-06-06,2026-08-04,87,88.0,Discontinued,-171.0,97,Seguro
+Lime,Fruits & Vegetables,75,56,57,2026-10-27,2026-10-20,2026-09-19,63,64.0,Discontinued,2.0,143,Seguro
+Egg (Turkey),Dairy,63,7,23,2026-09-07,2026-08-31,2026-10-17,78,100.0,Active,-76.0,171,Seguro
+White Tea,Beverages,35,20,42,2026-06-30,2026-06-23,2027-01-08,53,56.0,Discontinued,-36.0,254,Seguro
+Cabbage,Fruits & Vegetables,24,32,17,2026-09-29,2026-09-22,2026-07-02,55,72.0,Discontinued,104.0,64,Seguro
+Jasmine Rice,Grains & Pulses,53,26,3,2026-03-02,2026-02-23,2026-03-06,100,94.0,Active,-124.0,-54,Vencido
+Butter Biscuit,Bakery,74,81,41,2027-02-05,2027-01-29,2026-05-27,51,67.0,Active,279.0,28,Próximo (30 días)
+Brown Rice,Grains & Pulses,79,38,67,2026-07-05,2026-06-28,2026-09-01,43,93.0,Discontinued,-95.0,125,Seguro
+Bread Flour,Grains & Pulses,54,78,81,2026-05-02,2026-04-25,2026-07-05,41,63.0,Backordered,-205.0,67,Seguro
+Palm Oil,Oils & Fats,44,83,78,2026-07-08,2026-07-01,2026-08-20,46,4.0,Discontinued,-183.0,113,Seguro
+Almond Flour,Grains & Pulses,77,19,31,2026-10-29,2026-10-22,2026-03-20,27,25.0,Backordered,-86.0,-40,Vencido
+Apricot,Fruits & Vegetables,42,61,52,2026-12-02,2026-11-25,2026-09-29,86,99.0,Backordered,-60.0,153,Seguro
+Sweet Potato,Fruits & Vegetables,44,77,45,2026-07-27,2026-07-20,2026-05-24,89,64.0,Discontinued,35.0,25,Próximo (30 días)
+Sour Cream,Dairy,81,76,10,2026-05-13,2026-05-06,2026-12-18,68,100.0,Backordered,-14.0,233,Seguro
+Black Rice,Grains & Pulses,92,48,22,2026-11-29,2026-11-22,2027-01-20,38,61.0,Backordered,-2.0,266,Seguro
+Salmon,Seafood,78,68,86,2026-03-25,2026-03-18,2026-12-28,47,95.0,Discontinued,5.0,243,Seguro
+Heavy Cream,Dairy,85,66,85,2027-01-06,2026-12-30,2026-09-09,65,58.0,Discontinued,67.0,133,Seguro
+Pomegranate,Fruits & Vegetables,65,69,4,2026-08-14,2026-08-07,2026-10-13,80,26.0,Active,60.0,167,Seguro
+Olive Oil,Oils & Fats,36,3,54,2026-03-03,2026-02-24,2026-12-13,74,8.0,Discontinued,-102.0,228,Seguro
+Potato,Fruits & Vegetables,26,63,88,2026-05-09,2026-05-02,2026-05-24,84,70.0,Active,70.0,25,Próximo (30 días)
+Sunflower Oil,Oils & Fats,39,13,13,2026-09-13,2026-09-06,2026-03-14,84,93.0,Active,-159.0,-46,Vencido
+White Sugar,Grains & Pulses,39,83,21,2026-12-31,2026-12-24,2026-04-12,73,88.0,Active,252.0,-17,Vencido
+Cabbage,Fruits & Vegetables,83,61,4,2026-09-16,2026-09-09,2026-10-24,35,7.0,Backordered,-50.0,178,Seguro
+Cucumber,Fruits & Vegetables,28,5,9,2027-01-16,2027-01-09,2026-03-04,33,9.0,Discontinued,0.0,-56,Vencido
+Tuna,Seafood,85,17,96,2026-11-05,2026-10-29,2026-04-08,92,34.0,Discontinued,126.0,-21,Vencido
+Lime,Fruits & Vegetables,76,39,15,2026-12-06,2026-11-29,2026-08-16,77,70.0,Backordered,166.0,109,Seguro
+Tomato,Fruits & Vegetables,100,64,62,2026-12-15,2026-12-08,2026-08-24,84,44.0,Discontinued,-15.0,117,Seguro
+Pomegranate,Fruits & Vegetables,17,45,44,2026-07-25,2026-07-18,2026-10-10,37,16.0,Active,113.0,164,Seguro
+Anchovies,Seafood,51,35,95,2026-10-22,2026-10-15,2026-08-16,80,89.0,Backordered,167.0,109,Seguro
+Grapes,Fruits & Vegetables,54,88,43,2027-02-12,2027-02-05,2026-04-19,81,77.0,Backordered,264.0,-10,Vencido
+Sourdough Bread,Bakery,94,56,80,2027-01-04,2026-12-28,2026-09-27,47,96.0,Backordered,33.0,151,Seguro
+Asparagus,Fruits & Vegetables,34,95,18,2026-10-14,2026-10-07,2026-05-12,41,26.0,Discontinued,-3.0,13,Crítico (15 días)
+Herbal Tea,Beverages,27,1,3,2026-04-16,2026-04-09,2026-11-28,34,63.0,Backordered,-115.0,213,Seguro
+All-Purpose Flour,Grains & Pulses,50,42,20,2026-11-06,2026-10-30,2026-07-24,87,59.0,Active,-105.0,86,Seguro
+Almond Flour,Grains & Pulses,85,12,94,2026-03-24,2026-03-17,2026-03-14,26,32.0,Discontinued,-215.0,-46,Vencido
+Rice Flour,Grains & Pulses,24,2,49,2026-06-02,2026-05-26,2026-09-05,98,82.0,Active,-237.0,129,Seguro
+Halibut,Seafood,82,31,86,2026-04-10,2026-04-03,2027-01-08,66,74.0,Active,-37.0,254,Seguro
+Apple,Fruits & Vegetables,17,14,17,2026-03-24,2026-03-17,2026-04-14,36,64.0,Discontinued,-195.0,-15,Vencido
+Canola Oil,Oils & Fats,25,97,63,2026-10-22,2026-10-15,2026-08-15,72,23.0,Discontinued,122.0,108,Seguro
+Tilapia,Seafood,56,59,87,2027-01-26,2027-01-19,2026-07-29,65,45.0,Active,34.0,91,Seguro
+Evaporated Milk,Dairy,72,3,10,2027-01-18,2027-01-11,2026-10-05,52,14.0,Backordered,171.0,159,Seguro
+Mushrooms,Fruits & Vegetables,65,42,62,2026-10-24,2026-10-17,2026-07-13,54,2.0,Active,127.0,75,Seguro
+Grapes,Fruits & Vegetables,30,66,28,2026-08-09,2026-08-02,2026-12-28,63,98.0,Active,-183.0,243,Seguro
+Onion,Fruits & Vegetables,39,37,48,2026-11-27,2026-11-20,2026-06-24,25,19.0,Active,93.0,56,Seguro
+Pineapple,Fruits & Vegetables,14,81,65,2026-11-17,2026-11-10,2026-10-22,74,84.0,Active,247.0,176,Seguro
+Carrot,Fruits & Vegetables,74,37,57,2027-02-14,2027-02-07,2026-12-18,91,18.0,Active,347.0,233,Seguro
+Parmesan Cheese,Dairy,63,41,98,2026-10-22,2026-10-15,2026-08-14,37,7.0,Active,-56.0,107,Seguro
+Peach,Fruits & Vegetables,47,67,57,2026-12-04,2026-11-27,2027-02-23,36,48.0,Backordered,135.0,300,Seguro
+Egg (Turkey),Dairy,42,94,79,2026-12-17,2026-12-10,2026-05-16,61,92.0,Backordered,-4.0,17,Próximo (30 días)
+Tomato,Fruits & Vegetables,32,49,73,2026-07-06,2026-06-29,2026-05-27,80,36.0,Discontinued,75.0,28,Próximo (30 días)
+Lettuce,Fruits & Vegetables,88,56,72,2027-01-12,2027-01-05,2026-06-28,25,36.0,Active,275.0,60,Seguro
+Yogurt,Dairy,80,69,71,2026-08-27,2026-08-20,2026-04-17,41,43.0,Backordered,116.0,-12,Vencido
+Orange,Fruits & Vegetables,36,59,90,2026-07-08,2026-07-01,2026-11-11,25,60.0,Discontinued,-154.0,196,Seguro
+Bread Flour,Grains & Pulses,11,77,7,2026-10-26,2026-10-19,2026-07-10,77,46.0,Backordered,-10.0,72,Seguro
+Peach,Fruits & Vegetables,40,83,50,2026-06-05,2026-05-29,2026-06-16,92,50.0,Active,-90.0,48,Seguro
+Bread Flour,Grains & Pulses,63,43,8,2026-08-20,2026-08-13,2026-12-08,55,72.0,Active,122.0,223,Seguro
+Raw Sugar,Grains & Pulses,90,75,43,2026-05-28,2026-05-21,2027-02-23,80,57.0,Discontinued,-113.0,300,Seguro
+Multigrain Bread,Bakery,47,26,40,2026-12-13,2026-12-06,2026-11-26,30,72.0,Active,-30.0,211,Seguro
+Digestive Biscuit,Bakery,29,2,84,2026-03-21,2026-03-14,2026-09-25,80,85.0,Backordered,-29.0,149,Seguro
+Peach,Fruits & Vegetables,94,69,68,2026-07-08,2026-07-01,2027-02-13,24,20.0,Discontinued,-192.0,290,Seguro
+Mango,Fruits & Vegetables,32,63,92,2026-11-17,2026-11-10,2026-11-09,84,34.0,Discontinued,115.0,194,Seguro
+Plum,Fruits & Vegetables,40,3,5,2026-03-04,2026-02-25,2026-06-24,45,69.0,Discontinued,-103.0,56,Seguro
+Egg (Goose),Dairy,50,66,1,2026-10-22,2026-10-15,2027-02-04,76,73.0,Active,-46.0,281,Seguro
+Cod,Seafood,72,29,10,2026-03-06,2026-02-27,2026-03-24,54,38.0,Discontinued,-32.0,-36,Vencido
+Pomegranate,Fruits & Vegetables,22,35,55,2026-08-30,2026-08-23,2026-10-26,41,27.0,Active,3.0,180,Seguro
+Chocolate Biscuit,Bakery,23,76,70,2027-01-07,2026-12-31,2026-09-01,97,38.0,Backordered,110.0,125,Seguro
+Halibut,Seafood,35,72,70,2026-04-17,2026-04-10,2027-02-10,74,15.0,Backordered,13.0,287,Seguro
+Cucumber,Fruits & Vegetables,12,93,29,2027-02-20,2027-02-13,2026-08-15,45,12.0,Backordered,76.0,108,Seguro
+Cheddar Cheese,Dairy,86,23,1,2026-06-20,2026-06-13,2026-03-23,100,86.0,Backordered,32.0,-37,Vencido
+Mackerel,Seafood,91,96,90,2027-02-14,2027-02-07,2026-12-24,90,75.0,Backordered,187.0,239,Seguro
+Evaporated Milk,Dairy,23,99,97,2026-06-09,2026-06-02,2026-04-10,68,76.0,Discontinued,64.0,-19,Vencido
+Onion,Fruits & Vegetables,98,40,100,2027-02-03,2027-01-27,2026-12-19,46,9.0,Active,96.0,234,Seguro
+Cherry,Fruits & Vegetables,29,66,21,2026-10-29,2026-10-22,2026-11-07,74,93.0,Discontinued,110.0,192,Seguro
+Coconut,Fruits & Vegetables,32,27,26,2026-05-30,2026-05-23,2027-01-14,38,79.0,Backordered,-174.0,260,Seguro
+Pear,Fruits & Vegetables,84,74,48,2026-12-24,2026-12-17,2026-05-24,64,32.0,Backordered,68.0,25,Próximo (30 días)
+Yogurt,Dairy,86,20,67,2027-02-12,2027-02-05,2026-08-03,83,82.0,Discontinued,220.0,96,Seguro
+Black Rice,Grains & Pulses,11,58,26,2026-06-06,2026-05-30,2026-07-08,49,34.0,Active,-180.0,70,Seguro
+Whole Wheat Flour,Grains & Pulses,60,69,64,2027-02-23,2027-02-16,2027-01-02,51,6.0,Active,351.0,248,Seguro
+Whole Wheat Bread,Bakery,58,48,9,2026-12-07,2026-11-30,2026-03-19,98,69.0,Active,126.0,-41,Vencido
+Ricotta Cheese,Dairy,64,95,62,2026-05-24,2026-05-17,2026-05-17,55,1.0,Discontinued,-90.0,18,Próximo (30 días)
+Canola Oil,Oils & Fats,19,80,87,2026-10-11,2026-10-04,2026-12-30,33,38.0,Backordered,-12.0,245,Seguro
+Cherry,Fruits & Vegetables,43,41,100,2026-06-16,2026-06-09,2026-06-01,27,78.0,Active,69.0,33,Seguro
+Peanut Oil,Oils & Fats,38,62,47,2026-12-02,2026-11-25,2026-11-13,41,34.0,Discontinued,-10.0,198,Seguro
+Buttermilk,Dairy,70,66,74,2026-11-11,2026-11-04,2026-03-28,47,77.0,Active,123.0,-32,Vencido
+Asparagus,Fruits & Vegetables,18,3,39,2026-10-18,2026-10-11,2026-11-24,58,61.0,Backordered,-121.0,209,Seguro
+Brown Rice,Grains & Pulses,46,81,47,2026-09-05,2026-08-29,2027-01-16,48,48.0,Active,-6.0,262,Seguro
+Arabica Coffee,Beverages,78,34,39,2026-11-13,2026-11-06,2026-08-23,62,2.0,Active,79.0,116,Seguro
+Canola Oil,Oils & Fats,53,20,75,2026-06-12,2026-06-05,2027-01-04,83,77.0,Backordered,-111.0,250,Seguro
+Haddock,Seafood,67,71,4,2026-12-19,2026-12-12,2026-07-08,76,34.0,Backordered,249.0,70,Seguro
+Egg (Chicken),Dairy,36,30,44,2026-04-11,2026-04-04,2026-05-26,68,88.0,Backordered,39.0,27,Próximo (30 días)
+Whole Wheat Flour,Grains & Pulses,39,53,64,2026-06-22,2026-06-15,2026-12-27,92,8.0,Active,-10.0,242,Seguro
+Sweet Potato,Fruits & Vegetables,95,87,13,2026-10-12,2026-10-05,2026-08-04,61,4.0,Backordered,224.0,97,Seguro
+Almond Flour,Grains & Pulses,12,56,92,2026-05-08,2026-05-01,2026-05-13,56,6.0,Active,-221.0,14,Crítico (15 días)
+Wild Rice,Grains & Pulses,98,30,39,2026-11-25,2026-11-18,2026-08-10,31,26.0,Active,225.0,103,Seguro
+Jasmine Rice,Grains & Pulses,50,14,99,2027-01-09,2027-01-02,2026-04-15,52,75.0,Active,287.0,-14,Vencido
+Zucchini,Fruits & Vegetables,98,14,11,2026-04-17,2026-04-10,2026-03-20,48,38.0,Discontinued,-228.0,-40,Vencido
+Corn Oil,Oils & Fats,28,32,71,2026-12-22,2026-12-15,2026-12-06,32,49.0,Discontinued,234.0,221,Seguro
+Cucumber,Fruits & Vegetables,67,14,25,2026-05-02,2026-04-25,2026-10-16,81,77.0,Active,-110.0,170,Seguro
+Onion,Fruits & Vegetables,20,93,37,2026-10-20,2026-10-13,2026-12-25,23,2.0,Discontinued,227.0,240,Seguro
+Trout,Seafood,67,83,90,2026-10-27,2026-10-20,2026-08-29,66,77.0,Active,27.0,122,Seguro
+Egg (Quail),Dairy,94,60,78,2026-12-08,2026-12-01,2026-09-20,100,42.0,Active,276.0,144,Seguro
+Black Tea,Beverages,45,58,84,2027-01-06,2026-12-30,2026-03-30,90,67.0,Active,291.0,-30,Vencido
+Anchovies,Seafood,86,55,96,2026-12-19,2026-12-12,2026-09-29,37,53.0,Backordered,163.0,153,Seguro
+Wild Rice,Grains & Pulses,72,82,52,2026-08-03,2026-07-27,2026-09-28,51,95.0,Backordered,25.0,152,Seguro
+Green Beans,Fruits & Vegetables,31,61,28,2026-03-10,2026-03-03,2026-08-17,55,70.0,Active,-121.0,110,Seguro
+Butter Biscuit,Bakery,12,7,23,2027-02-06,2027-01-30,2026-06-23,72,16.0,Discontinued,-11.0,55,Seguro
+Gouda Cheese,Dairy,71,93,75,2026-10-09,2026-10-02,2027-02-03,77,58.0,Discontinued,51.0,280,Seguro
+Anchovies,Seafood,64,1,92,2026-04-05,2026-03-29,2027-01-24,49,15.0,Active,-18.0,270,Seguro
+Coconut Oil,Oils & Fats,89,79,66,2026-07-31,2026-07-24,2026-10-17,91,31.0,Discontinued,-142.0,171,Seguro
+Sesame Oil,Oils & Fats,50,36,96,2026-12-12,2026-12-05,2026-07-01,53,73.0,Backordered,122.0,63,Seguro
+Mango,Fruits & Vegetables,53,98,23,2027-02-24,2027-02-17,2026-09-29,41,84.0,Backordered,235.0,153,Seguro
+Haddock,Seafood,19,99,78,2026-11-21,2026-11-14,2026-12-30,29,54.0,Discontinued,-88.0,245,Seguro
+Broccoli,Fruits & Vegetables,89,40,64,2026-10-16,2026-10-09,2026-09-19,93,48.0,Active,-119.0,143,Seguro
+Cod,Seafood,96,12,8,2026-05-11,2026-05-04,2026-08-20,97,92.0,Active,-13.0,113,Seguro
+Parmesan Cheese,Dairy,52,56,34,2026-09-27,2026-09-20,2026-07-28,31,69.0,Backordered,-7.0,90,Seguro
+Sesame Oil,Oils & Fats,97,20,8,2026-06-16,2026-06-09,2026-11-09,51,51.0,Active,-143.0,194,Seguro
+Halibut,Seafood,88,42,68,2026-06-23,2026-06-16,2026-04-09,92,29.0,Active,-159.0,-20,Vencido
+Jasmine Rice,Grains & Pulses,33,44,89,2026-03-15,2026-03-08,2026-04-17,93,19.0,Discontinued,-174.0,-12,Vencido
+Jasmine Rice,Grains & Pulses,98,20,81,2026-08-14,2026-08-07,2026-12-30,51,23.0,Backordered,35.0,245,Seguro
+Peach,Fruits & Vegetables,45,79,95,2026-12-06,2026-11-29,2026-11-15,84,62.0,Backordered,163.0,200,Seguro
+White Rice,Grains & Pulses,80,86,50,2026-05-05,2026-04-28,2027-02-24,46,69.0,Discontinued,-78.0,301,Seguro
+Halibut,Seafood,68,43,96,2026-11-17,2026-11-10,2026-10-15,75,35.0,Backordered,203.0,169,Seguro
+Apricot,Fruits & Vegetables,90,91,62,2026-11-24,2026-11-17,2026-11-24,34,72.0,Active,-3.0,209,Seguro
+Trout,Seafood,89,67,89,2027-02-14,2027-02-07,2026-11-10,96,42.0,Discontinued,40.0,195,Seguro
+Cucumber,Fruits & Vegetables,38,94,87,2026-05-27,2026-05-20,2026-08-21,89,100.0,Discontinued,24.0,114,Seguro
+Green Beans,Fruits & Vegetables,99,37,74,2026-07-25,2026-07-18,2026-03-02,46,46.0,Active,-149.0,-58,Vencido
+Powdered Sugar,Grains & Pulses,66,19,20,2026-09-18,2026-09-11,2026-06-01,30,49.0,Active,11.0,33,Seguro
+Pomegranate,Fruits & Vegetables,66,28,7,2026-04-27,2026-04-20,2026-08-14,85,6.0,Backordered,-182.0,107,Seguro
+Bread Flour,Grains & Pulses,64,11,97,2026-12-26,2026-12-19,2026-07-05,33,83.0,Discontinued,8.0,67,Seguro
+Black Rice,Grains & Pulses,18,78,43,2027-01-04,2026-12-28,2026-03-13,85,97.0,Active,183.0,-47,Vencido
+Whole Wheat Flour,Grains & Pulses,86,100,78,2026-04-06,2026-03-30,2027-02-05,52,91.0,Backordered,-52.0,282,Seguro
+Black Tea,Beverages,35,88,87,2026-04-05,2026-03-29,2026-11-21,39,62.0,Active,-190.0,206,Seguro
+Green Beans,Fruits & Vegetables,26,70,52,2026-09-07,2026-08-31,2026-11-03,36,10.0,Discontinued,181.0,188,Seguro
+Parmesan Cheese,Dairy,80,100,48,2026-08-18,2026-08-11,2026-04-06,100,28.0,Backordered,-55.0,-23,Vencido
+Zucchini,Fruits & Vegetables,63,56,33,2027-01-09,2027-01-02,2026-10-16,35,16.0,Backordered,216.0,170,Seguro
+Vanilla Biscuit,Bakery,89,22,23,2026-05-12,2026-05-05,2026-08-14,83,25.0,Discontinued,-44.0,107,Seguro
+Sweet Potato,Fruits & Vegetables,80,60,71,2026-10-08,2026-10-01,2026-08-17,98,13.0,Active,115.0,110,Seguro
+Vegetable Oil,Oils & Fats,41,66,50,2027-02-18,2027-02-11,2026-03-16,55,74.0,Backordered,203.0,-44,Vencido
+Chocolate Biscuit,Bakery,53,19,94,2026-03-29,2026-03-22,2026-10-18,82,56.0,Discontinued,-228.0,172,Seguro
+Haddock,Seafood,61,91,40,2027-01-08,2027-01-01,2026-06-09,34,76.0,Active,134.0,41,Seguro
+Egg (Duck),Dairy,70,92,74,2026-11-30,2026-11-23,2026-07-11,95,26.0,Backordered,105.0,73,Seguro
+Mango,Fruits & Vegetables,73,69,1,2026-11-05,2026-10-29,2026-09-17,50,67.0,Active,175.0,141,Seguro
+Kale,Fruits & Vegetables,60,15,89,2026-06-07,2026-05-31,2026-04-11,21,29.0,Discontinued,-259.0,-18,Vencido
+Pomegranate,Fruits & Vegetables,88,24,44,2026-11-05,2026-10-29,2026-12-18,72,88.0,Backordered,-3.0,233,Seguro
+Cauliflower,Fruits & Vegetables,95,6,59,2026-12-31,2026-12-24,2026-09-29,49,77.0,Active,138.0,153,Seguro
+Powdered Sugar,Grains & Pulses,47,30,16,2026-03-10,2026-03-03,2026-05-23,22,81.0,Active,-123.0,24,Próximo (30 días)
+Mozzarella Cheese,Dairy,24,1,65,2026-11-18,2026-11-11,2026-02-28,58,61.0,Active,129.0,-60,Vencido
+Anchovies,Seafood,93,51,70,2026-04-22,2026-04-15,2026-09-04,81,18.0,Active,-51.0,128,Seguro
+Sunflower Oil,Oils & Fats,80,24,60,2027-01-21,2027-01-14,2026-04-28,98,38.0,Active,69.0,-1,Vencido
+Apple,Fruits & Vegetables,77,58,13,2026-06-22,2026-06-15,2026-04-16,63,28.0,Discontinued,30.0,-13,Vencido
+Green Beans,Fruits & Vegetables,42,48,18,2027-01-09,2027-01-02,2026-04-23,39,57.0,Active,265.0,-6,Vencido
+Egg (Turkey),Dairy,92,1,23,2026-08-27,2026-08-20,2026-04-13,78,36.0,Discontinued,-36.0,-16,Vencido
+Mushrooms,Fruits & Vegetables,81,23,17,2026-05-26,2026-05-19,2026-07-16,92,78.0,Active,18.0,78,Seguro
+Jasmine Rice,Grains & Pulses,46,39,11,2026-10-10,2026-10-03,2026-11-10,36,54.0,Active,55.0,195,Seguro
+Brown Rice,Grains & Pulses,44,67,31,2026-07-14,2026-07-07,2026-06-05,44,72.0,Discontinued,118.0,37,Seguro
+Multigrain Bread,Bakery,38,37,27,2026-06-14,2026-06-07,2026-07-14,45,88.0,Backordered,-113.0,76,Seguro
+Evaporated Milk,Dairy,64,28,35,2026-11-05,2026-10-29,2026-02-26,74,50.0,Active,-2.0,-62,Vencido
+Long Grain Rice,Grains & Pulses,39,2,71,2026-04-29,2026-04-22,2026-04-21,20,70.0,Backordered,42.0,-8,Vencido
+White Bread,Bakery,42,88,95,2026-03-28,2026-03-21,2026-04-24,67,94.0,Backordered,-306.0,-5,Vencido
+White Sugar,Grains & Pulses,29,54,54,2026-10-27,2026-10-20,2026-12-25,58,63.0,Backordered,-120.0,240,Seguro
+Cucumber,Fruits & Vegetables,60,63,81,2027-01-26,2027-01-19,2026-05-01,74,31.0,Active,115.0,2,Crítico (15 días)
+Parmesan Cheese,Dairy,65,54,29,2026-11-30,2026-11-23,2026-04-12,69,79.0,Backordered,1.0,-17,Vencido
+Bell Pepper,Fruits & Vegetables,89,96,94,2026-06-10,2026-06-03,2026-09-19,38,96.0,Discontinued,-210.0,143,Seguro
+Corn Oil,Oils & Fats,50,40,69,2026-06-30,2026-06-23,2026-08-26,28,98.0,Active,91.0,119,Seguro
+Bell Pepper,Fruits & Vegetables,94,18,84,2027-01-04,2026-12-28,2026-09-17,44,49.0,Discontinued,81.0,141,Seguro
+Canola Oil,Oils & Fats,97,32,43,2026-10-06,2026-09-29,2026-05-30,82,98.0,Active,156.0,31,Seguro
+Digestive Biscuit,Bakery,72,78,1,2026-11-10,2026-11-03,2027-01-03,85,30.0,Discontinued,227.0,249,Seguro
+Cream,Dairy,62,91,14,2026-09-21,2026-09-14,2026-12-08,41,77.0,Discontinued,113.0,223,Seguro
+Apple,Fruits & Vegetables,44,92,92,2026-03-08,2026-03-01,2026-09-25,41,61.0,Active,-309.0,149,Seguro
+Peanut Oil,Oils & Fats,21,25,39,2026-07-30,2026-07-23,2026-02-28,79,30.0,Active,-42.0,-60,Vencido
+Coconut Sugar,Grains & Pulses,91,39,48,2026-03-31,2026-03-24,2026-11-16,48,18.0,Active,-265.0,201,Seguro
+Tuna,Seafood,87,24,66,2026-05-20,2026-05-13,2026-05-04,22,34.0,Active,-188.0,5,Crítico (15 días)
+Spinach,Fruits & Vegetables,61,17,69,2026-05-22,2026-05-15,2026-06-17,31,29.0,Active,15.0,49,Seguro
+Carrot,Fruits & Vegetables,61,81,99,2026-10-27,2026-10-20,2026-04-24,26,76.0,Discontinued,228.0,-5,Vencido
+Sweet Potato,Fruits & Vegetables,49,1,28,2026-12-01,2026-11-24,2026-11-18,97,95.0,Active,-22.0,203,Seguro
+Lemon,Fruits & Vegetables,87,1,98,2026-04-07,2026-03-31,2026-07-19,61,84.0,Discontinued,-183.0,81,Seguro
+Multigrain Bread,Bakery,93,55,95,2027-02-11,2027-02-04,2026-12-19,56,72.0,Backordered,343.0,234,Seguro
+Basmati Rice,Grains & Pulses,55,13,71,2026-04-26,2026-04-19,2026-04-14,37,4.0,Backordered,-179.0,-15,Vencido
+Sour Cream,Dairy,29,39,80,2026-05-29,2026-05-22,2026-04-06,23,85.0,Backordered,-158.0,-23,Vencido
+Egg (Chicken),Dairy,63,62,18,2026-04-17,2026-04-10,2026-11-05,67,17.0,Active,15.0,190,Seguro
+Potato,Fruits & Vegetables,42,69,54,2027-01-19,2027-01-12,2026-03-01,43,96.0,Active,319.0,-59,Vencido
+Onion,Fruits & Vegetables,74,4,39,2026-12-26,2026-12-19,2026-08-07,97,24.0,Backordered,265.0,100,Seguro
+Short Grain Rice,Grains & Pulses,22,77,15,2026-04-11,2026-04-04,2026-07-29,68,46.0,Active,-48.0,91,Seguro
+Egg (Chicken),Dairy,83,35,43,2026-08-14,2026-08-07,2026-09-06,94,68.0,Discontinued,-12.0,130,Seguro
+Wild Rice,Grains & Pulses,32,91,80,2026-10-18,2026-10-11,2027-01-16,69,80.0,Discontinued,51.0,262,Seguro
+Apple,Fruits & Vegetables,84,46,80,2026-05-18,2026-05-11,2026-12-24,66,84.0,Discontinued,-137.0,239,Seguro
+Plum,Fruits & Vegetables,22,56,72,2026-04-09,2026-04-02,2026-12-03,70,39.0,Discontinued,-60.0,218,Seguro
+Peas,Fruits & Vegetables,100,52,2,2026-03-08,2026-03-01,2026-10-17,86,70.0,Backordered,-266.0,171,Seguro
+Cheddar Cheese,Dairy,36,77,49,2026-04-10,2026-04-03,2027-02-09,30,84.0,Active,-197.0,286,Seguro
+Halibut,Seafood,14,67,65,2026-03-14,2026-03-07,2026-10-19,71,94.0,Discontinued,-219.0,173,Seguro
+White Sugar,Grains & Pulses,38,82,17,2026-12-29,2026-12-22,2026-08-06,52,47.0,Discontinued,283.0,99,Seguro
+Eggplant,Fruits & Vegetables,97,52,80,2027-01-19,2027-01-12,2026-10-13,22,90.0,Backordered,186.0,167,Seguro
+Green Tea,Beverages,64,66,28,2026-05-28,2026-05-21,2026-08-19,25,52.0,Discontinued,-231.0,112,Seguro
+Lime,Fruits & Vegetables,14,75,19,2026-12-24,2026-12-17,2026-03-04,100,84.0,Backordered,227.0,-56,Vencido
+Avocado Oil,Oils & Fats,24,89,27,2026-04-10,2026-04-03,2026-03-28,99,1.0,Discontinued,-188.0,-32,Vencido
+Tilapia,Seafood,100,61,21,2026-09-21,2026-09-14,2026-05-18,85,79.0,Backordered,-95.0,19,Próximo (30 días)
+Jasmine Rice,Grains & Pulses,62,36,96,2026-04-03,2026-03-27,2026-05-27,31,25.0,Discontinued,-7.0,28,Próximo (30 días)
+Basmati Rice,Grains & Pulses,71,60,62,2026-08-27,2026-08-20,2026-03-14,60,63.0,Discontinued,155.0,-46,Vencido
+Parmesan Cheese,Dairy,38,67,66,2026-04-01,2026-03-25,2026-04-08,35,24.0,Discontinued,-264.0,-21,Vencido
+Powdered Sugar,Grains & Pulses,88,34,94,2026-12-27,2026-12-20,2026-10-30,95,63.0,Active,-55.0,184,Seguro
+Sourdough Bread,Bakery,40,30,65,2026-07-02,2026-06-25,2026-05-14,54,29.0,Active,105.0,15,Crítico (15 días)
+Spinach,Fruits & Vegetables,88,78,17,2026-09-06,2026-08-30,2026-11-04,58,21.0,Active,-113.0,189,Seguro
+Cheddar Cheese,Dairy,60,9,89,2026-06-01,2026-05-25,2026-10-05,95,63.0,Active,-1.0,159,Seguro
+Cabbage,Fruits & Vegetables,94,90,12,2026-10-03,2026-09-26,2026-11-01,98,71.0,Active,-21.0,186,Seguro
+Avocado Oil,Oils & Fats,30,48,52,2026-06-11,2026-06-04,2026-04-30,22,78.0,Active,-179.0,1,Crítico (15 días)
+Papaya,Fruits & Vegetables,19,28,83,2026-11-26,2026-11-19,2026-08-27,91,73.0,Discontinued,270.0,120,Seguro
+Suero Fisiológico 500ml,Soporte,56,32,152,2026-04-26,2026-04-16,2026-11-12,54,0.95,Active,,197,Seguro
+Gasas Estériles,Curación,112,19,149,2026-03-25,2026-03-15,2027-09-28,32,0.28,Active,,517,Seguro
+Dextrosa al 5%,Soporte,28,25,87,2026-01-31,2026-01-24,2027-07-08,42,1.45,Active,,435,Seguro
+Ciclofosfamida 1g,Oncológicos,25,43,138,2026-03-26,2026-03-18,2027-06-01,72,2.77,Active,,398,Seguro
+Espesante de Alimentos,Nutrición,120,40,113,2026-02-20,2026-02-15,2027-04-19,68,0.56,Active,,355,Seguro
+Crema de Hidrocortisona,Tópicos,32,27,122,2026-03-01,2026-02-20,2026-09-17,46,1.39,Active,,141,Seguro
+Suero Fisiológico 500ml,Soporte,22,25,102,2026-04-08,2026-04-04,2027-09-15,43,1.87,Active,,504,Seguro
+Ciclofosfamida 1g,Oncológicos,24,59,130,2026-03-21,2026-03-11,2026-10-21,99,3.96,Active,,175,Seguro
+Doxorrubicina 50mg,Oncológicos,54,25,53,2026-01-11,2026-01-03,2026-10-23,43,0.78,Active,,177,Seguro
+Tubo Vacutainer (Rojo),Laboratorio,122,16,63,2026-04-09,2026-04-05,2027-04-25,27,0.22,Active,,361,Seguro
+Fórmula Polimérica,Nutrición,44,10,89,2026-03-28,2026-03-19,2027-06-02,17,0.38,Active,,399,Seguro
+Jabón Clorhexidina,Higiene,109,32,173,2026-04-01,2026-03-25,2027-05-02,54,0.49,Active,,368,Seguro
+Equipo de Venoclisis,Insumos,70,22,137,2026-01-24,2026-01-21,2027-12-25,38,0.54,Active,,605,Seguro
+Metotrexato 500mg,Oncológicos,48,28,82,2026-04-07,2026-04-02,2027-10-30,47,0.96,Active,,549,Seguro
+Esparadrapo Micropore,Curación,34,30,184,2026-04-22,2026-04-11,2026-11-15,51,1.46,Active,,200,Seguro
+Cloruro de Potasio 20%,Soporte,12,30,111,2026-02-12,2026-02-09,2026-09-27,51,3.92,Active,,151,Seguro
+Placas de Rayos X,Imágenes,66,26,180,2026-02-22,2026-02-12,2027-11-25,44,0.66,Active,,575,Seguro
+Metotrexato 500mg,Oncológicos,9,31,64,2026-04-22,2026-04-11,2027-05-13,53,5.3,Active,,379,Seguro
+Gasas Estériles,Curación,71,41,101,2026-03-27,2026-03-22,2027-05-21,69,0.96,Active,,387,Seguro
+Ibuprofeno Pediátrico,Analgesicos,125,7,192,2026-04-13,2026-04-06,2027-11-20,13,0.1,Active,,570,Seguro
+Catéter Port-a-Cath,Insumos,58,27,135,2026-01-22,2026-01-13,2027-03-20,45,0.76,Active,,325,Seguro
+Paracetamol Jarabe,Analgesicos,95,30,157,2026-02-23,2026-02-12,2026-09-18,51,0.53,Active,,142,Seguro
+Jeringa 5ml,Insumos,113,23,178,2026-03-12,2026-03-03,2027-08-21,39,0.34,Active,,479,Seguro
+Crema de Hidrocortisona,Tópicos,56,39,152,2026-05-05,2026-04-24,2027-07-17,66,1.16,Active,,444,Seguro
+Dexametasona 4mg,Antieméticos,101,21,100,2026-01-18,2026-01-11,2027-02-26,36,0.35,Active,,303,Seguro
+Catéter Endovenoso 24G,Insumos,73,19,162,2026-03-29,2026-03-21,2028-01-09,33,0.45,Active,,620,Seguro
+Ceftriaxona 1g,Antibióticos,142,40,180,2026-03-02,2026-02-21,2027-09-18,67,0.47,Active,,507,Seguro
+Espesante de Alimentos,Nutrición,130,34,51,2026-03-06,2026-03-03,2026-12-23,58,0.44,Active,,238,Seguro
+Ciclofosfamida 1g,Oncológicos,32,55,178,2026-04-06,2026-03-30,2027-05-15,93,2.82,Active,,381,Seguro
+Alcohol en Gel 70%,Higiene,31,37,117,2026-02-22,2026-02-14,2027-10-10,62,1.94,Active,,529,Seguro
+Tubo Vacutainer (Lila),Laboratorio,104,39,118,2026-01-26,2026-01-18,2027-04-30,65,0.62,Active,,366,Seguro
+Guantes Estériles,Higiene,127,9,173,2026-04-05,2026-04-02,2027-04-20,15,0.12,Active,,356,Seguro
+Esparadrapo Micropore,Curación,99,15,139,2026-04-12,2026-04-07,2027-11-15,25,0.25,Active,,565,Seguro
+Vincristina 1mg,Oncológicos,23,35,177,2026-04-15,2026-04-06,2028-02-12,59,2.46,Active,,654,Seguro
+Suero Fisiológico 500ml,Soporte,22,24,91,2026-01-20,2026-01-09,2027-11-03,40,1.74,Active,,553,Seguro
+Vincristina 1mg,Oncológicos,11,33,178,2026-04-09,2026-03-29,2026-10-07,55,4.58,Active,,161,Seguro
+Fórmula Polimérica,Nutrición,41,8,148,2026-02-15,2026-02-06,2026-08-22,14,0.33,Active,,115,Seguro
+Alcohol en Gel 70%,Higiene,77,15,103,2026-01-12,2026-01-06,2026-12-09,25,0.32,Active,,224,Seguro
+Placas de Rayos X,Imágenes,62,19,153,2026-05-05,2026-05-02,2027-12-25,33,0.52,Active,,605,Seguro
+Guantes Estériles,Higiene,128,34,142,2026-04-08,2026-04-03,2027-03-06,57,0.44,Active,,311,Seguro
+Mascarilla N95 Pediátrica,Higiene,139,16,117,2026-03-16,2026-03-08,2027-02-21,27,0.19,Active,,298,Seguro
+Metotrexato 500mg,Oncológicos,18,36,177,2026-02-26,2026-02-20,2028-01-10,60,3.16,Active,,621,Seguro
+Dextrosa al 5%,Soporte,11,63,164,2026-01-26,2026-01-23,2027-10-27,106,8.83,Active,,546,Seguro
+Tubo Vacutainer (Rojo),Laboratorio,148,18,158,2026-04-29,2026-04-21,2027-06-12,31,0.21,Active,,409,Seguro
+Alcohol en Gel 70%,Higiene,83,10,79,2026-02-05,2026-02-01,2027-05-07,17,0.2,Active,,373,Seguro
+Metotrexato 500mg,Oncológicos,32,61,84,2026-04-16,2026-04-09,2028-03-11,103,3.12,Active,,682,Seguro
+Espesante de Alimentos,Nutrición,46,31,148,2026-04-11,2026-04-04,2028-03-08,53,1.13,Active,,679,Seguro
+Paracetamol Jarabe,Analgesicos,134,27,144,2026-02-02,2026-01-30,2027-05-29,46,0.34,Active,,395,Seguro
+Vincristina 1mg,Oncológicos,37,61,116,2026-04-04,2026-03-26,2027-03-10,102,2.68,Active,,315,Seguro
+Mascarilla N95 Pediátrica,Higiene,54,30,153,2026-04-14,2026-04-06,2027-08-29,51,0.93,Active,,487,Seguro
+Llave de 3 vías,Insumos,53,35,179,2026-02-10,2026-02-02,2027-01-10,59,1.09,Active,,256,Seguro
+Gasas Estériles,Curación,46,29,88,2026-02-11,2026-01-31,2027-04-12,49,1.04,Active,,348,Seguro
+Ibuprofeno Pediátrico,Analgesicos,71,38,62,2026-02-04,2026-01-30,2027-09-14,64,0.89,Active,,503,Seguro
+Paracetamol Jarabe,Analgesicos,36,39,57,2026-02-14,2026-02-08,2027-06-29,66,1.78,Active,,426,Seguro
+Llave de 3 vías,Insumos,45,13,192,2026-03-26,2026-03-21,2028-01-05,23,0.5,Active,,616,Seguro
+Paracetamol Jarabe,Analgesicos,127,6,112,2026-02-10,2026-02-01,2026-09-28,11,0.09,Active,,152,Seguro
+Ceftriaxona 1g,Antibióticos,51,40,119,2026-03-08,2026-02-28,2027-07-05,67,1.29,Active,,432,Seguro
+Pediasure Plus 200ml,Nutrición,83,31,102,2026-03-10,2026-03-03,2027-05-27,52,0.62,Active,,393,Seguro
+Paracetamol Jarabe,Analgesicos,137,31,55,2026-01-14,2026-01-05,2027-01-24,53,0.38,Active,,270,Seguro
+Equipo de Venoclisis,Insumos,125,36,163,2026-04-13,2026-04-08,2027-07-05,61,0.48,Active,,432,Seguro
+Paracetamol Jarabe,Analgesicos,135,23,112,2026-01-28,2026-01-25,2026-11-23,39,0.29,Active,,208,Seguro
+Alcohol en Gel 70%,Higiene,121,40,166,2026-03-05,2026-02-26,2027-12-18,67,0.55,Active,,598,Seguro
+Ceftriaxona 1g,Antibióticos,52,10,171,2026-01-21,2026-01-14,2026-09-15,18,0.34,Active,,139,Seguro
+Metotrexato 500mg,Oncológicos,51,43,166,2026-04-15,2026-04-07,2028-02-11,73,1.4,Active,,653,Seguro
+Metotrexato 500mg,Oncológicos,20,60,125,2026-04-22,2026-04-15,2027-06-22,100,4.76,Active,,419,Seguro
+Gasas Estériles,Curación,45,36,118,2026-04-20,2026-04-12,2027-07-28,60,1.3,Active,,455,Seguro
+Pediasure Plus 200ml,Nutrición,142,23,193,2026-04-29,2026-04-23,2028-01-21,39,0.27,Active,,632,Seguro
+Gasas Estériles,Curación,119,34,150,2026-04-04,2026-03-26,2027-07-16,57,0.47,Active,,443,Seguro
+Tubo Vacutainer (Lila),Laboratorio,39,37,187,2026-03-19,2026-03-13,2027-03-13,63,1.57,Active,,318,Seguro
+Gasas Estériles,Curación,48,40,53,2026-04-15,2026-04-12,2027-09-01,67,1.37,Active,,490,Seguro
+Fórmula Polimérica,Nutrición,53,15,177,2026-05-08,2026-05-04,2028-03-14,25,0.46,Active,,685,Seguro
+Esparadrapo Micropore,Curación,113,19,82,2026-01-21,2026-01-17,2027-08-03,33,0.29,Active,,461,Seguro
+Metotrexato 500mg,Oncológicos,55,49,123,2026-04-20,2026-04-15,2027-12-07,82,1.46,Active,,587,Seguro
+Catéter Port-a-Cath,Insumos,73,22,84,2026-01-22,2026-01-18,2027-03-30,38,0.51,Active,,335,Seguro
+Tubo Vacutainer (Lila),Laboratorio,110,21,154,2026-01-17,2026-01-13,2026-11-07,35,0.32,Active,,192,Seguro
+Suero Fisiológico 500ml,Soporte,8,58,124,2026-05-06,2026-05-02,2028-03-08,97,10.78,Active,,679,Seguro
+Ibuprofeno Pediátrico,Analgesicos,149,27,150,2026-04-08,2026-04-01,2027-11-02,45,0.3,Active,,552,Seguro
+Cloruro de Potasio 20%,Soporte,28,61,85,2026-04-18,2026-04-15,2027-01-21,103,3.55,Active,,267,Seguro
+Mascarilla N95 Pediátrica,Higiene,142,28,86,2026-04-15,2026-04-05,2027-04-19,48,0.34,Active,,355,Seguro
+Jeringa 5ml,Insumos,142,38,148,2026-01-22,2026-01-13,2027-02-22,64,0.45,Active,,299,Seguro
+Cloruro de Potasio 20%,Soporte,34,33,190,2026-05-02,2026-04-26,2027-10-05,56,1.6,Active,,524,Seguro
+Esparadrapo Micropore,Curación,48,34,58,2026-04-19,2026-04-08,2026-12-30,58,1.18,Active,,245,Seguro
+Suero Fisiológico 500ml,Soporte,32,54,148,2026-04-02,2026-03-26,2026-12-06,91,2.76,Active,,221,Seguro
+Jeringa 5ml,Insumos,54,36,193,2026-04-04,2026-03-29,2027-02-28,61,1.11,Active,,305,Seguro
+Crema de Hidrocortisona,Tópicos,68,32,171,2026-03-03,2026-02-22,2027-10-01,54,0.78,Active,,520,Seguro
+Ondansetrón 8mg,Antieméticos,64,19,123,2026-04-12,2026-04-08,2026-10-17,32,0.49,Active,,171,Seguro
+Gasas Estériles,Curación,137,15,190,2026-04-21,2026-04-12,2027-04-09,26,0.19,Active,,345,Seguro
+Dextrosa al 5%,Soporte,46,28,78,2026-02-28,2026-02-24,2028-01-25,48,1.02,Active,,636,Seguro
+Ondansetrón 8mg,Antieméticos,67,16,194,2026-01-17,2026-01-14,2027-06-22,28,0.41,Active,,419,Seguro
+Suero Fisiológico 500ml,Soporte,29,50,68,2026-01-13,2026-01-07,2026-09-19,84,2.8,Active,,143,Seguro
+Ibuprofeno Pediátrico,Analgesicos,137,37,175,2026-02-17,2026-02-12,2026-09-23,63,0.46,Active,,147,Seguro
+Vincristina 1mg,Oncológicos,49,31,110,2026-05-03,2026-04-27,2028-02-17,52,1.04,Active,,659,Seguro
+Cloruro de Potasio 20%,Soporte,43,24,162,2026-01-12,2026-01-01,2027-01-17,40,0.91,Active,,263,Seguro
+Crema de Hidrocortisona,Tópicos,85,25,107,2026-02-16,2026-02-09,2026-12-26,42,0.49,Active,,241,Seguro
+Jeringa 5ml,Insumos,74,24,167,2026-02-23,2026-02-16,2026-11-09,41,0.55,Active,,194,Seguro
+Jabón Clorhexidina,Higiene,104,41,196,2026-04-20,2026-04-14,2027-05-31,69,0.66,Active,,397,Seguro
+Guantes Estériles,Higiene,86,16,63,2026-02-25,2026-02-14,2027-06-24,27,0.31,Active,,421,Seguro
+Pediasure Plus 200ml,Nutrición,60,6,193,2026-05-06,2026-04-28,2027-07-18,10,0.16,Active,,445,Seguro
+Tubo Vacutainer (Lila),Laboratorio,86,12,166,2026-01-21,2026-01-11,2027-07-12,20,0.23,Active,,439,Seguro
+Dextrosa al 5%,Soporte,32,45,77,2026-04-09,2026-03-30,2027-08-17,75,2.27,Active,,475,Seguro
+Paracetamol Jarabe,Analgesicos,130,30,190,2026-04-19,2026-04-11,2027-03-09,50,0.38,Active,,314,Seguro
+Llave de 3 vías,Insumos,64,9,96,2026-04-01,2026-03-27,2027-06-10,15,0.23,Active,,407,Seguro
+Crema de Hidrocortisona,Tópicos,95,11,158,2026-03-06,2026-03-02,2027-05-10,19,0.2,Active,,376,Seguro
+Ondansetrón 8mg,Antieméticos,148,39,195,2026-02-11,2026-02-03,2026-10-13,65,0.44,Active,,167,Seguro
+Pediasure Plus 200ml,Nutrición,78,12,147,2026-04-04,2026-03-24,2028-01-04,20,0.25,Active,,615,Seguro
+Cloruro de Potasio 20%,Soporte,39,24,144,2026-01-30,2026-01-21,2027-12-28,40,1.0,Active,,608,Seguro
+Ondansetrón 8mg,Antieméticos,131,7,132,2026-03-03,2026-02-22,2027-11-30,12,0.09,Active,,580,Seguro
+Espesante de Alimentos,Nutrición,114,13,53,2026-03-23,2026-03-20,2026-11-08,23,0.2,Active,,193,Seguro
+Ceftriaxona 1g,Antibióticos,94,34,144,2026-04-23,2026-04-19,2027-10-02,58,0.61,Active,,521,Seguro
+Dextrosa al 5%,Soporte,43,39,52,2026-02-12,2026-02-04,2026-12-06,65,1.48,Active,,221,Seguro
+Esparadrapo Micropore,Curación,79,12,182,2026-03-15,2026-03-07,2027-05-04,21,0.26,Active,,370,Seguro
+Ceftriaxona 1g,Antibióticos,123,40,134,2026-03-07,2026-03-04,2027-07-02,68,0.55,Active,,429,Seguro
+Llave de 3 vías,Insumos,95,12,87,2026-03-01,2026-02-20,2027-10-23,20,0.21,Active,,542,Seguro
+Mascarilla N95 Pediátrica,Higiene,127,16,101,2026-02-08,2026-02-03,2027-10-27,27,0.21,Active,,546,Seguro
+Crema de Hidrocortisona,Tópicos,67,25,100,2026-04-07,2026-03-29,2027-01-17,42,0.62,Active,,263,Seguro
+Espesante de Alimentos,Nutrición,34,22,123,2026-01-13,2026-01-03,2027-08-16,38,1.09,Active,,474,Seguro
+Espesante de Alimentos,Nutrición,113,19,175,2026-03-19,2026-03-15,2026-11-06,33,0.29,Active,,191,Seguro
+Catéter Port-a-Cath,Insumos,72,34,129,2026-03-25,2026-03-20,2027-01-09,57,0.78,Active,,255,Seguro
+Catéter Port-a-Cath,Insumos,147,15,181,2026-01-17,2026-01-11,2027-07-10,25,0.17,Active,,437,Seguro
+Placas de Rayos X,Imágenes,54,7,110,2026-04-15,2026-04-10,2027-01-12,12,0.22,Active,,258,Seguro
+Gasas Estériles,Curación,80,16,141,2026-01-30,2026-01-23,2027-11-06,28,0.35,Active,,556,Seguro
+Catéter Endovenoso 24G,Insumos,90,18,182,2026-01-30,2026-01-22,2027-12-23,31,0.34,Active,,603,Seguro
+Cloruro de Potasio 20%,Soporte,16,51,94,2026-02-12,2026-02-09,2026-10-27,85,5.0,Active,,181,Seguro
+Esparadrapo Micropore,Curación,102,21,105,2026-02-25,2026-02-14,2027-03-25,35,0.34,Active,,330,Seguro
+Ceftriaxona 1g,Antibióticos,136,34,85,2026-03-11,2026-03-08,2026-10-02,57,0.42,Active,,156,Seguro
+Metotrexato 500mg,Oncológicos,12,54,77,2026-03-29,2026-03-19,2028-03-03,91,7.0,Active,,674,Seguro
+Tubo Vacutainer (Lila),Laboratorio,107,19,52,2026-01-11,2026-01-01,2026-07-16,33,0.31,Active,,78,Seguro
+Pediasure Plus 200ml,Nutrición,52,33,87,2026-04-26,2026-04-22,2028-03-11,55,1.04,Active,,682,Seguro
+Vincristina 1mg,Oncológicos,55,32,77,2026-03-14,2026-03-03,2028-01-07,54,0.96,Active,,618,Seguro
+Catéter Endovenoso 24G,Insumos,68,39,175,2026-01-26,2026-01-17,2026-10-18,66,0.96,Active,,172,Seguro
+Jeringa 5ml,Insumos,54,15,117,2026-01-22,2026-01-16,2026-08-14,26,0.47,Active,,107,Seguro
+Catéter Endovenoso 24G,Insumos,96,30,160,2026-04-28,2026-04-24,2027-02-12,50,0.52,Active,,289,Seguro
+Tubo Vacutainer (Rojo),Laboratorio,63,33,132,2026-01-17,2026-01-07,2027-07-19,56,0.88,Active,,446,Seguro
+Catéter Endovenoso 24G,Insumos,70,27,113,2026-01-15,2026-01-09,2027-04-21,46,0.65,Active,,357,Seguro
+Ciclofosfamida 1g,Oncológicos,49,65,199,2026-04-20,2026-04-09,2027-08-01,109,2.18,Active,,459,Seguro
+Jabón Clorhexidina,Higiene,99,9,124,2026-05-08,2026-05-02,2027-10-19,15,0.15,Active,,538,Seguro
+Ceftriaxona 1g,Antibióticos,91,23,180,2026-04-14,2026-04-04,2027-02-24,39,0.42,Active,,301,Seguro
+Alcohol en Gel 70%,Higiene,60,29,55,2026-04-20,2026-04-14,2027-05-27,49,0.8,Active,,393,Seguro
+Ciclofosfamida 1g,Oncológicos,24,25,162,2026-03-29,2026-03-21,2027-01-20,43,1.72,Active,,266,Seguro
+Ceftriaxona 1g,Antibióticos,149,28,128,2026-03-01,2026-02-18,2027-03-09,47,0.31,Active,,314,Seguro
+Catéter Port-a-Cath,Insumos,37,21,167,2026-03-01,2026-02-22,2027-07-19,35,0.92,Active,,446,Seguro
+Doxorrubicina 50mg,Oncológicos,23,35,191,2026-05-02,2026-04-29,2027-01-26,59,2.46,Active,,272,Seguro
+Dexametasona 4mg,Antieméticos,66,12,54,2026-04-19,2026-04-14,2026-10-25,20,0.3,Active,,179,Seguro
+Tubo Vacutainer (Lila),Laboratorio,39,31,112,2026-01-11,2026-01-01,2027-05-26,53,1.32,Active,,392,Seguro
+Ondansetrón 8mg,Antieméticos,102,15,143,2026-01-18,2026-01-08,2027-09-08,26,0.25,Active,,497,Seguro
+Espesante de Alimentos,Nutrición,98,41,166,2026-04-27,2026-04-23,2027-09-22,69,0.7,Active,,511,Seguro
+Placas de Rayos X,Imágenes,104,10,89,2026-02-12,2026-02-07,2028-01-05,18,0.17,Active,,616,Seguro
+Tubo Vacutainer (Rojo),Laboratorio,89,22,63,2026-03-22,2026-03-11,2027-05-04,38,0.42,Active,,370,Seguro
+Paracetamol Jarabe,Analgesicos,59,26,132,2026-04-04,2026-03-28,2026-10-05,44,0.73,Active,,159,Seguro
+Esparadrapo Micropore,Curación,107,21,138,2026-03-12,2026-03-06,2026-10-19,35,0.32,Active,,173,Seguro
+Mascarilla N95 Pediátrica,Higiene,69,10,81,2026-02-17,2026-02-07,2028-01-23,17,0.24,Active,,634,Seguro
+Alcohol en Gel 70%,Higiene,67,25,102,2026-02-01,2026-01-29,2026-12-22,42,0.62,Active,,237,Seguro
+Dextrosa al 5%,Soporte,44,54,183,2026-02-17,2026-02-12,2027-03-01,90,2.0,Active,,306,Seguro
+Vincristina 1mg,Oncológicos,11,54,160,2026-03-22,2026-03-16,2026-10-02,90,7.5,Active,,156,Seguro
+Ibuprofeno Pediátrico,Analgesicos,62,36,87,2026-04-13,2026-04-04,2027-12-03,61,0.97,Active,,583,Seguro
+Crema de Hidrocortisona,Tópicos,126,27,135,2026-02-05,2026-01-27,2027-05-19,46,0.36,Active,,385,Seguro
+Ciclofosfamida 1g,Oncológicos,14,26,87,2026-03-24,2026-03-21,2027-01-15,44,2.93,Active,,261,Seguro
+Equipo de Venoclisis,Insumos,60,33,185,2026-04-19,2026-04-09,2026-10-30,56,0.92,Active,,184,Seguro
+Ondansetrón 8mg,Antieméticos,58,33,144,2026-03-18,2026-03-14,2027-10-29,56,0.95,Active,,548,Seguro
+Alcohol en Gel 70%,Higiene,144,27,123,2026-02-14,2026-02-07,2026-08-23,45,0.31,Active,,116,Seguro
+Dextrosa al 5%,Soporte,42,27,95,2026-03-22,2026-03-13,2027-08-29,45,1.05,Active,,487,Seguro
+Catéter Port-a-Cath,Insumos,41,21,160,2026-01-22,2026-01-12,2027-02-15,35,0.83,Active,,292,Seguro
+Dextrosa al 5%,Soporte,47,64,155,2026-01-14,2026-01-04,2026-11-16,107,2.23,Active,,201,Seguro
+Espesante de Alimentos,Nutrición,121,24,78,2026-01-18,2026-01-10,2026-09-05,40,0.33,Active,,129,Seguro
+Llave de 3 vías,Insumos,69,30,139,2026-04-05,2026-03-27,2027-11-10,50,0.71,Active,,560,Seguro
+Llave de 3 vías,Insumos,65,37,112,2026-04-06,2026-03-26,2026-10-03,63,0.95,Active,,157,Seguro
+Tubo Vacutainer (Rojo),Laboratorio,84,36,102,2026-02-18,2026-02-11,2027-10-21,60,0.71,Active,,540,Seguro
+Cloruro de Potasio 20%,Soporte,14,54,74,2026-03-07,2026-02-28,2027-05-04,91,6.07,Active,,370,Seguro
+Gasas Estériles,Curación,104,28,140,2026-01-11,2026-01-02,2027-02-04,47,0.45,Active,,281,Seguro
+Espesante de Alimentos,Nutrición,72,40,74,2026-04-27,2026-04-22,2027-04-23,68,0.93,Active,,359,Seguro
+Suero Fisiológico 500ml,Soporte,56,65,78,2026-05-06,2026-04-26,2027-04-11,109,1.91,Active,,347,Seguro
+Catéter Port-a-Cath,Insumos,51,21,98,2026-02-06,2026-02-02,2027-11-16,35,0.67,Active,,566,Seguro
+Suero Fisiológico 500ml,Soporte,21,52,112,2026-01-29,2026-01-21,2027-07-04,88,4.0,Active,,431,Seguro
+Ibuprofeno Pediátrico,Analgesicos,133,34,172,2026-03-21,2026-03-18,2027-02-04,58,0.43,Active,,281,Seguro
+Placas de Rayos X,Imágenes,112,24,79,2026-02-08,2026-02-05,2027-10-09,41,0.36,Active,,528,Seguro
+Fórmula Polimérica,Nutrición,69,16,162,2026-01-27,2026-01-24,2027-07-31,28,0.4,Active,,458,Seguro
+Mascarilla N95 Pediátrica,Higiene,123,28,104,2026-03-01,2026-02-23,2027-05-18,47,0.38,Active,,384,Seguro
+Suero Fisiológico 500ml,Soporte,7,42,173,2026-01-19,2026-01-14,2026-12-26,71,8.88,Active,,241,Seguro
+Metotrexato 500mg,Oncológicos,27,56,142,2026-04-11,2026-04-07,2027-11-02,94,3.36,Active,,552,Seguro
+Dextrosa al 5%,Soporte,5,57,121,2026-05-08,2026-05-03,2028-01-20,96,16.0,Active,,631,Seguro
+Tubo Vacutainer (Rojo),Laboratorio,140,27,84,2026-03-17,2026-03-12,2027-06-03,46,0.33,Active,,400,Seguro
+Placas de Rayos X,Imágenes,107,24,191,2026-05-09,2026-05-03,2028-03-18,41,0.38,Active,,689,Seguro
+Tubo Vacutainer (Lila),Laboratorio,77,16,134,2026-01-16,2026-01-07,2026-12-12,27,0.35,Active,,227,Seguro
+Alcohol en Gel 70%,Higiene,141,16,178,2026-02-14,2026-02-10,2028-01-08,28,0.2,Active,,619,Seguro
+Pediasure Plus 200ml,Nutrición,98,17,168,2026-01-20,2026-01-16,2027-11-01,29,0.29,Active,,551,Seguro
+Jeringa 5ml,Insumos,49,8,186,2026-02-15,2026-02-07,2027-04-26,14,0.28,Active,,362,Seguro
+Ciclofosfamida 1g,Oncológicos,57,49,135,2026-04-18,2026-04-12,2028-03-03,83,1.43,Active,,674,Seguro
+Jeringa 5ml,Insumos,53,15,177,2026-03-24,2026-03-14,2026-11-17,26,0.48,Active,,202,Seguro
+Espesante de Alimentos,Nutrición,143,36,74,2026-03-31,2026-03-20,2027-05-21,60,0.42,Active,,387,Seguro
+Suero Fisiológico 500ml,Soporte,13,36,78,2026-04-26,2026-04-20,2028-01-07,61,4.36,Active,,618,Seguro
+Equipo de Venoclisis,Insumos,127,19,177,2026-02-15,2026-02-07,2027-01-06,32,0.25,Active,,252,Seguro
+Jabón Clorhexidina,Higiene,71,27,66,2026-02-19,2026-02-11,2026-09-20,45,0.62,Active,,144,Seguro
+Ondansetrón 8mg,Antieméticos,54,28,76,2026-03-26,2026-03-17,2027-08-29,47,0.85,Active,,487,Seguro
+Crema de Hidrocortisona,Tópicos,60,9,102,2026-04-10,2026-03-31,2027-07-01,15,0.25,Active,,428,Seguro
+Suero Fisiológico 500ml,Soporte,14,50,171,2026-01-26,2026-01-19,2027-11-12,84,5.6,Active,,562,Seguro
+Llave de 3 vías,Insumos,93,6,164,2026-03-04,2026-03-01,2027-06-18,11,0.12,Active,,415,Seguro
+Gasas Estériles,Curación,58,18,162,2026-01-20,2026-01-10,2026-07-29,30,0.51,Active,,91,Seguro
+Esparadrapo Micropore,Curación,68,29,104,2026-04-18,2026-04-10,2027-01-20,49,0.71,Active,,266,Seguro
+Pediasure Plus 200ml,Nutrición,53,37,82,2026-01-31,2026-01-24,2027-06-06,63,1.17,Active,,403,Seguro
+Gasas Estériles,Curación,65,33,130,2026-01-29,2026-01-24,2027-03-28,56,0.85,Active,,333,Seguro
+Ceftriaxona 1g,Antibióticos,138,31,122,2026-04-17,2026-04-06,2027-03-16,52,0.37,Active,,321,Seguro
+Cloruro de Potasio 20%,Soporte,44,33,153,2026-01-10,2025-12-30,2026-09-07,56,1.24,Active,,131,Seguro
+Catéter Endovenoso 24G,Insumos,54,28,157,2026-02-13,2026-02-08,2027-12-22,48,0.87,Active,,602,Seguro
+Jeringa 5ml,Insumos,80,23,68,2026-04-21,2026-04-17,2028-03-24,39,0.48,Active,,695,Seguro
+Ondansetrón 8mg,Antieméticos,73,40,106,2026-02-27,2026-02-24,2027-07-21,68,0.92,Active,,448,Seguro
+Tubo Vacutainer (Lila),Laboratorio,142,33,57,2026-01-21,2026-01-11,2027-06-23,56,0.39,Active,,420,Seguro
+Jabón Clorhexidina,Higiene,110,19,74,2026-04-20,2026-04-12,2027-05-04,32,0.29,Active,,370,Seguro
+Mascarilla N95 Pediátrica,Higiene,118,12,96,2026-01-24,2026-01-13,2028-01-11,21,0.18,Active,,622,Seguro
+Catéter Endovenoso 24G,Insumos,45,9,184,2026-01-26,2026-01-17,2026-10-18,16,0.35,Active,,172,Seguro
+Llave de 3 vías,Insumos,108,37,108,2026-01-16,2026-01-05,2027-11-24,62,0.57,Active,,574,Seguro
+Tubo Vacutainer (Lila),Laboratorio,122,16,152,2026-04-14,2026-04-08,2027-11-16,27,0.22,Active,,566,Seguro
+Espesante de Alimentos,Nutrición,43,24,94,2026-02-02,2026-01-28,2027-02-04,40,0.91,Active,,281,Seguro
+Ciclofosfamida 1g,Oncológicos,7,45,157,2026-02-21,2026-02-11,2027-02-18,76,9.5,Active,,295,Seguro
+Suero Fisiológico 500ml,Soporte,19,25,65,2026-04-12,2026-04-04,2027-11-09,43,2.15,Active,,559,Seguro
+Equipo de Venoclisis,Insumos,71,31,83,2026-03-16,2026-03-07,2027-02-28,53,0.74,Active,,305,Seguro
+Ceftriaxona 1g,Antibióticos,148,13,145,2026-01-22,2026-01-18,2027-09-09,22,0.15,Active,,498,Seguro
+Vincristina 1mg,Oncológicos,43,51,111,2026-05-05,2026-05-02,2028-02-20,85,1.93,Active,,662,Seguro
+Jabón Clorhexidina,Higiene,137,39,170,2026-01-25,2026-01-15,2027-03-19,66,0.48,Active,,324,Seguro
+Catéter Endovenoso 24G,Insumos,59,20,114,2026-04-22,2026-04-16,2027-11-11,34,0.57,Active,,561,Seguro
+Ceftriaxona 1g,Antibióticos,78,7,195,2026-02-23,2026-02-13,2027-07-11,12,0.15,Active,,438,Seguro
+Ceftriaxona 1g,Antibióticos,66,20,98,2026-02-26,2026-02-23,2027-09-27,34,0.51,Active,,516,Seguro
+Crema de Hidrocortisona,Tópicos,117,7,173,2026-01-21,2026-01-14,2026-09-18,13,0.11,Active,,142,Seguro
+Dexametasona 4mg,Antieméticos,68,39,111,2026-03-13,2026-03-03,2026-09-19,65,0.94,Active,,143,Seguro
+Equipo de Venoclisis,Insumos,127,20,166,2026-03-21,2026-03-15,2027-07-23,34,0.27,Active,,450,Seguro
+Alcohol en Gel 70%,Higiene,138,33,52,2026-03-24,2026-03-20,2027-04-25,55,0.4,Active,,361,Seguro
+Placas de Rayos X,Imágenes,35,8,58,2026-01-14,2026-01-06,2026-08-28,14,0.39,Active,,121,Seguro
+Vincristina 1mg,Oncológicos,24,60,194,2026-04-25,2026-04-20,2026-12-22,100,4.0,Active,,237,Seguro
+Placas de Rayos X,Imágenes,32,24,174,2026-04-18,2026-04-10,2027-02-11,41,1.24,Active,,288,Seguro
+Pediasure Plus 200ml,Nutrición,118,10,154,2026-03-18,2026-03-11,2027-06-07,18,0.15,Active,,404,Seguro
+Placas de Rayos X,Imágenes,96,40,125,2026-04-11,2026-03-31,2027-04-20,68,0.7,Active,,356,Seguro
+Catéter Endovenoso 24G,Insumos,38,14,188,2026-02-18,2026-02-07,2027-05-04,24,0.62,Active,,370,Seguro
+Esparadrapo Micropore,Curación,127,19,182,2026-03-29,2026-03-21,2027-08-18,33,0.26,Active,,476,Seguro
+Fórmula Polimérica,Nutrición,119,16,77,2026-03-20,2026-03-13,2027-07-28,27,0.23,Active,,455,Seguro
+Ondansetrón 8mg,Antieméticos,106,15,111,2026-05-03,2026-04-23,2027-08-26,26,0.24,Active,,484,Seguro
+Ibuprofeno Pediátrico,Analgesicos,144,40,147,2026-03-17,2026-03-07,2026-10-22,67,0.46,Active,,176,Seguro
+Dextrosa al 5%,Soporte,31,43,129,2026-01-15,2026-01-05,2026-12-07,72,2.25,Active,,222,Seguro
+Dextrosa al 5%,Soporte,32,58,94,2026-03-09,2026-02-26,2027-09-02,98,2.97,Active,,491,Seguro
+Crema de Hidrocortisona,Tópicos,82,30,182,2026-04-19,2026-04-11,2026-10-22,51,0.61,Active,,176,Seguro
+Catéter Port-a-Cath,Insumos,74,40,187,2026-05-04,2026-04-25,2027-12-30,67,0.89,Active,,610,Seguro
+Catéter Port-a-Cath,Insumos,82,23,51,2026-02-17,2026-02-13,2027-08-06,39,0.47,Active,,464,Seguro
+Llave de 3 vías,Insumos,106,22,62,2026-01-21,2026-01-12,2027-02-28,38,0.36,Active,,305,Seguro
+Llave de 3 vías,Insumos,56,34,147,2026-04-24,2026-04-21,2027-10-15,58,1.02,Active,,534,Seguro
+Paracetamol Jarabe,Analgesicos,93,19,123,2026-04-28,2026-04-23,2027-09-15,33,0.35,Active,,504,Seguro
+Cloruro de Potasio 20%,Soporte,36,61,197,2026-02-06,2026-01-30,2027-05-09,102,2.76,Active,,375,Seguro
+Doxorrubicina 50mg,Oncológicos,54,64,199,2026-04-10,2026-04-07,2028-03-13,107,1.95,Active,,684,Seguro
+Espesante de Alimentos,Nutrición,39,37,169,2026-03-15,2026-03-07,2027-12-28,63,1.57,Active,,608,Seguro
+Esparadrapo Micropore,Curación,111,35,174,2026-01-23,2026-01-17,2027-03-05,59,0.53,Active,,310,Seguro
+Jeringa 5ml,Insumos,36,22,107,2026-01-20,2026-01-17,2026-10-05,38,1.03,Active,,159,Seguro
+Tubo Vacutainer (Lila),Laboratorio,55,25,53,2026-02-24,2026-02-20,2027-06-03,43,0.77,Active,,400,Seguro
+Espesante de Alimentos,Nutrición,128,13,168,2026-04-24,2026-04-15,2027-07-18,22,0.17,Active,,445,Seguro
+Ibuprofeno Pediátrico,Analgesicos,58,12,71,2026-05-05,2026-05-01,2027-01-23,20,0.34,Active,,269,Seguro
+Catéter Port-a-Cath,Insumos,56,7,96,2026-03-31,2026-03-21,2026-10-17,12,0.21,Active,,171,Seguro
+Fórmula Polimérica,Nutrición,130,40,180,2026-04-03,2026-03-26,2027-12-26,68,0.52,Active,,606,Seguro
+Esparadrapo Micropore,Curación,30,40,113,2026-02-16,2026-02-12,2027-01-24,67,2.16,Active,,270,Seguro
+Espesante de Alimentos,Nutrición,54,19,76,2026-01-21,2026-01-17,2027-04-16,33,0.6,Active,,352,Seguro
+Dextrosa al 5%,Soporte,50,33,128,2026-04-12,2026-04-05,2028-03-11,56,1.1,Active,,682,Seguro
+Esparadrapo Micropore,Curación,75,35,142,2026-05-05,2026-04-26,2027-11-22,59,0.78,Active,,572,Seguro
+Jeringa 5ml,Insumos,82,19,66,2026-03-10,2026-03-05,2028-02-14,33,0.4,Active,,656,Seguro
+Ceftriaxona 1g,Antibióticos,137,17,166,2026-04-19,2026-04-08,2028-02-28,29,0.21,Active,,670,Seguro
+Ciclofosfamida 1g,Oncológicos,28,30,70,2026-03-14,2026-03-11,2026-11-20,50,1.72,Active,,205,Seguro
+Mascarilla N95 Pediátrica,Higiene,123,16,94,2026-04-29,2026-04-21,2026-11-05,27,0.22,Active,,190,Seguro
+Crema de Hidrocortisona,Tópicos,62,41,60,2026-04-21,2026-04-10,2027-11-13,69,1.1,Active,,563,Seguro
+Tubo Vacutainer (Rojo),Laboratorio,80,19,129,2026-02-19,2026-02-16,2026-10-02,33,0.41,Active,,156,Seguro
+Tubo Vacutainer (Rojo),Laboratorio,115,22,146,2026-01-29,2026-01-26,2027-03-26,37,0.32,Active,,331,Seguro
+Ciclofosfamida 1g,Oncológicos,37,43,199,2026-04-24,2026-04-21,2027-02-13,72,1.89,Active,,290,Seguro
+Suero Fisiológico 500ml,Soporte,6,46,155,2026-04-22,2026-04-18,2027-03-10,77,11.0,Active,,315,Seguro
+Tubo Vacutainer (Lila),Laboratorio,73,34,55,2026-04-23,2026-04-18,2026-10-28,58,0.78,Active,,182,Seguro
+Cloruro de Potasio 20%,Soporte,43,42,121,2026-02-19,2026-02-15,2027-05-08,71,1.61,Active,,374,Seguro
+Mascarilla N95 Pediátrica,Higiene,121,17,133,2026-03-12,2026-03-03,2027-12-10,29,0.24,Active,,590,Seguro
+Fórmula Polimérica,Nutrición,33,9,176,2026-03-08,2026-02-28,2027-10-18,15,0.44,Active,,537,Seguro
+Vincristina 1mg,Oncológicos,45,59,136,2026-04-25,2026-04-21,2026-11-02,99,2.15,Active,,187,Seguro
+Jeringa 5ml,Insumos,42,20,196,2026-02-23,2026-02-18,2026-12-21,34,0.79,Active,,236,Seguro
+Tubo Vacutainer (Lila),Laboratorio,139,27,81,2026-02-23,2026-02-13,2027-06-26,45,0.32,Active,,423,Seguro
+Alcohol en Gel 70%,Higiene,73,16,105,2026-03-20,2026-03-16,2027-09-02,27,0.36,Active,,491,Seguro
+Cloruro de Potasio 20%,Soporte,7,40,142,2026-03-24,2026-03-19,2026-10-24,67,8.38,Active,,178,Seguro
+Tubo Vacutainer (Rojo),Laboratorio,92,14,98,2026-04-16,2026-04-07,2027-09-09,24,0.26,Active,,498,Seguro
+Ceftriaxona 1g,Antibióticos,114,24,86,2026-03-08,2026-02-26,2027-10-12,40,0.35,Active,,531,Seguro
+Doxorrubicina 50mg,Oncológicos,32,35,166,2026-03-10,2026-02-28,2027-10-30,59,1.79,Active,,549,Seguro
+Ciclofosfamida 1g,Oncológicos,40,63,164,2026-03-29,2026-03-25,2027-07-16,105,2.56,Active,,443,Seguro
+Gasas Estériles,Curación,147,12,192,2026-01-12,2026-01-08,2026-07-31,21,0.14,Active,,93,Seguro
+Metotrexato 500mg,Oncológicos,39,39,136,2026-01-17,2026-01-11,2027-11-05,65,1.62,Active,,555,Seguro
+Catéter Endovenoso 24G,Insumos,73,13,86,2026-03-28,2026-03-24,2027-10-03,23,0.31,Active,,522,Seguro
+Ondansetrón 8mg,Antieméticos,67,32,160,2026-02-19,2026-02-11,2027-09-02,54,0.79,Active,,491,Seguro
+Llave de 3 vías,Insumos,149,28,119,2026-04-08,2026-04-02,2027-02-11,48,0.32,Active,,288,Seguro
+Espesante de Alimentos,Nutrición,118,39,54,2026-02-06,2026-02-02,2027-01-14,66,0.55,Active,,260,Seguro
+Metotrexato 500mg,Oncológicos,44,57,80,2026-02-14,2026-02-05,2027-06-11,95,2.11,Active,,408,Seguro
+Catéter Port-a-Cath,Insumos,39,7,182,2026-05-07,2026-04-26,2027-07-17,12,0.3,Active,,444,Seguro
+Guantes Estériles,Higiene,37,31,113,2026-03-26,2026-03-23,2027-07-31,52,1.37,Active,,458,Seguro
+Tubo Vacutainer (Rojo),Laboratorio,113,22,98,2026-04-26,2026-04-19,2027-05-14,37,0.32,Active,,380,Seguro
+Espesante de Alimentos,Nutrición,149,31,197,2026-03-06,2026-02-26,2027-05-10,53,0.35,Active,,376,Seguro
+Mascarilla N95 Pediátrica,Higiene,107,6,75,2026-03-23,2026-03-16,2026-10-08,11,0.1,Active,,162,Seguro
+Ibuprofeno Pediátrico,Analgesicos,30,38,108,2026-02-13,2026-02-05,2027-12-09,64,2.06,Active,,589,Seguro
+Ondansetrón 8mg,Antieméticos,62,34,92,2026-03-01,2026-02-23,2027-04-26,58,0.92,Active,,362,Seguro
+Ceftriaxona 1g,Antibióticos,127,20,87,2026-02-28,2026-02-17,2026-10-04,34,0.27,Active,,158,Seguro
+Guantes Estériles,Higiene,52,32,57,2026-03-02,2026-02-26,2027-09-07,54,1.02,Active,,496,Seguro
+Mascarilla N95 Pediátrica,Higiene,114,6,151,2026-05-08,2026-04-28,2027-10-21,10,0.09,Active,,540,Seguro
+Ondansetrón 8mg,Antieméticos,140,18,104,2026-02-25,2026-02-21,2027-03-04,31,0.22,Active,,309,Seguro
+Tubo Vacutainer (Lila),Laboratorio,119,31,75,2026-03-24,2026-03-20,2027-02-11,52,0.43,Active,,288,Seguro
+Dextrosa al 5%,Soporte,51,51,196,2026-03-18,2026-03-15,2026-09-14,85,1.63,Active,,138,Seguro
+Fórmula Polimérica,Nutrición,43,37,139,2026-02-26,2026-02-19,2027-08-20,62,1.41,Active,,478,Seguro
+Ceftriaxona 1g,Antibióticos,121,6,138,2026-05-03,2026-04-25,2027-04-08,11,0.09,Active,,344,Seguro
+Fórmula Polimérica,Nutrición,42,10,147,2026-05-06,2026-04-25,2027-09-21,18,0.42,Active,,510,Seguro
+Ibuprofeno Pediátrico,Analgesicos,131,33,131,2026-01-13,2026-01-05,2026-07-30,55,0.42,Active,,92,Seguro
+Equipo de Venoclisis,Insumos,134,19,103,2026-04-02,2026-03-30,2027-09-07,32,0.24,Active,,496,Seguro
+Suero Fisiológico 500ml,Soporte,29,32,198,2026-03-15,2026-03-06,2027-01-31,54,1.8,Active,,277,Seguro
+Alcohol en Gel 70%,Higiene,89,22,84,2026-04-08,2026-04-05,2027-08-05,38,0.42,Active,,463,Seguro
+Jeringa 5ml,Insumos,131,21,134,2026-01-20,2026-01-15,2026-07-21,35,0.27,Active,,83,Seguro
+Gasas Estériles,Curación,101,34,61,2026-03-16,2026-03-08,2027-04-20,57,0.56,Active,,356,Seguro
+Ondansetrón 8mg,Antieméticos,127,34,136,2026-02-15,2026-02-09,2026-09-25,57,0.45,Active,,149,Seguro
+Dexametasona 4mg,Antieméticos,75,35,156,2026-04-27,2026-04-20,2027-12-04,59,0.78,Active,,584,Seguro
+Tubo Vacutainer (Lila),Laboratorio,109,33,64,2026-05-06,2026-04-25,2026-12-22,56,0.51,Active,,237,Seguro
+Doxorrubicina 50mg,Oncológicos,25,31,174,2026-04-05,2026-03-31,2027-08-31,52,2.0,Active,,489,Seguro
+Doxorrubicina 50mg,Oncológicos,52,54,155,2026-04-29,2026-04-24,2027-03-18,91,1.72,Active,,323,Seguro
+Doxorrubicina 50mg,Oncológicos,34,34,138,2026-01-11,2026-01-08,2026-10-07,57,1.63,Active,,161,Seguro
+Ceftriaxona 1g,Antibióticos,104,9,120,2026-04-14,2026-04-05,2027-03-18,16,0.15,Active,,323,Seguro
+Placas de Rayos X,Imágenes,142,30,133,2026-03-11,2026-03-01,2026-10-12,51,0.36,Active,,166,Seguro
+Doxorrubicina 50mg,Oncológicos,58,27,169,2026-03-04,2026-03-01,2027-02-18,46,0.78,Active,,295,Seguro
+Equipo de Venoclisis,Insumos,135,33,70,2026-01-22,2026-01-13,2026-11-15,56,0.41,Active,,200,Seguro
+Tubo Vacutainer (Rojo),Laboratorio,121,10,171,2026-02-04,2026-01-24,2026-08-12,18,0.15,Active,,105,Seguro
+Crema de Hidrocortisona,Tópicos,71,10,140,2026-02-02,2026-01-30,2027-01-01,17,0.24,Active,,247,Seguro
+Ondansetrón 8mg,Antieméticos,97,35,138,2026-02-02,2026-01-28,2026-09-29,59,0.6,Active,,153,Seguro
+Mascarilla N95 Pediátrica,Higiene,48,27,118,2026-03-24,2026-03-21,2027-12-02,45,0.92,Active,,582,Seguro
+Pediasure Plus 200ml,Nutrición,78,26,86,2026-04-27,2026-04-23,2027-12-29,44,0.56,Active,,609,Seguro
+Pediasure Plus 200ml,Nutrición,64,22,51,2026-03-21,2026-03-10,2026-12-02,37,0.57,Active,,217,Seguro
+Vincristina 1mg,Oncológicos,11,34,73,2026-03-17,2026-03-09,2027-02-26,57,4.75,Active,,303,Seguro
+Paracetamol Jarabe,Analgesicos,75,16,158,2026-03-18,2026-03-10,2027-06-28,28,0.37,Active,,425,Seguro
+Llave de 3 vías,Insumos,65,29,185,2026-04-20,2026-04-17,2026-12-28,49,0.74,Active,,243,Seguro
+Metotrexato 500mg,Oncológicos,10,48,76,2026-04-22,2026-04-16,2028-03-18,80,7.27,Active,,689,Seguro
+Jabón Clorhexidina,Higiene,37,28,93,2026-03-22,2026-03-18,2026-11-23,47,1.24,Active,,208,Seguro
+Ibuprofeno Pediátrico,Analgesicos,87,7,51,2026-04-05,2026-03-28,2027-02-08,12,0.14,Active,,285,Seguro
+Dexametasona 4mg,Antieméticos,110,26,57,2026-04-17,2026-04-08,2027-02-06,44,0.4,Active,,283,Seguro
+Tubo Vacutainer (Rojo),Laboratorio,73,40,80,2026-02-14,2026-02-07,2027-12-02,67,0.91,Active,,582,Seguro
+Pediasure Plus 200ml,Nutrición,84,15,193,2026-04-25,2026-04-14,2026-12-15,25,0.29,Active,,230,Seguro
+Jeringa 5ml,Insumos,46,15,193,2026-01-21,2026-01-11,2027-12-16,25,0.53,Active,,596,Seguro
+Ceftriaxona 1g,Antibióticos,138,19,167,2026-04-11,2026-04-06,2027-01-19,32,0.23,Active,,265,Seguro
+Ondansetrón 8mg,Antieméticos,113,29,198,2026-05-09,2026-05-06,2027-08-17,49,0.43,Active,,475,Seguro
+Guantes Estériles,Higiene,99,18,65,2026-04-01,2026-03-22,2027-03-07,31,0.31,Active,,312,Seguro
+Jeringa 5ml,Insumos,67,36,163,2026-04-17,2026-04-11,2028-02-06,61,0.9,Active,,648,Seguro
+Equipo de Venoclisis,Insumos,95,30,124,2026-04-04,2026-03-31,2027-12-23,50,0.52,Active,,603,Seguro
+Vincristina 1mg,Oncológicos,56,60,104,2026-02-01,2026-01-26,2027-11-08,101,1.77,Active,,558,Seguro
+Dexametasona 4mg,Antieméticos,64,18,150,2026-02-21,2026-02-13,2027-07-01,31,0.48,Active,,428,Seguro
+Guantes Estériles,Higiene,135,12,131,2026-04-30,2026-04-27,2026-12-07,21,0.15,Active,,222,Seguro
+Equipo de Venoclisis,Insumos,64,23,129,2026-04-07,2026-03-30,2026-12-09,39,0.6,Active,,224,Seguro
+Suero Fisiológico 500ml,Soporte,56,31,69,2026-03-23,2026-03-16,2027-01-26,53,0.93,Active,,272,Seguro
+Mascarilla N95 Pediátrica,Higiene,39,20,103,2026-03-16,2026-03-05,2027-05-22,34,0.85,Active,,388,Seguro
+Metotrexato 500mg,Oncológicos,40,31,174,2026-03-15,2026-03-07,2027-05-06,53,1.29,Active,,372,Seguro
+Guantes Estériles,Higiene,32,26,190,2026-02-19,2026-02-11,2026-09-11,44,1.33,Active,,135,Seguro
+Jabón Clorhexidina,Higiene,127,10,128,2026-01-30,2026-01-26,2028-01-16,17,0.13,Active,,627,Seguro
+Doxorrubicina 50mg,Oncológicos,49,59,183,2026-01-21,2026-01-15,2027-10-09,99,1.98,Active,,528,Seguro
+Ibuprofeno Pediátrico,Analgesicos,72,6,80,2026-03-10,2026-03-01,2027-12-16,11,0.15,Active,,596,Seguro
+Alcohol en Gel 70%,Higiene,34,16,60,2026-02-12,2026-02-01,2027-08-27,28,0.8,Active,,485,Seguro
+Mascarilla N95 Pediátrica,Higiene,60,39,186,2026-03-29,2026-03-18,2026-12-16,65,1.07,Active,,231,Seguro
+Vincristina 1mg,Oncológicos,25,40,129,2026-03-12,2026-03-07,2027-05-28,67,2.58,Active,,394,Seguro
+Fórmula Polimérica,Nutrición,126,7,152,2026-01-13,2026-01-04,2026-10-20,13,0.1,Active,,174,Seguro
+Paracetamol Jarabe,Analgesicos,81,22,112,2026-03-02,2026-02-24,2026-12-30,38,0.46,Active,,245,Seguro
+Ondansetrón 8mg,Antieméticos,145,26,135,2026-01-16,2026-01-08,2027-12-22,44,0.3,Active,,602,Seguro
+Ondansetrón 8mg,Antieméticos,84,6,128,2026-03-12,2026-03-05,2027-05-11,11,0.13,Active,,377,Seguro
+Jabón Clorhexidina,Higiene,39,19,182,2026-03-08,2026-02-26,2027-10-31,32,0.8,Active,,550,Seguro
+Metotrexato 500mg,Oncológicos,17,55,188,2026-04-01,2026-03-25,2027-03-19,92,5.11,Active,,324,Seguro
+Jabón Clorhexidina,Higiene,81,38,91,2026-05-06,2026-04-30,2027-06-16,64,0.78,Active,,413,Seguro
+Jabón Clorhexidina,Higiene,71,13,66,2026-05-02,2026-04-21,2027-05-08,22,0.31,Active,,374,Seguro
+Placas de Rayos X,Imágenes,38,30,146,2026-01-10,2026-01-06,2026-08-06,50,1.28,Active,,99,Seguro
+Catéter Endovenoso 24G,Insumos,143,40,83,2026-03-10,2026-02-28,2027-06-16,67,0.47,Active,,413,Seguro
+Dextrosa al 5%,Soporte,26,52,118,2026-03-29,2026-03-26,2027-03-16,88,3.26,Active,,321,Seguro
+Jeringa 5ml,Insumos,94,19,136,2026-04-20,2026-04-10,2027-05-04,32,0.34,Active,,370,Seguro
+Catéter Port-a-Cath,Insumos,30,32,66,2026-03-01,2026-02-19,2027-12-23,54,1.74,Active,,603,Seguro
+Ondansetrón 8mg,Antieméticos,49,18,192,2026-04-23,2026-04-17,2027-12-29,30,0.6,Active,,609,Seguro
+Alcohol en Gel 70%,Higiene,36,36,54,2026-02-06,2026-02-01,2027-12-08,60,1.62,Active,,588,Seguro
+Ondansetrón 8mg,Antieméticos,123,37,187,2026-04-15,2026-04-05,2027-08-27,63,0.51,Active,,485,Seguro
+Dexametasona 4mg,Antieméticos,140,24,185,2026-05-01,2026-04-28,2027-06-07,41,0.29,Active,,404,Seguro
+Dextrosa al 5%,Soporte,29,63,117,2026-03-29,2026-03-25,2027-10-11,105,3.5,Active,,530,Seguro
+Llave de 3 vías,Insumos,134,30,163,2026-04-08,2026-03-30,2027-04-12,50,0.37,Active,,348,Seguro
+Catéter Endovenoso 24G,Insumos,50,27,62,2026-01-21,2026-01-11,2027-07-28,45,0.88,Active,,455,Seguro
+Jabón Clorhexidina,Higiene,61,24,59,2026-01-25,2026-01-21,2027-12-28,40,0.65,Active,,608,Seguro
+Pediasure Plus 200ml,Nutrición,46,29,108,2026-01-27,2026-01-18,2027-11-25,49,1.04,Active,,575,Seguro
+Llave de 3 vías,Insumos,118,35,81,2026-01-31,2026-01-25,2027-09-16,59,0.5,Active,,505,Seguro
+Alcohol en Gel 70%,Higiene,75,34,81,2026-05-09,2026-05-02,2027-03-06,58,0.76,Active,,311,Seguro
+Ceftriaxona 1g,Antibióticos,148,28,198,2026-05-02,2026-04-21,2028-04-10,48,0.32,Active,,712,Seguro
+Equipo de Venoclisis,Insumos,50,10,184,2026-02-24,2026-02-14,2027-04-17,17,0.33,Active,,353,Seguro
+Tubo Vacutainer (Lila),Laboratorio,137,24,138,2026-03-25,2026-03-17,2027-05-13,41,0.3,Active,,379,Seguro
+Tubo Vacutainer (Rojo),Laboratorio,121,22,76,2026-01-22,2026-01-18,2027-02-18,38,0.31,Active,,295,Seguro
+Mascarilla N95 Pediátrica,Higiene,124,14,93,2026-05-04,2026-04-25,2027-01-26,24,0.19,Active,,272,Seguro
+Equipo de Venoclisis,Insumos,51,31,167,2026-02-15,2026-02-12,2028-01-10,52,1.0,Active,,621,Seguro
+Alcohol en Gel 70%,Higiene,52,22,160,2026-02-08,2026-01-30,2026-11-22,38,0.72,Active,,207,Seguro
+Crema de Hidrocortisona,Tópicos,130,33,157,2026-01-17,2026-01-07,2026-11-21,56,0.43,Active,,206,Seguro
+Ondansetrón 8mg,Antieméticos,32,6,113,2026-01-13,2026-01-03,2027-11-06,10,0.3,Active,,556,Seguro
+Catéter Endovenoso 24G,Insumos,127,31,115,2026-04-08,2026-04-01,2027-08-02,52,0.41,Active,,460,Seguro
+Cloruro de Potasio 20%,Soporte,52,31,139,2026-01-18,2026-01-12,2027-03-07,52,0.98,Active,,312,Seguro
+Gasas Estériles,Curación,83,12,170,2026-03-31,2026-03-20,2027-11-18,21,0.25,Active,,568,Seguro
+Guantes Estériles,Higiene,104,15,105,2026-05-04,2026-04-25,2027-01-08,25,0.24,Active,,254,Seguro
+Alcohol en Gel 70%,Higiene,130,40,187,2026-01-13,2026-01-07,2026-07-31,67,0.51,Active,,93,Seguro
+Placas de Rayos X,Imágenes,147,26,103,2026-02-04,2026-01-28,2027-11-14,44,0.3,Active,,564,Seguro
+Dextrosa al 5%,Soporte,43,36,106,2026-03-24,2026-03-16,2027-03-26,60,1.36,Active,,331,Seguro
+Equipo de Venoclisis,Insumos,49,15,63,2026-05-08,2026-04-29,2028-04-02,26,0.52,Active,,704,Seguro
+Vincristina 1mg,Oncológicos,28,58,131,2026-03-05,2026-02-27,2028-02-18,97,3.34,Active,,660,Seguro
+Alcohol en Gel 70%,Higiene,60,41,159,2026-03-10,2026-03-05,2027-07-21,69,1.13,Active,,448,Seguro
+Alcohol en Gel 70%,Higiene,51,19,149,2026-04-28,2026-04-20,2027-02-18,33,0.63,Active,,295,Seguro
+Alcohol en Gel 70%,Higiene,77,32,195,2026-04-19,2026-04-10,2027-02-05,54,0.69,Active,,282,Seguro
+Guantes Estériles,Higiene,142,40,94,2026-04-11,2026-03-31,2027-02-02,68,0.48,Active,,279,Seguro
+Metotrexato 500mg,Oncológicos,21,65,192,2026-01-13,2026-01-07,2026-08-27,109,4.95,Active,,120,Seguro
+Dexametasona 4mg,Antieméticos,76,13,139,2026-03-25,2026-03-16,2027-02-04,23,0.3,Active,,281,Seguro
+Fórmula Polimérica,Nutrición,98,39,167,2026-05-05,2026-05-01,2027-07-12,66,0.67,Active,,439,Seguro
+Equipo de Venoclisis,Insumos,99,15,84,2026-04-28,2026-04-23,2027-12-24,26,0.26,Active,,604,Seguro
+Llave de 3 vías,Insumos,55,36,198,2026-03-19,2026-03-12,2026-11-02,60,1.07,Active,,187,Seguro
+Catéter Endovenoso 24G,Insumos,93,8,175,2026-04-19,2026-04-11,2027-07-02,14,0.15,Active,,429,Seguro
+Suero Fisiológico 500ml,Soporte,43,44,149,2026-01-10,2025-12-31,2027-05-17,74,1.68,Active,,383,Seguro
+Dexametasona 4mg,Antieméticos,70,37,157,2026-02-24,2026-02-13,2027-10-04,63,0.89,Active,,523,Seguro
+Catéter Endovenoso 24G,Insumos,59,18,63,2026-04-11,2026-04-02,2027-03-19,31,0.52,Active,,324,Seguro
+Placas de Rayos X,Imágenes,39,15,119,2026-01-25,2026-01-17,2027-02-13,25,0.62,Active,,290,Seguro
+Jeringa 5ml,Insumos,102,32,156,2026-04-19,2026-04-09,2027-06-22,54,0.52,Active,,419,Seguro
+Crema de Hidrocortisona,Tópicos,50,7,119,2026-02-28,2026-02-25,2028-01-27,13,0.25,Active,,638,Seguro
+Pediasure Plus 200ml,Nutrición,111,24,192,2026-05-09,2026-05-03,2028-02-19,41,0.37,Active,,661,Seguro
+Fórmula Polimérica,Nutrición,100,18,106,2026-02-20,2026-02-10,2027-01-07,30,0.3,Active,,253,Seguro
+Ondansetrón 8mg,Antieméticos,87,18,136,2026-04-01,2026-03-25,2027-02-05,30,0.34,Active,,282,Seguro
+Gasas Estériles,Curación,66,19,138,2026-02-27,2026-02-22,2027-08-31,33,0.49,Active,,489,Seguro
+Jabón Clorhexidina,Higiene,41,39,166,2026-03-11,2026-02-28,2027-02-14,66,1.57,Active,,291,Seguro
+Doxorrubicina 50mg,Oncológicos,46,43,77,2026-03-31,2026-03-21,2027-09-15,72,1.53,Active,,504,Seguro
+Gasas Estériles,Curación,72,30,66,2026-02-17,2026-02-09,2027-02-08,50,0.68,Active,,285,Seguro
+Ciclofosfamida 1g,Oncológicos,10,65,51,2026-04-17,2026-04-14,2028-03-13,109,9.91,Active,,684,Seguro
+Tubo Vacutainer (Rojo),Laboratorio,141,39,161,2026-03-16,2026-03-12,2027-02-02,66,0.46,Active,,279,Seguro
+Alcohol en Gel 70%,Higiene,68,18,108,2026-03-26,2026-03-16,2027-07-12,31,0.45,Active,,439,Seguro
+Catéter Endovenoso 24G,Insumos,128,36,184,2026-03-13,2026-03-10,2026-10-10,60,0.47,Active,,164,Seguro
+Jabón Clorhexidina,Higiene,49,21,192,2026-03-18,2026-03-12,2027-04-15,35,0.7,Active,,351,Seguro
+Placas de Rayos X,Imágenes,133,18,107,2026-03-29,2026-03-21,2027-10-10,30,0.22,Active,,529,Seguro
+Paracetamol Jarabe,Analgesicos,55,34,180,2026-03-13,2026-03-09,2027-05-20,58,1.04,Active,,386,Seguro
+Dextrosa al 5%,Soporte,48,48,72,2026-05-05,2026-04-30,2028-01-10,81,1.65,Active,,621,Seguro
+Crema de Hidrocortisona,Tópicos,79,31,60,2026-01-28,2026-01-21,2027-05-29,52,0.65,Active,,395,Seguro
+Placas de Rayos X,Imágenes,41,11,90,2026-01-17,2026-01-07,2027-12-05,19,0.45,Active,,585,Seguro
+Doxorrubicina 50mg,Oncológicos,41,56,91,2026-01-18,2026-01-08,2027-02-11,94,2.24,Active,,288,Seguro
+Paracetamol Jarabe,Analgesicos,113,9,158,2026-01-21,2026-01-17,2027-08-10,15,0.13,Active,,468,Seguro
+Vincristina 1mg,Oncológicos,31,47,178,2026-04-21,2026-04-18,2027-05-25,79,2.47,Active,,391,Seguro
+Tubo Vacutainer (Lila),Laboratorio,37,27,159,2026-02-10,2026-02-03,2027-04-25,46,1.21,Active,,361,Seguro
+Tubo Vacutainer (Rojo),Laboratorio,48,24,178,2026-01-18,2026-01-09,2026-08-01,41,0.84,Active,,94,Seguro
+Equipo de Venoclisis,Insumos,148,37,151,2026-01-30,2026-01-26,2027-04-14,62,0.42,Active,,350,Seguro
+Gasas Estériles,Curación,124,40,180,2026-05-08,2026-05-01,2028-04-23,68,0.54,Active,,725,Seguro
+Metotrexato 500mg,Oncológicos,8,38,182,2026-01-29,2026-01-25,2027-08-13,64,7.11,Active,,471,Seguro
+Vincristina 1mg,Oncológicos,32,28,183,2026-05-05,2026-04-27,2028-01-08,48,1.45,Active,,619,Seguro
+Alcohol en Gel 70%,Higiene,89,31,157,2026-01-20,2026-01-16,2027-07-17,53,0.59,Active,,444,Seguro
+Cloruro de Potasio 20%,Soporte,25,25,83,2026-03-26,2026-03-19,2027-02-24,42,1.62,Active,,301,Seguro
+Cloruro de Potasio 20%,Soporte,55,51,177,2026-04-01,2026-03-21,2027-07-03,86,1.54,Active,,430,Seguro
+Tubo Vacutainer (Rojo),Laboratorio,46,8,174,2026-04-27,2026-04-22,2027-08-08,14,0.3,Active,,466,Seguro
+Fórmula Polimérica,Nutrición,63,6,96,2026-04-18,2026-04-08,2027-06-19,11,0.17,Active,,416,Seguro
+Suero Fisiológico 500ml,Soporte,10,35,116,2026-01-10,2025-12-31,2027-01-15,59,5.36,Active,,261,Seguro
+Doxorrubicina 50mg,Oncológicos,29,51,106,2026-02-16,2026-02-09,2027-03-29,86,2.87,Active,,334,Seguro
+Jabón Clorhexidina,Higiene,82,33,194,2026-05-05,2026-04-29,2028-02-03,55,0.66,Active,,645,Seguro
+Suero Fisiológico 500ml,Soporte,13,27,140,2026-04-10,2026-04-01,2027-12-23,45,3.21,Active,,603,Seguro
+Ciclofosfamida 1g,Oncológicos,50,46,121,2026-01-23,2026-01-17,2027-12-04,77,1.51,Active,,584,Seguro
+Ceftriaxona 1g,Antibióticos,64,16,137,2026-02-08,2026-02-02,2027-05-14,28,0.43,Active,,380,Seguro
+Llave de 3 vías,Insumos,55,28,159,2026-04-06,2026-03-29,2026-12-24,47,0.84,Active,,239,Seguro
+Alcohol en Gel 70%,Higiene,32,30,120,2026-01-28,2026-01-17,2027-05-06,51,1.55,Active,,372,Seguro
+Llave de 3 vías,Insumos,92,10,68,2026-05-08,2026-04-27,2028-03-25,18,0.19,Active,,696,Seguro
+Pediasure Plus 200ml,Nutrición,145,13,110,2026-05-09,2026-05-01,2028-01-15,23,0.16,Active,,626,Seguro
+Doxorrubicina 50mg,Oncológicos,44,41,101,2026-01-18,2026-01-15,2027-07-27,69,1.53,Active,,454,Seguro
+Crema de Hidrocortisona,Tópicos,43,12,90,2026-03-03,2026-02-26,2027-07-29,20,0.45,Active,,456,Seguro
+Doxorrubicina 50mg,Oncológicos,8,28,65,2026-01-11,2025-12-31,2026-11-13,47,5.22,Active,,198,Seguro
+Ibuprofeno Pediátrico,Analgesicos,91,34,99,2026-02-26,2026-02-21,2027-12-31,58,0.63,Active,,611,Seguro
+Jabón Clorhexidina,Higiene,50,8,186,2026-02-26,2026-02-20,2027-03-13,14,0.27,Active,,318,Seguro
+Doxorrubicina 50mg,Oncológicos,39,62,125,2026-01-17,2026-01-08,2027-09-19,104,2.6,Active,,508,Seguro
+Tubo Vacutainer (Rojo),Laboratorio,105,33,101,2026-02-25,2026-02-14,2026-09-18,55,0.52,Active,,142,Seguro
+Ibuprofeno Pediátrico,Analgesicos,51,29,181,2026-01-30,2026-01-25,2027-12-15,49,0.94,Active,,595,Seguro
+Tubo Vacutainer (Lila),Laboratorio,100,22,125,2026-02-06,2026-01-31,2027-09-14,37,0.37,Active,,503,Seguro
+Equipo de Venoclisis,Insumos,96,18,140,2026-04-27,2026-04-23,2027-04-03,31,0.32,Active,,339,Seguro
+Tubo Vacutainer (Lila),Laboratorio,134,6,194,2026-03-22,2026-03-13,2027-06-06,10,0.07,Active,,403,Seguro
+Ibuprofeno Pediátrico,Analgesicos,41,9,173,2026-04-09,2026-03-30,2028-01-15,15,0.36,Active,,626,Seguro
+Catéter Endovenoso 24G,Insumos,94,39,191,2026-04-12,2026-04-09,2027-12-06,66,0.69,Active,,586,Seguro
+Vincristina 1mg,Oncológicos,52,57,95,2026-02-27,2026-02-19,2026-10-13,95,1.79,Active,,167,Seguro
+Espesante de Alimentos,Nutrición,91,10,111,2026-02-21,2026-02-15,2027-07-26,17,0.18,Active,,453,Seguro
+Catéter Endovenoso 24G,Insumos,136,37,86,2026-04-24,2026-04-13,2027-09-29,63,0.46,Active,,518,Seguro
+Espesante de Alimentos,Nutrición,70,15,90,2026-04-07,2026-03-31,2027-04-04,26,0.37,Active,,340,Seguro
+Suero Fisiológico 500ml,Soporte,17,61,176,2026-01-20,2026-01-15,2027-06-16,103,5.72,Active,,413,Seguro
+Llave de 3 vías,Insumos,74,6,121,2026-02-18,2026-02-13,2027-07-14,10,0.13,Active,,441,Seguro
+Dextrosa al 5%,Soporte,57,30,139,2026-03-11,2026-03-08,2027-07-04,51,0.88,Active,,431,Seguro
+Suero Fisiológico 500ml,Soporte,32,64,136,2026-01-17,2026-01-06,2027-01-05,108,3.27,Active,,251,Seguro
+Ceftriaxona 1g,Antibióticos,138,33,176,2026-04-06,2026-04-03,2027-08-22,56,0.4,Active,,480,Seguro
+Doxorrubicina 50mg,Oncológicos,22,34,162,2026-04-30,2026-04-20,2027-01-18,58,2.52,Active,,264,Seguro
+Metotrexato 500mg,Oncológicos,16,32,100,2026-02-19,2026-02-10,2026-11-30,54,3.18,Active,,215,Seguro
+Catéter Port-a-Cath,Insumos,106,11,170,2026-01-23,2026-01-19,2026-11-16,19,0.18,Active,,201,Seguro
+Suero Fisiológico 500ml,Soporte,32,25,142,2026-04-03,2026-03-26,2028-02-25,42,1.27,Active,,667,Seguro
+Dexametasona 4mg,Antieméticos,32,15,130,2026-04-13,2026-04-03,2027-06-24,25,0.76,Active,,421,Seguro
+Cloruro de Potasio 20%,Soporte,16,44,94,2026-04-26,2026-04-23,2027-08-29,74,4.35,Active,,487,Seguro
+Pediasure Plus 200ml,Nutrición,119,27,72,2026-04-04,2026-04-01,2027-02-04,46,0.38,Active,,281,Seguro
+Placas de Rayos X,Imágenes,67,22,195,2026-01-30,2026-01-22,2026-11-12,37,0.54,Active,,197,Seguro
+Doxorrubicina 50mg,Oncológicos,39,50,157,2026-05-08,2026-04-27,2026-12-03,84,2.1,Active,,218,Seguro
+Ciclofosfamida 1g,Oncológicos,36,63,72,2026-03-17,2026-03-06,2026-11-14,106,2.86,Active,,199,Seguro
+Dextrosa al 5%,Soporte,15,52,149,2026-02-10,2026-01-30,2026-12-04,87,5.44,Active,,219,Seguro
+Paracetamol Jarabe,Analgesicos,62,19,56,2026-02-17,2026-02-13,2027-10-29,33,0.52,Active,,548,Seguro
+Doxorrubicina 50mg,Oncológicos,41,57,68,2026-03-15,2026-03-12,2027-02-05,95,2.26,Active,,282,Seguro
+Ibuprofeno Pediátrico,Analgesicos,103,41,175,2026-01-27,2026-01-22,2027-09-25,69,0.66,Active,,514,Seguro
+Catéter Port-a-Cath,Insumos,78,34,165,2026-02-16,2026-02-09,2027-09-10,58,0.73,Active,,499,Seguro
+Placas de Rayos X,Imágenes,105,28,118,2026-03-15,2026-03-09,2027-11-18,47,0.44,Active,,568,Seguro
+Ceftriaxona 1g,Antibióticos,149,19,94,2026-03-09,2026-03-04,2026-11-18,33,0.22,Active,,203,Seguro
+Doxorrubicina 50mg,Oncológicos,30,39,100,2026-02-24,2026-02-16,2027-08-20,66,2.13,Active,,478,Seguro
+Mascarilla N95 Pediátrica,Higiene,35,40,171,2026-01-24,2026-01-17,2027-11-19,68,1.89,Active,,569,Seguro
+Ibuprofeno Pediátrico,Analgesicos,66,30,183,2026-04-20,2026-04-15,2027-01-11,51,0.76,Active,,257,Seguro
+Doxorrubicina 50mg,Oncológicos,22,40,71,2026-03-27,2026-03-21,2027-01-09,68,2.96,Active,,255,Seguro
+Doxorrubicina 50mg,Oncológicos,9,45,135,2026-04-24,2026-04-21,2027-10-20,76,7.6,Active,,539,Seguro
+Jabón Clorhexidina,Higiene,116,36,158,2026-01-12,2026-01-08,2027-08-30,60,0.51,Active,,488,Seguro
+Alcohol en Gel 70%,Higiene,142,18,188,2026-02-24,2026-02-17,2027-06-18,30,0.21,Active,,415,Seguro
+Suero Fisiológico 500ml,Soporte,8,24,190,2026-04-11,2026-04-01,2028-02-02,40,4.44,Active,,644,Seguro
+Pediasure Plus 200ml,Nutrición,127,12,66,2026-04-19,2026-04-14,2028-03-07,20,0.16,Active,,678,Seguro
