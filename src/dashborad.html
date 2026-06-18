@@ -1,0 +1,432 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { font-family: 'DM Sans', sans-serif; }
+    body { background: #f6f8fc; color: #0f172a; }
+    .sidebar-item { transition: background 0.2s, opacity 0.2s; }
+    .sidebar-item:hover { background: rgba(255,255,255,0.08); }
+    .panel-card { transition: transform 0.2s, box-shadow 0.2s; }
+    .panel-card:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08); }
+    .metric-ring {
+      width: 72px;
+      height: 72px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      background: #fff;
+    }
+    .confusion-cell {
+      min-width: 72px;
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      border-radius: 12px;
+      font-size: 16px;
+    }
+    .confusion-grid {
+      display: grid;
+      grid-template-columns: 88px repeat(3, 72px);
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+    }
+    .chart-grid {
+      background-image: linear-gradient(to top, rgba(148,163,184,0.14) 1px, transparent 1px);
+      background-size: 100% 48px;
+    }
+    .axis-label { color: #94a3b8; font-size: 11px; }
+    .chart-bar-real, .chart-bar-pred {
+      width: 16px;
+      border-radius: 8px 8px 2px 2px;
+      transition: height 0.3s ease;
+    }
+    .chart-bar-real { background: #3b82f6; }
+    .chart-bar-pred { background: #34d399; }
+    .progress-track {
+      height: 10px;
+      border-radius: 999px;
+      background: #eef2ff;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      border-radius: 999px;
+      transition: width 0.3s ease;
+    }
+    .table-row td { border-top: 1px solid #eef2f7; }
+  </style>
+</head>
+<body class="min-h-screen">
+  <div class="flex min-h-screen">
+    <aside class="w-64 bg-slate-800 text-white flex flex-col px-4 py-6">
+      <div class="mb-10 px-2">
+        <h1 class="text-3xl font-bold tracking-tight">MedPredict AI</h1>
+        <p class="text-xs mt-1 text-slate-300">Analytics Platform v2.1</p>
+      </div>
+
+      <nav class="flex-1 space-y-1">
+        <a class="sidebar-item flex items-center gap-3 px-3 py-2.5 rounded-lg bg-white/10">
+          <i data-lucide="layout-dashboard" style="width:18px;height:18px;color:#fff"></i>
+          <span class="text-sm font-medium">Vista General</span>
+        </a>
+        <a class="sidebar-item flex items-center gap-3 px-3 py-2.5 rounded-lg">
+          <i data-lucide="heart-pulse" style="width:18px;height:18px;color:rgba(255,255,255,0.7)"></i>
+          <span class="text-sm opacity-80">Modelo Cl&iacute;nico</span>
+        </a>
+        <a class="sidebar-item flex items-center gap-3 px-3 py-2.5 rounded-lg">
+          <i data-lucide="truck" style="width:18px;height:18px;color:rgba(255,255,255,0.7)"></i>
+          <span class="text-sm opacity-80">Modelo Log&iacute;stico</span>
+        </a>
+        <a class="sidebar-item flex items-center gap-3 px-3 py-2.5 rounded-lg">
+          <i data-lucide="bar-chart-3" style="width:18px;height:18px;color:rgba(255,255,255,0.7)"></i>
+          <span class="text-sm opacity-80">Comparativo</span>
+        </a>
+        <a class="sidebar-item flex items-center gap-3 px-3 py-2.5 rounded-lg">
+          <i data-lucide="settings" style="width:18px;height:18px;color:rgba(255,255,255,0.7)"></i>
+          <span class="text-sm opacity-80">Configuraci&oacute;n</span>
+        </a>
+      </nav>
+
+      <div class="mt-auto border-t border-white/10 pt-4 px-2">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-full bg-white/15 flex items-center justify-center">
+            <i data-lucide="user" style="width:14px;height:14px;color:#fff"></i>
+          </div>
+          <div>
+            <p class="text-sm font-medium">Dra. Garc&iacute;a</p>
+            <p class="text-xs text-slate-300">Panel de Supervisi&oacute;n</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="flex-1">
+      <header class="px-8 py-5 bg-white border-b border-slate-200">
+        <div>
+          <h2 class="text-3xl font-bold text-slate-900">Dashboard</h2>
+        </div>
+      </header>
+
+      <div class="p-8 space-y-6">
+        <section class="panel-card bg-white rounded-2xl border border-slate-200 p-5">
+          <div class="flex items-start justify-between gap-4 mb-4">
+            <div>
+              <h3 class="text-base font-bold text-slate-800">Flujo integrado de decisi&oacute;n</h3>
+              <p class="text-sm text-slate-400 mt-1">La vista integra decisiones asistenciales y abastecimiento para sostener continuidad operativa.</p>
+            </div>
+            <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full">Modelo unificado</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="rounded-2xl border border-blue-100 bg-blue-50/60 p-4">
+              <div class="flex items-center gap-2 mb-2">
+                <i data-lucide="heart-pulse" style="width:16px;height:16px;color:#3b82f6"></i>
+                <span class="text-sm font-semibold">1. Priorizaci&oacute;n cl&iacute;nica</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">El modelo de clasificaci&oacute;n cl&iacute;nica organiza la atenci&oacute;n seg&uacute;n nivel de prioridad para enfocar los recursos en los casos que requieren respuesta m&aacute;s oportuna.</p>
+            </div>
+
+            <div class="rounded-2xl border border-emerald-100 bg-emerald-50/60 p-4">
+              <div class="flex items-center gap-2 mb-2">
+                <i data-lucide="package-check" style="width:16px;height:16px;color:#10b981"></i>
+                <span class="text-sm font-semibold">2. Proyecci&oacute;n log&iacute;stica</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">El modelo de proyecci&oacute;n log&iacute;stica anticipa necesidades de insumos y alimentos para mejorar planificaci&oacute;n, reposici&oacute;n y cobertura durante periodos de mayor demanda.</p>
+            </div>
+
+            <div class="rounded-2xl border border-violet-100 bg-violet-50/60 p-4">
+              <div class="flex items-center gap-2 mb-2">
+                <i data-lucide="workflow" style="width:16px;height:16px;color:#8b5cf6"></i>
+                <span class="text-sm font-semibold">3. Decisi&oacute;n operativa</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">Ambos modelos se interpretan juntos para decidir qu&eacute; paciente atender primero y con qu&eacute; recursos sostener la atenci&oacute;n sin riesgo de quiebre.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="grid grid-cols-1 xl:grid-cols-5 gap-4">
+          <div class="panel-card bg-white rounded-2xl border border-slate-200 p-5 xl:col-span-2">
+            <h3 class="text-sm font-bold mb-4">Matriz de Confusi&oacute;n</h3>
+            <div class="flex justify-center">
+              <div>
+                <div class="confusion-grid">
+                  <div></div>
+                  <p class="text-[10px] text-center font-medium text-slate-400">Alta</p>
+                  <p class="text-[10px] text-center font-medium text-slate-400">Baja</p>
+                  <p class="text-[10px] text-center font-medium text-slate-400">Media</p>
+
+                  <p class="text-[10px] font-medium text-slate-400 text-right pr-2">Alta</p>
+                  <div class="confusion-cell bg-blue-100 text-blue-700" id="cm-00">--</div>
+                  <div class="confusion-cell bg-rose-50 text-rose-600" id="cm-01">--</div>
+                  <div class="confusion-cell bg-violet-50 text-violet-600" id="cm-02">--</div>
+
+                  <p class="text-[10px] font-medium text-slate-400 text-right pr-2">Baja</p>
+                  <div class="confusion-cell bg-orange-50 text-orange-500" id="cm-10">--</div>
+                  <div class="confusion-cell bg-emerald-100 text-emerald-700" id="cm-11">--</div>
+                  <div class="confusion-cell bg-cyan-50 text-cyan-600" id="cm-12">--</div>
+
+                  <p class="text-[10px] font-medium text-slate-400 text-right pr-2">Media</p>
+                  <div class="confusion-cell bg-amber-50 text-amber-600" id="cm-20">--</div>
+                  <div class="confusion-cell bg-lime-100 text-lime-700" id="cm-21">--</div>
+                  <div class="confusion-cell bg-sky-100 text-sky-700" id="cm-22">--</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel-card bg-white rounded-2xl border border-slate-200 p-5 xl:col-span-3">
+            <h3 class="text-sm font-bold mb-5">M&eacute;tricas - Modelo Cl&iacute;nico (Clasificaci&oacute;n de Prioridad)</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div class="text-center">
+                <div class="metric-ring border-4 border-blue-500"><span class="text-sm font-bold text-blue-600" id="metric-accuracy">--</span></div>
+                <p class="text-sm text-slate-500 mt-2">Accuracy</p>
+              </div>
+              <div class="text-center">
+                <div class="metric-ring border-4 border-emerald-500"><span class="text-sm font-bold text-emerald-600" id="metric-recall">--</span></div>
+                <p class="text-sm text-slate-500 mt-2">Recall</p>
+              </div>
+              <div class="text-center">
+                <div class="metric-ring border-4 border-violet-500"><span class="text-sm font-bold text-violet-600" id="metric-precision">--</span></div>
+                <p class="text-sm text-slate-500 mt-2">Precision</p>
+              </div>
+              <div class="text-center">
+                <div class="metric-ring border-4 border-cyan-500"><span class="text-sm font-bold text-cyan-600" id="metric-f1">--</span></div>
+                <p class="text-sm text-slate-500 mt-2">F1-Score</p>
+              </div>
+            </div>
+            <div class="mt-6 rounded-xl bg-blue-50 px-4 py-3 border border-blue-100">
+              <p class="text-sm text-blue-700" id="insight-clinico">Cargando resultados clinicos...</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="grid grid-cols-1 xl:grid-cols-4 gap-4">
+          <div class="panel-card bg-white rounded-2xl border border-slate-200 p-5 xl:col-span-3">
+            <h3 class="text-sm font-bold">Demanda Real vs. Predicci&oacute;n</h3>
+            <p class="text-xs text-slate-300 mt-1">Muestra de predicciones exportadas por el modelo log&iacute;stico</p>
+
+            <div class="flex items-center gap-4 mt-4 text-xs text-slate-500">
+              <span class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm bg-blue-500"></span>Real</span>
+              <span class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm bg-emerald-400"></span>Predicci&oacute;n</span>
+            </div>
+
+            <div class="mt-5 grid grid-cols-[32px_1fr] gap-3">
+              <div class="flex flex-col justify-between h-72 pt-1 pb-5 text-right">
+                <span class="axis-label">100</span>
+                <span class="axis-label">75</span>
+                <span class="axis-label">50</span>
+                <span class="axis-label">25</span>
+                <span class="axis-label">0</span>
+              </div>
+
+              <div class="relative h-72 chart-grid rounded-xl border border-slate-100 px-6 pt-4 pb-9">
+                <div class="absolute inset-x-6 bottom-9 top-4 flex items-end justify-between gap-5" id="chart-bars"></div>
+                <div class="absolute left-6 right-6 bottom-2 flex justify-between" id="chart-labels"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel-card bg-white rounded-2xl border border-slate-200 p-5">
+            <h3 class="text-sm font-bold mb-4">M&eacute;tricas - Modelo Log&iacute;stico</h3>
+
+            <div class="space-y-3 mb-4">
+              <div class="rounded-xl bg-slate-50 p-3">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-xs text-slate-400">MAE</span>
+                  <span class="text-xl font-bold" id="metric-mae">--</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill bg-orange-400" id="fill-mae" style="width: 0%;"></div></div>
+              </div>
+              <div class="rounded-xl bg-slate-50 p-3">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-xs text-slate-400">RMSE</span>
+                  <span class="text-xl font-bold" id="metric-rmse">--</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill bg-sky-400" id="fill-rmse" style="width: 0%;"></div></div>
+              </div>
+              <div class="rounded-xl bg-slate-50 p-3">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-xs text-slate-400">R&sup2;</span>
+                  <span class="text-xl font-bold text-emerald-600" id="metric-r2">--</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill bg-emerald-400" id="fill-r2" style="width: 0%;"></div></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel-card bg-white rounded-2xl border border-slate-200 p-5">
+          <h3 class="text-sm font-bold mb-4">Panel Comparativo de Modelos</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="text-slate-400 text-xs">
+                  <th class="text-left font-medium py-3 px-3">Criterio</th>
+                  <th class="text-center font-medium py-3 px-3 text-blue-500">Modelo Cl&iacute;nico</th>
+                  <th class="text-center font-medium py-3 px-3 text-emerald-500">Modelo Log&iacute;stico</th>
+                </tr>
+              </thead>
+              <tbody class="text-slate-600">
+                <tr class="table-row">
+                  <td class="py-3 px-3">Tipo</td>
+                  <td class="py-3 px-3 text-center">Clasificaci&oacute;n</td>
+                  <td class="py-3 px-3 text-center">Regresi&oacute;n</td>
+                </tr>
+                <tr class="table-row">
+                  <td class="py-3 px-3">M&eacute;trica principal</td>
+                  <td class="py-3 px-3 text-center font-semibold text-blue-600" id="tabla-f1">F1: --</td>
+                  <td class="py-3 px-3 text-center font-semibold text-emerald-600" id="tabla-r2">R2: --</td>
+                </tr>
+                <tr class="table-row">
+                  <td class="py-3 px-3">Objetivo</td>
+                  <td class="py-3 px-3 text-center">Priorizar atenci&oacute;n oncol&oacute;gica pedi&aacute;trica</td>
+                  <td class="py-3 px-3 text-center">Anticipar demanda de insumos y alimentos</td>
+                </tr>
+                <tr class="table-row">
+                  <td class="py-3 px-3">Prop&oacute;sito operativo</td>
+                  <td class="py-3 px-3 text-center">Define nivel de prioridad del paciente</td>
+                  <td class="py-3 px-3 text-center">Sugiere cobertura operativa y reposici&oacute;n</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    const formatearPorcentaje = (valor) => `${(Number(valor) * 100).toFixed(1)}%`;
+    const formatearDecimal = (valor, decimales = 2) => Number(valor).toFixed(decimales);
+
+    function actualizarClinico(data) {
+      const accuracy = data.metricas.accuracy;
+      const precision = data.metricas.precision_macro;
+      const recall = data.metricas.recall_macro;
+      const f1 = data.metricas.f1_macro;
+      const cm = data.matriz_confusion || [];
+      const clasesOriginales = data.clases || ["Alta", "Baja", "Media"];
+      const clasesVisuales = ["Alta", "Baja", "Media"];
+
+      document.getElementById("metric-accuracy").textContent = formatearPorcentaje(accuracy);
+      document.getElementById("metric-precision").textContent = formatearPorcentaje(precision);
+      document.getElementById("metric-recall").textContent = formatearPorcentaje(recall);
+      document.getElementById("metric-f1").textContent = formatearPorcentaje(f1);
+      document.getElementById("tabla-f1").textContent = `F1: ${formatearPorcentaje(f1)}`;
+
+      if (cm.length >= 3) {
+        const indiceClase = (nombre) => clasesOriginales.indexOf(nombre);
+        const matrizVisual = clasesVisuales.map((filaClase) =>
+          clasesVisuales.map((colClase) => {
+            const i = indiceClase(filaClase);
+            const j = indiceClase(colClase);
+            return i >= 0 && j >= 0 ? cm[i][j] : "--";
+          })
+        );
+
+        document.getElementById("cm-00").textContent = matrizVisual[0][0] ?? "--";
+        document.getElementById("cm-01").textContent = matrizVisual[0][1] ?? "--";
+        document.getElementById("cm-02").textContent = matrizVisual[0][2] ?? "--";
+        document.getElementById("cm-10").textContent = matrizVisual[1][0] ?? "--";
+        document.getElementById("cm-11").textContent = matrizVisual[1][1] ?? "--";
+        document.getElementById("cm-12").textContent = matrizVisual[1][2] ?? "--";
+        document.getElementById("cm-20").textContent = matrizVisual[2][0] ?? "--";
+        document.getElementById("cm-21").textContent = matrizVisual[2][1] ?? "--";
+        document.getElementById("cm-22").textContent = matrizVisual[2][2] ?? "--";
+      }
+
+      document.getElementById("insight-clinico").textContent =
+        `El modelo clinico alcanzo ${formatearPorcentaje(accuracy)} de accuracy y ${formatearPorcentaje(recall)} de recall macro para priorizar pacientes con cancer de medula osea.`;
+    }
+
+    function actualizarGrafico(predicciones) {
+      const contenedorBarras = document.getElementById("chart-bars");
+      const contenedorLabels = document.getElementById("chart-labels");
+      contenedorBarras.innerHTML = "";
+      contenedorLabels.innerHTML = "";
+      const muestra = predicciones
+        .slice()
+        .sort((a, b) => String(a.dt).localeCompare(String(b.dt)))
+        .slice(0, 8);
+
+      const maximo = Math.max(...muestra.flatMap((item) => [Number(item.real || 0), Number(item.pred || 0)]), 1);
+
+      muestra.forEach((item) => {
+        const real = Number(item.real || 0);
+        const pred = Number(item.pred || 0);
+        const alturaReal = `${Math.max((real / maximo) * 100, 4)}%`;
+        const alturaPred = `${Math.max((pred / maximo) * 100, 4)}%`;
+        const etiqueta = item.dt ? String(item.dt).slice(5, 10) : `M${contenedorLabels.children.length + 1}`;
+
+        const grupo = document.createElement("div");
+        grupo.className = "flex h-full items-end gap-2";
+        grupo.innerHTML = `
+          <div class="chart-bar-real" style="height:${alturaReal}" title="Real: ${formatearDecimal(real, 2)}"></div>
+          <div class="chart-bar-pred" style="height:${alturaPred}" title="Prediccion: ${formatearDecimal(pred, 2)}"></div>
+        `;
+        contenedorBarras.appendChild(grupo);
+
+        const label = document.createElement("span");
+        label.className = "axis-label";
+        label.textContent = etiqueta;
+        contenedorLabels.appendChild(label);
+      });
+    }
+
+    function actualizarLogistico(data) {
+      const mae = data.metricas.mae;
+      const rmse = data.metricas.rmse;
+      const r2 = data.metricas.r2;
+      const predicciones = data.serie_diaria || data.muestra_predicciones || [];
+
+      document.getElementById("metric-mae").textContent = formatearDecimal(mae, 2);
+      document.getElementById("metric-rmse").textContent = formatearDecimal(rmse, 2);
+      document.getElementById("metric-r2").textContent = formatearDecimal(r2, 2);
+
+      document.getElementById("fill-mae").style.width = `${Math.min(mae * 10, 100)}%`;
+      document.getElementById("fill-rmse").style.width = `${Math.min(rmse * 10, 100)}%`;
+      document.getElementById("fill-r2").style.width = `${Math.min(r2 * 100, 100)}%`;
+
+      document.getElementById("tabla-r2").textContent = `R2: ${formatearDecimal(r2, 2)}`;
+      actualizarGrafico(predicciones);
+    }
+
+    async function cargarResultados() {
+      try {
+        const [clinicoResp, logisticoResp] = await Promise.all([
+          fetch("../data/resultados_modelo_clinico.json"),
+          fetch("../data/resultados_modelo_logistico.json")
+        ]);
+
+        if (!clinicoResp.ok || !logisticoResp.ok) {
+          throw new Error("No se pudieron cargar los archivos JSON.");
+        }
+
+        const clinico = await clinicoResp.json();
+        const logistico = await logisticoResp.json();
+
+        actualizarClinico(clinico);
+        actualizarLogistico(logistico);
+      } catch (error) {
+        document.getElementById("insight-clinico").textContent = "No se encontraron los resultados clinicos JSON. Ejecuta la ultima celda del notebook clinico.";
+        console.error(error);
+      }
+    }
+
+    cargarResultados();
+  </script>
+</body>
+</html>
