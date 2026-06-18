@@ -33,18 +33,6 @@
           <i data-lucide="workflow" style="width:18px;height:18px;color:#fff"></i>
           <span class="text-sm font-medium">Salida Integrada</span>
         </a>
-        <a class="sidebar-item flex items-center gap-3 px-3 py-2.5 rounded-lg">
-          <i data-lucide="heart-pulse" style="width:18px;height:18px;color:rgba(255,255,255,0.7)"></i>
-          <span class="text-sm opacity-80">Modelo Cl&iacute;nico</span>
-        </a>
-        <a class="sidebar-item flex items-center gap-3 px-3 py-2.5 rounded-lg">
-          <i data-lucide="truck" style="width:18px;height:18px;color:rgba(255,255,255,0.7)"></i>
-          <span class="text-sm opacity-80">Modelo Log&iacute;stico</span>
-        </a>
-        <a class="sidebar-item flex items-center gap-3 px-3 py-2.5 rounded-lg">
-          <i data-lucide="bar-chart-3" style="width:18px;height:18px;color:rgba(255,255,255,0.7)"></i>
-          <span class="text-sm opacity-80">Comparativo</span>
-        </a>
       </nav>
 
       <div class="mt-auto border-t border-white/10 pt-4 px-2">
@@ -69,6 +57,40 @@
       </header>
 
       <div class="p-8 space-y-6">
+        <section class="panel-card bg-white rounded-2xl border border-slate-200 p-6">
+          <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div>
+              <h3 class="text-lg font-bold text-slate-900">Seleccion de paciente</h3>
+              <p class="text-sm text-slate-500 mt-1">Elige un paciente del mini dataset clinico para activar la salida integrada.</p>
+            </div>
+            <div class="w-full md:w-[420px]">
+              <label for="patient-select" class="mb-2 block text-xs font-semibold uppercase tracking-wide text-slate-400">Paciente</label>
+              <select id="patient-select" class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 outline-none focus:border-sky-400">
+                <option value="">Selecciona un paciente</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mt-5">
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
+              <p class="text-xs uppercase tracking-wide text-slate-400">Paciente seleccionado</p>
+              <p id="paciente-id" class="text-lg font-semibold text-slate-900 mt-2">--</p>
+            </div>
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
+              <p class="text-xs uppercase tracking-wide text-slate-400">Perfil</p>
+              <p id="paciente-perfil" class="text-sm font-medium text-slate-900 mt-2">--</p>
+            </div>
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
+              <p class="text-xs uppercase tracking-wide text-slate-400">Estadio</p>
+              <p id="paciente-estadio" class="text-sm font-medium text-slate-900 mt-2">--</p>
+            </div>
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
+              <p class="text-xs uppercase tracking-wide text-slate-400">Condicion actual</p>
+              <p id="paciente-estado" class="text-sm font-medium text-slate-900 mt-2">--</p>
+            </div>
+          </div>
+        </section>
+
         <section class="panel-card bg-white rounded-2xl border border-slate-200 p-6">
           <div class="flex items-start justify-between gap-4">
             <div>
@@ -101,25 +123,25 @@
         <section class="grid grid-cols-1 xl:grid-cols-3 gap-4">
           <div class="panel-card bg-white rounded-2xl border border-slate-200 p-6 xl:col-span-2">
             <h3 class="text-base font-bold text-slate-900">Recursos priorizados</h3>
-            <p class="text-sm text-slate-500 mt-1">Abastecimiento sugerido para sostener atenci&oacute;n y soporte nutricional.</p>
+            <p class="text-sm text-slate-500 mt-1">Recursos asociados al nivel de prioridad con proyeccion de demanda para la siguiente ventana operativa.</p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5">
-              <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-                <p class="text-xs uppercase tracking-wide text-slate-400">Insumos cl&iacute;nicos</p>
-                <ul id="lista-clinicos" class="mt-3 space-y-2 text-sm text-slate-700">
-                  <li>Metotrexato 500mg</li>
-                  <li>Suero Fisiol&oacute;gico 500ml</li>
-                  <li>Dexametasona 4mg</li>
-                </ul>
-              </div>
-              <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-                <p class="text-xs uppercase tracking-wide text-slate-400">Soporte alimentario</p>
-                <ul id="lista-alimentos" class="mt-3 space-y-2 text-sm text-slate-700">
-                  <li>Huevo de gallina</li>
-                  <li>Leche evaporada</li>
-                  <li>Pechuga de pollo</li>
-                </ul>
-              </div>
+            <div class="mt-5 overflow-x-auto">
+              <table class="w-full min-w-[760px] text-sm">
+                <thead>
+                  <tr class="text-left text-xs uppercase tracking-wide text-slate-400">
+                    <th class="pb-3 pr-4 font-medium">Recurso</th>
+                    <th class="pb-3 pr-4 font-medium">Tipo</th>
+                    <th class="pb-3 pr-4 font-medium">Demanda proyectada</th>
+                    <th class="pb-3 pr-4 font-medium">Stock día anterior</th>
+                    <th class="pb-3 pr-4 font-medium">Riesgo</th>
+                  </tr>
+                </thead>
+                <tbody id="tabla-recursos" class="text-slate-700">
+                  <tr>
+                    <td colspan="5" class="rounded-xl bg-slate-50 px-4 py-4 text-slate-500">Cargando recursos asociados...</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
 
@@ -159,73 +181,174 @@
 
     const formatearPorcentaje = (valor) => `${(Number(valor) * 100).toFixed(1)}%`;
     const formatearDecimal = (valor, decimales = 2) => Number(valor).toFixed(decimales);
+    const recursosPorPrioridad = {
+      Alta: [
+        "Metotrexato 500mg",
+        "Suero Fisiologico 500ml",
+        "Dexametasona 4mg",
+        "Pediasure Plus 200ml",
+        "Huevo de gallina",
+        "Leche evaporada",
+        "Pechuga de pollo"
+      ],
+      Media: [
+        "Metotrexato 500mg",
+        "Suero Fisiologico 500ml",
+        "Pediasure Plus 200ml",
+        "Leche evaporada",
+        "Huevo de gallina"
+      ],
+      Baja: [
+        "Suero Fisiologico 500ml",
+        "Pediasure Plus 200ml",
+        "Leche evaporada",
+        "Huevo de gallina"
+      ]
+    };
 
-    function tomarTopDias(serieDiaria) {
-      return [...serieDiaria]
-        .sort((a, b) => Number(b.pred || 0) - Number(a.pred || 0))
-        .slice(0, 7);
+    let pacientesApp = [];
+
+    function riesgoMasAlto(recursos) {
+      if (recursos.some((item) => item.riesgo_quiebre === "Alto")) return "Alto";
+      if (recursos.some((item) => item.riesgo_quiebre === "Medio")) return "Medio";
+      return "Bajo";
     }
 
-    function calcularDemandaPromedio(serieDiaria) {
-      if (!serieDiaria.length) return 0;
-      const total = serieDiaria.reduce((acc, item) => acc + Number(item.pred || 0), 0);
-      return total / serieDiaria.length;
+    function colorRiesgo(riesgo) {
+      if (riesgo === "Alto") return "bg-rose-50 text-rose-700";
+      if (riesgo === "Medio") return "bg-amber-50 text-amber-700";
+      return "bg-emerald-50 text-emerald-700";
     }
 
-    function definirRiesgo(r2, mae) {
-      if (r2 >= 0.9 && mae <= 5) return "Bajo";
-      if (r2 >= 0.8 && mae <= 8) return "Medio";
-      return "Alto";
+    function poblarSelectorPacientes() {
+      const select = document.getElementById("patient-select");
+      select.innerHTML = '<option value="">Selecciona un paciente</option>';
+      pacientesApp.forEach((paciente, index) => {
+        const option = document.createElement("option");
+        option.value = paciente.paciente_id;
+        option.textContent = `${paciente.paciente_id} · ${paciente.grupo_edad} · ${paciente.sexo}`;
+        select.appendChild(option);
+      });
+
+      select.addEventListener("change", (event) => {
+        if (event.target.value) {
+          cargarPrediccionIntegrada(event.target.value);
+        } else {
+          resetVistaIntegrada();
+        }
+      });
     }
 
-    function actualizarVistaIntegrada(clinico, logistico) {
-      const accuracy = Number(clinico.metricas.accuracy || 0);
-      const recall = Number(clinico.metricas.recall_macro || 0);
-      const r2 = Number(logistico.metricas.r2 || 0);
-      const mae = Number(logistico.metricas.mae || 0);
-      const serieDiaria = logistico.serie_diaria || [];
-      const demandaPromedio = calcularDemandaPromedio(serieDiaria);
-      const riesgo = definirRiesgo(r2, mae);
-      const topDias = tomarTopDias(serieDiaria);
+    function resetVistaIntegrada() {
+      document.getElementById("paciente-id").textContent = "--";
+      document.getElementById("paciente-perfil").textContent = "--";
+      document.getElementById("paciente-estadio").textContent = "--";
+      document.getElementById("paciente-estado").textContent = "--";
+      document.getElementById("conf-clinica").textContent = "--";
+      document.getElementById("conf-logistica").textContent = "--";
+      document.getElementById("demanda-estimada").textContent = "--";
+      document.getElementById("riesgo-operativo").textContent = "--";
+      document.getElementById("prioridad-estimada").textContent = "--";
+      document.getElementById("badge-prioridad").textContent = "Sin clasificar";
+      document.getElementById("badge-prioridad").className = "inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600";
+      document.getElementById("accion-sugerida").textContent = "Selecciona un paciente para ejecutar la clasificacion y activar la asignacion de recursos.";
+      document.getElementById("lectura-ejecutiva").textContent = "Selecciona un paciente para ver la prioridad estimada, los recursos asociados y la demanda proyectada.";
+      document.getElementById("tabla-recursos").innerHTML = '<tr><td colspan="5" class="rounded-xl bg-slate-50 px-4 py-4 text-slate-500">Selecciona un paciente para cargar los recursos asociados.</td></tr>';
+    }
 
-      document.getElementById("conf-clinica").textContent = formatearPorcentaje(accuracy);
+    function renderTablaRecursos(recursos) {
+      const tbody = document.getElementById("tabla-recursos");
+      if (!recursos.length) {
+        tbody.innerHTML = '<tr><td colspan="5" class="rounded-xl bg-slate-50 px-4 py-4 text-slate-500">No se encontraron recursos asociados.</td></tr>';
+        return;
+      }
+
+      tbody.innerHTML = recursos.map((item) => `
+        <tr class="border-t border-slate-100">
+          <td class="py-3 pr-4 font-medium">${item.name_products}</td>
+          <td class="py-3 pr-4">${item.tipo_producto_app}</td>
+          <td class="py-3 pr-4">${formatearDecimal(item.prediccion_demanda, 2)} u.</td>
+          <td class="py-3 pr-4">${formatearDecimal(item.stock_actual_referencia, 2)}</td>
+          <td class="py-3 pr-4">
+            <span class="inline-flex rounded-full px-2.5 py-1 text-xs font-semibold ${colorRiesgo(item.riesgo_quiebre)}">${item.riesgo_quiebre}</span>
+          </td>
+        </tr>
+      `).join("");
+    }
+
+    function actualizarVistaIntegrada(data) {
+      const paciente = data.paciente;
+      const clinico = data.clinico;
+      const logistico = data.logistico;
+      const prioridad = clinico.prioridad_predicha;
+      const recursosAsignados = logistico.recursos || [];
+      const demandaTotal = Number(logistico.demanda_total_proyectada || 0);
+      const riesgo = logistico.riesgo_operativo || riesgoMasAlto(recursosAsignados);
+      const recall = Number(clinico.metricas_modelo?.recall_macro || 0);
+      const r2 = Number(logistico.metricas_modelo?.r2 || 0);
+      const topRecursos = recursosAsignados
+        .slice()
+        .sort((a, b) => Number(b.prediccion_demanda || 0) - Number(a.prediccion_demanda || 0))
+        .slice(0, 3)
+        .map((item) => item.name_products)
+        .join(", ");
+
+      document.getElementById("paciente-id").textContent = paciente.paciente_id;
+      document.getElementById("paciente-perfil").textContent = `${paciente.grupo_edad} · ${paciente.sexo} · ${paciente.raza}`;
+      document.getElementById("paciente-estadio").textContent = paciente.estadio;
+      document.getElementById("paciente-estado").textContent = `${paciente.estado_vital} · ${paciente.supervivencia_meses} meses`;
+
+      document.getElementById("conf-clinica").textContent = formatearPorcentaje(clinico.confianza_prediccion || 0);
       document.getElementById("conf-logistica").textContent = `R2 ${formatearDecimal(r2, 2)}`;
-      document.getElementById("demanda-estimada").textContent = `${formatearDecimal(demandaPromedio, 0)} unidades / d&iacute;a`;
+      document.getElementById("demanda-estimada").textContent = `${formatearDecimal(demandaTotal, 0)} unidades`;
       document.getElementById("riesgo-operativo").textContent = riesgo;
+      document.getElementById("prioridad-estimada").textContent = prioridad;
 
       const badge = document.getElementById("badge-prioridad");
-      badge.textContent = "Prioridad alta";
+      badge.textContent = `Prioridad ${prioridad.toLowerCase()}`;
+      badge.className = `inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold ${colorRiesgo(prioridad === "Alta" ? "Alto" : prioridad === "Media" ? "Medio" : "Bajo")}`;
+
+      renderTablaRecursos(recursosAsignados);
+
+      document.getElementById("accion-sugerida").textContent =
+        prioridad === "Alta"
+          ? "Priorizar atencion inmediata, asegurar cobertura de insumos oncologicos y sostener reposicion preventiva de soporte alimentario."
+          : prioridad === "Media"
+            ? "Mantener cobertura programada y reforzar la reposicion de recursos con mayor presion proyectada."
+            : "Sostener cobertura base y monitorear la disponibilidad de soporte clinico y nutricional.";
 
       document.getElementById("lectura-ejecutiva").textContent =
-        `La vista integrada prioriza atencion para pacientes con cancer de medula osea y sugiere sostener cobertura preventiva. El desempeno clinico alcanza ${formatearPorcentaje(recall)} de recall macro, mientras que la proyeccion logistica mantiene un R2 de ${formatearDecimal(r2, 2)}. Con una demanda proyectada promedio de ${formatearDecimal(demandaPromedio, 0)} unidades por dia, el riesgo operativo actual se interpreta como ${riesgo.toLowerCase()}.`;
+        `Para ${paciente.paciente_id}, el modelo de clasificacion proyecta prioridad ${prioridad.toLowerCase()} con ${formatearPorcentaje(clinico.confianza_prediccion || 0)} de confianza. La salida integrada asigna ${recursosAsignados.length} recursos asociados al manejo de pacientes con cancer de medula osea. La demanda proyectada conjunta alcanza ${formatearDecimal(demandaTotal, 0)} unidades en la siguiente ventana operativa y el riesgo se interpreta como ${riesgo.toLowerCase()}. Los recursos con mayor presion esperada son ${topRecursos || "los recursos priorizados seleccionados"}. El modelo clinico mantiene un recall macro de ${formatearPorcentaje(recall)} y el modelo logistico un R2 de ${formatearDecimal(r2, 2)}.`;
+    }
 
-      if (topDias.length) {
-        const diasTexto = topDias
-          .slice(0, 3)
-          .map((item) => String(item.dt).slice(0, 10))
-          .join(", ");
-        document.getElementById("accion-sugerida").textContent =
-          `Priorizar cobertura de recursos criticos y mantener reposicion preventiva en la siguiente ventana operativa. Los dias con mayor presion proyectada incluyen ${diasTexto}.`;
+    async function cargarPrediccionIntegrada(patientId) {
+      try {
+        const resp = await fetch(`/api/integrated?patient_id=${encodeURIComponent(patientId)}`);
+        if (!resp.ok) {
+          throw new Error("No se pudo obtener la prediccion integrada.");
+        }
+        const data = await resp.json();
+        actualizarVistaIntegrada(data);
+      } catch (error) {
+        document.getElementById("lectura-ejecutiva").textContent =
+          "No se pudo ejecutar la prediccion en tiempo real para el paciente seleccionado.";
+        console.error(error);
       }
     }
 
     async function cargarResultados() {
       try {
-        const [clinicoResp, logisticoResp] = await Promise.all([
-          fetch("../data/resultados_modelo_clinico.json"),
-          fetch("../data/resultados_modelo_logistico.json")
-        ]);
-
-        if (!clinicoResp.ok || !logisticoResp.ok) {
+        const pacientesResp = await fetch("/api/patients");
+        if (!pacientesResp.ok) {
           throw new Error("No se pudieron cargar los archivos JSON.");
         }
 
-        const clinico = await clinicoResp.json();
-        const logistico = await logisticoResp.json();
-        actualizarVistaIntegrada(clinico, logistico);
+        pacientesApp = await pacientesResp.json();
+        poblarSelectorPacientes();
+        resetVistaIntegrada();
       } catch (error) {
         document.getElementById("lectura-ejecutiva").textContent =
-          "No se pudieron cargar los resultados integrados. Ejecuta las celdas finales de los notebooks clinico y logistico.";
+          "No se pudieron cargar los resultados integrados. Verifica que el servidor de la app este corriendo.";
         console.error(error);
       }
     }

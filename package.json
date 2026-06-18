@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "npx http-server . -o /src/dashborad.html"
+    "dev": "python src/app_server.py"
   }
 }
