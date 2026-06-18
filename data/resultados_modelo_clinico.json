@@ -2,15 +2,15 @@
     "modelo": "RandomForestClassifier",
     "cancer_objetivo": "C42.1-Bone marrow",
     "metricas": {
-        "accuracy": 0.9463,
-        "precision_macro": 0.967,
-        "recall_macro": 0.9076,
-        "f1_macro": 0.9332
+        "accuracy": 0.9978,
+        "precision_macro": 0.9987,
+        "recall_macro": 0.9972,
+        "f1_macro": 0.998
     },
     "matriz_confusion": [
         [
-            541,
-            56,
+            592,
+            5,
             0
         ],
         [
@@ -19,9 +19,9 @@
             0
         ],
         [
-            12,
-            54,
-            294
+            0,
+            0,
+            360
         ]
     ],
     "clases": [
