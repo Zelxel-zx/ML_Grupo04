@@ -76,9 +76,13 @@
       </div>
 
       <nav class="flex-1 space-y-1">
-        <a class="sidebar-item flex items-center gap-3 px-3 py-2.5 rounded-lg bg-white/10">
+        <a href="./dashborad.html" class="sidebar-item flex items-center gap-3 px-3 py-2.5 rounded-lg bg-white/10">
           <i data-lucide="layout-dashboard" style="width:18px;height:18px;color:#fff"></i>
           <span class="text-sm font-medium">Vista General</span>
+        </a>
+        <a href="./salida_integrada.html" class="sidebar-item flex items-center gap-3 px-3 py-2.5 rounded-lg">
+          <i data-lucide="workflow" style="width:18px;height:18px;color:rgba(255,255,255,0.7)"></i>
+          <span class="text-sm opacity-80">Salida Integrada</span>
         </a>
         <a class="sidebar-item flex items-center gap-3 px-3 py-2.5 rounded-lg">
           <i data-lucide="heart-pulse" style="width:18px;height:18px;color:rgba(255,255,255,0.7)"></i>
@@ -363,16 +367,17 @@
         .slice(0, 8);
 
       const maximo = Math.max(...muestra.flatMap((item) => [Number(item.real || 0), Number(item.pred || 0)]), 1);
+      const alturaBase = 220;
 
       muestra.forEach((item) => {
         const real = Number(item.real || 0);
         const pred = Number(item.pred || 0);
-        const alturaReal = `${Math.max((real / maximo) * 100, 4)}%`;
-        const alturaPred = `${Math.max((pred / maximo) * 100, 4)}%`;
+        const alturaReal = `${Math.max((real / maximo) * alturaBase, 8)}px`;
+        const alturaPred = `${Math.max((pred / maximo) * alturaBase, 8)}px`;
         const etiqueta = item.dt ? String(item.dt).slice(5, 10) : `M${contenedorLabels.children.length + 1}`;
 
         const grupo = document.createElement("div");
-        grupo.className = "flex h-full items-end gap-2";
+        grupo.className = "flex items-end gap-2 self-end";
         grupo.innerHTML = `
           <div class="chart-bar-real" style="height:${alturaReal}" title="Real: ${formatearDecimal(real, 2)}"></div>
           <div class="chart-bar-pred" style="height:${alturaPred}" title="Prediccion: ${formatearDecimal(pred, 2)}"></div>
