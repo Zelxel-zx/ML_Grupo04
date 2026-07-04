@@ -6,6 +6,7 @@ import plotly.express as px
 import sys
 import importlib
 import pickle
+import math
 from pathlib import Path
 
 
@@ -96,6 +97,8 @@ from database import (
     cargar_tabla,
     cargar_pacientes,
     cargar_inventario,
+    cargar_inventario_completo,
+    cargar_features_logisticas,
     insertar_registro,
     actualizar_registro,
     eliminar_registro,
@@ -111,6 +114,8 @@ from database import (
 # =====================================================
 
 MODEL_PATH = DATA_DIR / "modelo_clinico.pkl"
+LOGISTIC_MODEL_PATH = DATA_DIR / "modelo_logistico.pkl"
+LOGISTIC_DATA_PATH = DATA_DIR / "dataset_logistico_1.csv"
 
 
 @st.cache_resource
@@ -129,6 +134,27 @@ def cargar_modelo_clinico():
         payload = pickle.load(file)
 
     return payload
+
+
+@st.cache_resource
+def cargar_modelo_logistico():
+    if not LOGISTIC_MODEL_PATH.exists():
+        return None
+
+    with open(LOGISTIC_MODEL_PATH, "rb") as file:
+        payload = pickle.load(file)
+
+    return payload
+
+
+@st.cache_data(ttl=300)
+def cargar_historico_logistico():
+    df_features_bd = cargar_features_logisticas(limit=50000)
+
+    if not df_features_bd.empty:
+        return df_features_bd
+
+    return pd.DataFrame()
 
 
 def extraer_modelo_y_features(payload):
@@ -156,6 +182,110 @@ def extraer_modelo_y_features(payload):
         features = list(features)
 
     return modelo, features
+
+
+def preparar_features_logisticas(df_historico, features):
+    df_features = df_historico.copy()
+
+    equivalencias = {
+        "product_id_cod": ["product_id", "ID del producto"],
+        "store_id_cod": ["store_id", "ID de tienda"],
+        "first_category_id_cod": ["first_category_id", "primer_id_de_categoria"],
+        "second_category_id_cod": ["second_category_id", "segundo_id_categoria"],
+        "third_category_id_cod": ["third_category_id", "tercer_id_categoria"],
+        "discount": ["discount", "descuento"],
+        "holiday_flag_cod": ["holiday_flag", "bandera de vacaciones"],
+        "activity_flag_cod": ["activity_flag", "bandera de actividad"],
+    }
+
+    for feature, origenes in equivalencias.items():
+        if feature not in features or feature in df_features.columns:
+            continue
+
+        for origen in origenes:
+            if origen in df_features.columns:
+                df_features[feature] = df_features[origen]
+                break
+
+    for feature in features:
+        if feature not in df_features.columns:
+            df_features[feature] = 0
+
+    X = df_features[features].copy()
+
+    for col in X.columns:
+        X[col] = pd.to_numeric(X[col], errors="coerce")
+        mediana = X[col].median()
+        if pd.isna(mediana):
+            mediana = 0
+        X[col] = X[col].fillna(mediana)
+
+    return X
+
+
+def normalizar_texto_producto(valor):
+    if pd.isna(valor):
+        return ""
+
+    texto = str(valor).strip().lower()
+    reemplazos = {
+        "\u00e1": "a",
+        "\u00e9": "e",
+        "\u00ed": "i",
+        "\u00f3": "o",
+        "\u00fa": "u",
+        "\u00f1": "n",
+    }
+
+    for origen, destino in reemplazos.items():
+        texto = texto.replace(origen, destino)
+
+    texto = " ".join(texto.split())
+    return texto
+
+
+def predecir_demanda_logistica_por_producto(df_inventario):
+    payload = cargar_modelo_logistico()
+    historico = cargar_historico_logistico()
+
+    if payload is None or historico.empty:
+        return pd.DataFrame()
+
+    modelo, features = extraer_modelo_y_features(payload)
+
+    if features is None:
+        return pd.DataFrame()
+
+    if "dt" in historico.columns:
+        historico = historico.sort_values("dt")
+
+    if "name_products" not in historico.columns and "nombre_productos" in historico.columns:
+        historico = historico.rename(columns={"nombre_productos": "name_products"})
+
+    if "name_products" not in historico.columns:
+        return pd.DataFrame()
+
+    ultimos = historico.dropna(subset=["name_products"]).groupby("name_products", as_index=False).tail(1)
+    X = preparar_features_logisticas(ultimos, features)
+    ultimos = ultimos.copy()
+    ultimos["Demanda_Predicha"] = modelo.predict(X)
+    ultimos["Demanda_Predicha"] = ultimos["Demanda_Predicha"].clip(lower=0)
+
+    predicciones = ultimos[["name_products", "Demanda_Predicha"]].rename(
+        columns={"name_products": "Producto"}
+    )
+
+    if "Producto" not in df_inventario.columns:
+        return pd.DataFrame()
+
+    inventario = df_inventario.copy()
+    inventario["_producto_key"] = inventario["Producto"].apply(normalizar_texto_producto)
+    predicciones["_producto_key"] = predicciones["Producto"].apply(normalizar_texto_producto)
+    predicciones = predicciones.drop(columns=["Producto"])
+
+    resultado = inventario.merge(predicciones, on="_producto_key", how="left")
+    resultado = resultado.drop(columns=["_producto_key"])
+    return resultado
 
 
 def normalizar_prioridad(prediccion):
@@ -318,7 +448,7 @@ def load_data():
         inicializar_bd_si_no_existe()
 
         df_c = cargar_pacientes()
-        df_i = cargar_inventario()
+        df_i = cargar_inventario_completo()
 
         return df_c, df_i
 
@@ -1158,27 +1288,98 @@ def render_inventory_control(df):
 
     st.error("### ⚠️ Requerimientos de Compra Inmediata")
 
-    if "Stock_Actual" in df_f.columns and "Punto_Reorden" in df_f.columns:
-        urgentes = df_f[df_f["Stock_Actual"] <= df_f["Punto_Reorden"]]
+    columnas_requeridas = ["Producto", "Stock_Actual"]
+    faltantes_requerimientos = [
+        col for col in columnas_requeridas
+        if col not in df_f.columns
+    ]
 
-        columnas_tabla = [
-            col for col in [
-                "id_registro",
-                "Producto",
-                "Categoria",
-                "Stock_Actual",
-                "Punto_Reorden",
-                "Estado"
-            ]
-            if col in urgentes.columns
+    if faltantes_requerimientos:
+        st.warning(f"No se puede calcular requerimientos. Faltan columnas: {faltantes_requerimientos}")
+        return
+
+    df_pred = predecir_demanda_logistica_por_producto(df_f)
+
+    if df_pred.empty or "Demanda_Predicha" not in df_pred.columns:
+        st.warning(
+            "No se pudo generar la prediccion logistica. "
+            "Verifica que existan data/modelo_logistico.pkl y data/dataset_logistico_1.csv."
+        )
+        return
+
+    df_pred["Stock_Actual"] = pd.to_numeric(df_pred["Stock_Actual"], errors="coerce").fillna(0)
+    df_pred["Demanda_Predicha"] = pd.to_numeric(df_pred["Demanda_Predicha"], errors="coerce")
+    df_pred = df_pred.dropna(subset=["Demanda_Predicha"])
+
+    if "Categoria" in df_pred.columns:
+        resumen_predicciones = (
+            df_pred.groupby("Categoria")["Producto"]
+            .count()
+            .reset_index(name="Productos evaluados por el modelo")
+        )
+        st.caption("Productos con prediccion logistica por categoria:")
+        st.dataframe(resumen_predicciones, use_container_width=True, hide_index=True)
+
+    margen_seguridad = 1.15
+    df_pred["Stock_Sugerido"] = (df_pred["Demanda_Predicha"] * margen_seguridad).apply(math.ceil)
+    df_pred["Cantidad_Requerida"] = (
+        df_pred["Stock_Sugerido"] - df_pred["Stock_Actual"]
+    ).clip(lower=0)
+    df_pred["Brecha_Demanda_Stock"] = (
+        df_pred["Demanda_Predicha"] - df_pred["Stock_Actual"]
+    )
+
+    df_pred["Riesgo_Operativo"] = "Bajo"
+    df_pred.loc[df_pred["Brecha_Demanda_Stock"] > 0, "Riesgo_Operativo"] = "Medio"
+    df_pred.loc[
+        df_pred["Cantidad_Requerida"] >= df_pred["Demanda_Predicha"] * 0.5,
+        "Riesgo_Operativo"
+    ] = "Alto"
+
+    orden_riesgo = {"Alto": 0, "Medio": 1, "Bajo": 2}
+    urgentes = df_pred[df_pred["Cantidad_Requerida"] > 0].copy()
+    urgentes["_orden_riesgo"] = urgentes["Riesgo_Operativo"].map(orden_riesgo)
+    urgentes = urgentes.sort_values(
+        ["_orden_riesgo", "Cantidad_Requerida"],
+        ascending=[True, False]
+    )
+
+    columnas_tabla = [
+        col for col in [
+            "Producto",
+            "Categoria",
+            "Stock_Actual",
+            "Demanda_Predicha",
+            "Stock_Sugerido",
+            "Cantidad_Requerida",
+            "Riesgo_Operativo"
         ]
+        if col in urgentes.columns
+    ]
+
+    if urgentes.empty:
+        st.success("No hay requerimientos inmediatos segun la demanda predicha por el modelo.")
+    else:
+        st.caption(
+            "La demanda esperada se calcula con el modelo logistico. "
+            "El stock sugerido considera un margen operativo de 15%."
+        )
+        mostrar_evaluados = st.checkbox(
+            "Mostrar tambien productos evaluados sin compra inmediata",
+            value=False
+        )
+        tabla_mostrar = df_pred if mostrar_evaluados else urgentes
+
+        if mostrar_evaluados:
+            tabla_mostrar = tabla_mostrar.sort_values(
+                ["Cantidad_Requerida", "Demanda_Predicha"],
+                ascending=[False, False]
+            )
 
         st.dataframe(
-            urgentes[columnas_tabla],
+            tabla_mostrar[columnas_tabla],
             use_container_width=True
         )
-    else:
-        st.warning("Faltan columnas 'Stock_Actual' o 'Punto_Reorden'.")
 
 
 # =====================================================

@@ -6,7 +6,13 @@ import pandas as pd
 import requests
 
 
-TABLAS_VALIDAS = ["pacientes", "inventario"]
+TABLAS_VALIDAS = [
+    "pacientes",
+    "inventario",
+    "movimientos_inventario",
+    "inventario_features_modelo",
+    "inventario_caracter\u00edsticas",
+]
 
 
 def validar_tabla(nombre_tabla):
@@ -134,18 +140,24 @@ def limpiar_payload(data):
     return data_limpia
 
 
-def cargar_tabla(nombre_tabla, limit=1000, offset=0):
+def cargar_tabla(nombre_tabla, limit=1000, offset=0, order=None):
     validar_tabla(nombre_tabla)
+
+    params = {
+        "select": "*",
+        "limit": str(limit),
+        "offset": str(offset),
+    }
+
+    if order is not None:
+        params["order"] = order
+    elif nombre_tabla in ["pacientes", "inventario"]:
+        params["order"] = "id_registro.desc"
 
     registros = request_supabase(
         "GET",
         nombre_tabla,
-        params={
-            "select": "*",
-            "order": "id_registro.desc",
-            "limit": str(limit),
-            "offset": str(offset),
-        },
+        params=params,
     )
 
     df = pd.DataFrame(registros)
@@ -157,12 +169,86 @@ def cargar_tabla(nombre_tabla, limit=1000, offset=0):
     return df
 
 
+def cargar_tabla_por_paginas(nombre_tabla, max_registros=50000, page_size=1000, order=None):
+    validar_tabla(nombre_tabla)
+
+    registros = []
+    offset = 0
+
+    while offset < max_registros:
+        pagina = request_supabase(
+            "GET",
+            nombre_tabla,
+            params={
+                "select": "*",
+                "limit": str(page_size),
+                "offset": str(offset),
+                **({"order": order} if order else {}),
+            },
+        )
+
+        if not pagina:
+            break
+
+        registros.extend(pagina)
+
+        if len(pagina) < page_size:
+            break
+
+        offset += page_size
+
+    return pd.DataFrame(registros)
+
+
 def cargar_pacientes(limit=1000, offset=0):
     return cargar_tabla("pacientes", limit=limit, offset=offset)
 
 
 def cargar_inventario(limit=1000, offset=0):
     return cargar_tabla("inventario", limit=limit, offset=offset)
+
+
+def cargar_inventario_completo(max_registros=10000):
+    return cargar_tabla_por_paginas(
+        "inventario",
+        max_registros=max_registros,
+        page_size=1000,
+        order="id_registro.desc",
+    )
+
+
+def cargar_features_logisticas(limit=50000):
+    tablas_candidatas = [
+        "inventario_features_modelo",
+        "inventario_caracter\u00edsticas",
+    ]
+    dataframes = []
+
+    for tabla in tablas_candidatas:
+        try:
+            df_tabla = cargar_tabla_por_paginas(
+                tabla,
+                max_registros=limit,
+                page_size=1000,
+                order="dt.desc",
+            )
+        except Exception:
+            try:
+                df_tabla = cargar_tabla_por_paginas(
+                    tabla,
+                    max_registros=limit,
+                    page_size=1000,
+                )
+            except Exception:
+                df_tabla = pd.DataFrame()
+
+        if not df_tabla.empty:
+            dataframes.append(df_tabla)
+
+    if dataframes:
+        return pd.concat(dataframes, ignore_index=True, sort=False)
+
+    return pd.DataFrame()
 
 
 def contar_registros(nombre_tabla):
