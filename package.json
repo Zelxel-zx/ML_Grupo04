@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "py -3.14 -m streamlit run app/app.py"
+    "dev": "streamlit run app/app.py"
   }
 }

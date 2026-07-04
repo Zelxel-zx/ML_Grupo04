@@ -4,6 +4,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import sys
+import importlib
 import pickle
 from pathlib import Path
 
@@ -88,14 +89,20 @@ if str(SRC_DIR) not in sys.path:
     sys.path.append(str(SRC_DIR))
 
 
+import database
+importlib.reload(database)
+
 from database import (
+    cargar_tabla,
     cargar_pacientes,
     cargar_inventario,
     insertar_registro,
     actualizar_registro,
     eliminar_registro,
     agregar_csv_a_tabla,
-    inicializar_bd_si_no_existe
+    inicializar_bd_si_no_existe,
+    contar_registros,
+    contar_por_valor
 )
 
 
@@ -249,9 +256,6 @@ RANGOS_EDAD = {
     "61 - 75": 68,
     "76 a mas": 80
 }
-
-ORDEN_RANGOS_EDAD = list(RANGOS_EDAD.keys())
-
 
 COLUMNAS_NUMERICAS_POR_NOMBRE = [
     "age",
@@ -419,6 +423,78 @@ def buscar_columna_edad(df):
     return None
 
 
+def buscar_columnas_edad_one_hot(df):
+    columnas = []
+
+    for col in df.columns:
+        nombre = col.lower()
+
+        if not (nombre.startswith("age_") or nombre.startswith("edad_")):
+            continue
+
+        if pd.api.types.is_numeric_dtype(df[col]) and es_columna_binaria(df[col]):
+            columnas.append(col)
+
+    return columnas
+
+
+def etiqueta_edad_one_hot(columna):
+    texto = columna
+
+    for prefijo in ["Age_", "age_", "Edad_", "edad_"]:
+        if texto.startswith(prefijo):
+            texto = texto.replace(prefijo, "", 1)
+
+    texto = texto.replace("_", " ")
+    texto = texto.replace("to", "a")
+    texto = texto.replace("plus", "a mas")
+    texto = texto.replace("mas", "a mas")
+
+    return texto.strip()
+
+
+def preparar_columna_edad_visual(df):
+    df_vista = df.copy()
+    columnas_edad = buscar_columnas_edad_one_hot(df_vista)
+
+    if columnas_edad:
+        col_visual = "Edad"
+        df_vista[col_visual] = df_vista.apply(
+            lambda fila: etiqueta_edad_one_hot(
+                obtener_columna_activa_one_hot(fila, columnas_edad)
+            ),
+            axis=1
+        )
+        return df_vista, col_visual
+
+    col_edad = buscar_columna_edad(df_vista)
+    return df_vista, col_edad
+
+
+def ordenar_edades_visual(valores):
+    def clave(valor):
+        texto = str(valor)
+        numeros = []
+        actual = ""
+
+        for caracter in texto:
+            if caracter.isdigit():
+                actual += caracter
+            elif actual:
+                numeros.append(int(actual))
+                actual = ""
+
+        if actual:
+            numeros.append(int(actual))
+
+        if numeros:
+            return numeros[0]
+
+        return 999
+
+    return sorted([valor for valor in valores if pd.notna(valor)], key=clave)
+
+
 def obtener_rango_edad(valor):
     edad = convertir_a_numero(valor, None)
 
@@ -437,18 +513,6 @@ def obtener_rango_edad(valor):
         return "61 - 75"
     else:
         return "76 a mas"
-
-
-def preparar_df_con_rango_edad(df):
-    df_temp = df.copy()
-    col_edad = buscar_columna_edad(df_temp)
-
-    if col_edad is not None:
-        df_temp["Rango_Edad"] = df_temp[col_edad].apply(obtener_rango_edad)
-    else:
-        df_temp["Rango_Edad"] = "Sin columna de edad"
-
-    return df_temp
 
 
 def detectar_grupos_one_hot(df):
@@ -513,6 +577,70 @@ def obtener_opciones_columna(df, columna):
     return opciones
 
 
+def nombre_visual_desde_prefijo(prefijo):
+    nombres = {
+        "Race": "Raza",
+        "Gender": "Genero",
+        "Marital": "Estado civil",
+        "Grade": "Grado clinico",
+        "Stage": "Estadio clinico",
+        "T": "Categoria T",
+        "N": "Categoria N",
+        "M": "Categoria M",
+        "Surgery": "Cirugia",
+        "Radiation": "Radioterapia",
+        "Chemotherapy": "Quimioterapia",
+    }
+
+    return nombres.get(prefijo, prefijo.replace("_", " ").title())
+
+
+def construir_vista_legible(df):
+    df_vista = df.copy()
+    grupos_one_hot = detectar_grupos_one_hot(df_vista)
+    columnas_a_ocultar = []
+
+    for prefijo, columnas_grupo in grupos_one_hot.items():
+        columnas_validas = [col for col in columnas_grupo if col in df_vista.columns]
+
+        if not columnas_validas:
+            continue
+
+        nombre_columna = nombre_visual_desde_prefijo(prefijo)
+        df_vista[nombre_columna] = df_vista.apply(
+            lambda fila: etiqueta_desde_columna_one_hot(
+                prefijo,
+                obtener_columna_activa_one_hot(fila, columnas_validas)
+            ),
+            axis=1
+        )
+        columnas_a_ocultar.extend(columnas_validas)
+
+    columnas_a_ocultar = [
+        col for col in columnas_a_ocultar
+        if col in df_vista.columns and col not in ["id_registro", "Prioridad"]
+    ]
+
+    if columnas_a_ocultar:
+        df_vista = df_vista.drop(columns=columnas_a_ocultar)
+
+    for col in df_vista.columns:
+        if col in ["id_registro", "Prioridad"]:
+            continue
+
+        if pd.api.types.is_numeric_dtype(df_vista[col]) and es_columna_binaria(df_vista[col]):
+            df_vista[col] = df_vista[col].map({
+                1: "Si",
+                1.0: "Si",
+                True: "Si",
+                0: "No",
+                0.0: "No",
+                False: "No",
+            }).fillna(df_vista[col])
+
+    return df_vista
+
+
 # =====================================================
 # FORMULARIOS AMIGABLES
 # =====================================================
@@ -559,7 +687,7 @@ def crear_input_amigable(df, columna, valor_actual=None, key=""):
 
         return 1 if opcion == "Si" else 0
 
-    # NUMERICOS RESTRINGIDOS A SOLO NUMEROS
+    # NUMÉRICOS RESTRINGIDOS A SOLO NÚMEROS
     if pd.api.types.is_numeric_dtype(df[columna]) or es_columna_numerica_forzada(columna):
         valor_base = convertir_a_numero(valor_actual, 0.0)
 
@@ -634,7 +762,7 @@ def construir_formulario_amigable(df, nombre_tabla, modo, fila=None):
     ]
 
     # En pacientes, Prioridad NO se ingresa.
-    # La predice el modelo automaticamente.
+    # La predice el modelo automáticamente.
     if nombre_tabla == "pacientes":
         columnas = [
             col for col in columnas
@@ -712,12 +840,16 @@ def render_summary(df_c, df_i):
 
     col1, col2, col3, col4 = st.columns(4)
 
-    total_pacientes = len(df_c)
+    try:
+        total_pacientes = contar_registros("pacientes")
+        prioridad_alta = contar_por_valor("pacientes", "Prioridad", "Alta")
+    except Exception:
+        total_pacientes = len(df_c)
 
-    if "Prioridad" in df_c.columns:
-        prioridad_alta = len(df_c[df_c["Prioridad"].astype(str) == "Alta"])
-    else:
-        prioridad_alta = 0
+        if "Prioridad" in df_c.columns:
+            prioridad_alta = len(df_c[df_c["Prioridad"].astype(str) == "Alta"])
+        else:
+            prioridad_alta = 0
 
     if "Stock_Actual" in df_i.columns and "Punto_Reorden" in df_i.columns:
         stock_critico = len(df_i[df_i["Stock_Actual"] <= df_i["Punto_Reorden"]])
@@ -752,9 +884,28 @@ def render_summary(df_c, df_i):
         st.subheader("Carga de Prioridad Clínica")
 
         if "Prioridad" in df_c.columns:
+            try:
+                prioridad_resumen = pd.DataFrame({
+                    "Prioridad": PRIORIDAD_ORDEN,
+                    "Cantidad": [
+                        contar_por_valor("pacientes", "Prioridad", prioridad)
+                        for prioridad in PRIORIDAD_ORDEN
+                    ]
+                })
+            except Exception:
+                prioridad_resumen = (
+                    df_c["Prioridad"]
+                    .astype(str)
+                    .value_counts()
+                    .reindex(PRIORIDAD_ORDEN, fill_value=0)
+                    .reset_index()
+                )
+                prioridad_resumen.columns = ["Prioridad", "Cantidad"]
+
             fig_prio = px.pie(
-                df_c,
+                prioridad_resumen,
                 names="Prioridad",
+                values="Cantidad",
                 title="Carga de Prioridad Clínica",
                 color="Prioridad",
                 color_discrete_map=PRIORIDAD_COLORES,
@@ -778,36 +929,42 @@ def render_summary(df_c, df_i):
     with c2:
         st.subheader("Distribución por Edad")
 
-        df_edad = preparar_df_con_rango_edad(df_c)
+        df_edad_visual, col_edad = preparar_columna_edad_visual(df_c)
+        fig_edad = None
 
-        if "Prioridad" in df_edad.columns:
+        if col_edad is not None and "Prioridad" in df_edad_visual.columns:
+            orden_edades = ordenar_edades_visual(df_edad_visual[col_edad].unique())
             fig_edad = px.histogram(
-                df_edad,
-                x="Rango_Edad",
+                df_edad_visual,
+                x=col_edad,
                 color="Prioridad",
                 barmode="group",
-                title="Pacientes por Rango de Edad y Prioridad",
+                title="Pacientes por Edad y Prioridad",
                 color_discrete_map=PRIORIDAD_COLORES,
                 category_orders={
-                    "Rango_Edad": ORDEN_RANGOS_EDAD,
+                    col_edad: orden_edades,
                     "Prioridad": PRIORIDAD_ORDEN
                 }
             )
-        else:
+        elif col_edad is not None:
+            orden_edades = ordenar_edades_visual(df_edad_visual[col_edad].unique())
             fig_edad = px.histogram(
-                df_edad,
-                x="Rango_Edad",
-                title="Pacientes por Rango de Edad",
-                category_orders={"Rango_Edad": ORDEN_RANGOS_EDAD}
+                df_edad_visual,
+                x=col_edad,
+                title="Pacientes por Edad",
+                category_orders={col_edad: orden_edades}
             )
 
-        fig_edad.update_layout(
-            xaxis_title="Rango de edad",
-            yaxis_title="Cantidad de pacientes",
-            height=430
-        )
+        if fig_edad is not None:
+            fig_edad.update_layout(
+                xaxis_title="Edad",
+                yaxis_title="Cantidad de pacientes",
+                height=430
+            )
 
-        st.plotly_chart(fig_edad, use_container_width=True)
+            st.plotly_chart(fig_edad, use_container_width=True)
+        else:
+            st.warning("No existe una columna de edad para graficar.")
 
     st.divider()
 
@@ -843,59 +1000,64 @@ def render_summary(df_c, df_i):
 
 
 # =====================================================
-# ANALISIS CLINICO
+# ANÁLISIS CLÍNICO
 # =====================================================
 
 def render_clinical_analysis(df):
     st.header("🩺 Gestión de Prioridad Oncológica")
 
-    df_edad = preparar_df_con_rango_edad(df)
+    df_clinico = df.copy()
+    df_edad_visual, col_edad = preparar_columna_edad_visual(df_clinico)
 
     col1, col2 = st.columns([1, 2])
 
     with col1:
-        st.subheader("Pacientes por Rango de Edad")
+        st.subheader("Pacientes por Edad")
+        fig_edad = None
 
-        if "Prioridad" in df_edad.columns:
+        if col_edad is not None and "Prioridad" in df_edad_visual.columns:
+            orden_edades = ordenar_edades_visual(df_edad_visual[col_edad].unique())
             fig_edad = px.histogram(
-                df_edad,
-                x="Rango_Edad",
+                df_edad_visual,
+                x=col_edad,
                 color="Prioridad",
                 barmode="group",
                 title="Distribución por Edad y Prioridad",
                 color_discrete_map=PRIORIDAD_COLORES,
                 category_orders={
-                    "Rango_Edad": ORDEN_RANGOS_EDAD,
+                    col_edad: orden_edades,
                     "Prioridad": PRIORIDAD_ORDEN
                 }
             )
-        else:
+        elif col_edad is not None:
+            orden_edades = ordenar_edades_visual(df_edad_visual[col_edad].unique())
             fig_edad = px.histogram(
-                df_edad,
-                x="Rango_Edad",
+                df_edad_visual,
+                x=col_edad,
                 title="Distribución por Edad",
-                category_orders={"Rango_Edad": ORDEN_RANGOS_EDAD}
             )
 
-        fig_edad.update_layout(
-            xaxis_title="Rango de edad",
-            yaxis_title="Cantidad",
-            height=450
-        )
+        if fig_edad is not None:
+            fig_edad.update_layout(
+                xaxis_title="Edad",
+                yaxis_title="Cantidad",
+                height=450
+            )
 
-        st.plotly_chart(fig_edad, use_container_width=True)
+            st.plotly_chart(fig_edad, use_container_width=True)
+        else:
+            st.warning("No existe una columna de edad para graficar.")
 
     with col2:
         st.subheader("Pacientes con Prioridad Alta")
 
-        if "Prioridad" in df_edad.columns:
-            pacientes_altos = df_edad[df_edad["Prioridad"].astype(str) == "Alta"]
+        if "Prioridad" in df_clinico.columns:
+            pacientes_altos = df_clinico[df_clinico["Prioridad"].astype(str) == "Alta"]
 
             columnas_mostrar = []
 
             for col in [
                 "id_registro",
-                "Rango_Edad",
                 "Age",
                 "Edad",
                 "Income",
@@ -909,14 +1071,14 @@ def render_clinical_analysis(df):
 
             if columnas_mostrar:
                 st.dataframe(
-                    pacientes_altos[columnas_mostrar].head(30),
+                    construir_vista_legible(pacientes_altos[columnas_mostrar].head(30)),
                     use_container_width=True
                 )
             else:
-                st.dataframe(pacientes_altos.head(30), use_container_width=True)
-        else:
+                st.dataframe(construir_vista_legible(pacientes_altos.head(30)), use_container_width=True)
+        elif col_edad is not None:
             st.warning("No existe la columna 'Prioridad'.")
-            st.dataframe(df_edad.head(30), use_container_width=True)
+            st.dataframe(construir_vista_legible(df_clinico.head(30)), use_container_width=True)
 
     st.divider()
 
@@ -932,15 +1094,15 @@ def render_clinical_analysis(df):
             (0, min(60, max_meses))
         )
 
-        df_f = df_edad[
-            (df_edad["Survival_Months"] >= meses[0]) &
-            (df_edad["Survival_Months"] <= meses[1])
+        df_f = df_clinico[
+            (df_clinico["Survival_Months"] >= meses[0]) &
+            (df_clinico["Survival_Months"] <= meses[1])
         ]
 
-        st.dataframe(df_f.head(50), use_container_width=True)
+        st.dataframe(construir_vista_legible(df_f.head(50)), use_container_width=True)
     else:
         st.info("No existe la columna 'Survival_Months'. Se muestra la tabla general.")
-        st.dataframe(df_edad.head(50), use_container_width=True)
+        st.dataframe(construir_vista_legible(df_clinico.head(50)), use_container_width=True)
 
 
 # =====================================================
@@ -1020,18 +1182,37 @@ def render_inventory_control(df):
 
 
 # =====================================================
-# GESTION DE TABLAS
+# GESTIÓN DE TABLAS
 # =====================================================
 
 def render_gestion_tabla(df, nombre_tabla, titulo):
     st.header(titulo)
+    flash_key = f"mensaje_gestion_{nombre_tabla}"
+    pagina_key = f"pagina_{nombre_tabla}"
+    page_size = 1000
+
+    if pagina_key not in st.session_state:
+        st.session_state[pagina_key] = 0
+
+    if flash_key in st.session_state:
+        st.success(st.session_state.pop(flash_key))
+
+    pagina_actual = st.session_state[pagina_key]
+    if pagina_actual == 0:
+        df_pagina = df.copy()
+    else:
+        df_pagina = cargar_tabla(
+            nombre_tabla,
+            limit=page_size,
+            offset=pagina_actual * page_size
+        )
 
     tabs = st.tabs([
         "📋 Ver datos",
         "➕ Agregar",
         "✏️ Editar",
         "🗑️ Eliminar",
-        "📥 Cargar CSV"
+        "📥 Carga Masiva"
     ])
 
     # VER DATOS
@@ -1043,7 +1224,7 @@ def render_gestion_tabla(df, nombre_tabla, titulo):
             key=f"buscar_{nombre_tabla}"
         )
 
-        df_mostrar = df.copy()
+        df_mostrar = construir_vista_legible(df_pagina)
 
         if texto_busqueda:
             mascara = df_mostrar.astype(str).apply(
@@ -1051,6 +1232,31 @@ def render_gestion_tabla(df, nombre_tabla, titulo):
                 axis=1
             )
             df_mostrar = df_mostrar[mascara]
+
+        col_prev, col_info, col_next = st.columns([1, 2, 1])
+
+        with col_prev:
+            if st.button(
+                "Pagina anterior",
+                key=f"btn_prev_{nombre_tabla}",
+                disabled=pagina_actual == 0
+            ):
+                st.session_state[pagina_key] = max(pagina_actual - 1, 0)
+                limpiar_cache_y_recargar()
+
+        with col_info:
+            inicio = pagina_actual * page_size + 1
+            fin = pagina_actual * page_size + len(df_pagina)
+            st.caption(f"Pagina {pagina_actual + 1} | Registros {inicio} - {fin}")
+
+        with col_next:
+            if st.button(
+                "Pagina siguiente",
+                key=f"btn_next_{nombre_tabla}",
+                disabled=len(df_pagina) < page_size
+            ):
+                st.session_state[pagina_key] = pagina_actual + 1
+                limpiar_cache_y_recargar()
 
         st.dataframe(df_mostrar, use_container_width=True)
 
@@ -1061,11 +1267,11 @@ def render_gestion_tabla(df, nombre_tabla, titulo):
         if nombre_tabla == "pacientes":
             st.info(
                 "Completa los datos del paciente. La prioridad NO se ingresa manualmente: "
-                "el modelo predictivo la clasificara automaticamente."
+                "el modelo predictivo la clasificará automáticamente."
             )
         else:
             st.info(
-                "Completa el formulario usando selectores y campos numericos. "
+                "Completa el formulario usando selectores y campos numéricos. "
                 "Los campos como Stock, consumo o reorden solo aceptan numeros."
             )
 
@@ -1085,15 +1291,31 @@ def render_gestion_tabla(df, nombre_tabla, titulo):
                         prioridad_predicha = predecir_prioridad_paciente(data, df)
                         data["Prioridad"] = prioridad_predicha
 
-                        insertar_registro(nombre_tabla, data)
-
-                        st.success(
-                            f"Registro agregado correctamente. "
-                            f"Prioridad predicha: {prioridad_predicha}"
+                        registro_insertado = insertar_registro(nombre_tabla, data)
+                        id_insertado = (
+                            registro_insertado.get("id_registro")
+                            if isinstance(registro_insertado, dict)
+                            else None
                         )
+
+                        mensaje = "Registro agregado correctamente. "
+                        if id_insertado is not None:
+                            mensaje += f"ID: {id_insertado}. "
+                        mensaje += f"Prioridad predicha: {prioridad_predicha}"
+                        st.session_state[flash_key] = mensaje
+                        st.session_state[pagina_key] = 0
                     else:
-                        insertar_registro(nombre_tabla, data)
-                        st.success("Registro agregado correctamente.")
+                        registro_insertado = insertar_registro(nombre_tabla, data)
+                        id_insertado = (
+                            registro_insertado.get("id_registro")
+                            if isinstance(registro_insertado, dict)
+                            else None
+                        )
+                        mensaje = "Registro agregado correctamente."
+                        if id_insertado is not None:
+                            mensaje += f" ID: {id_insertado}."
+                        st.session_state[flash_key] = mensaje
+                        st.session_state[pagina_key] = 0
 
                     limpiar_cache_y_recargar()
 
@@ -1104,16 +1326,16 @@ def render_gestion_tabla(df, nombre_tabla, titulo):
     with tabs[2]:
         st.subheader("Editar registro existente")
 
-        if df.empty:
+        if df_pagina.empty:
             st.warning("No hay registros para editar.")
         else:
             id_seleccionado = st.selectbox(
                 "Selecciona el ID del registro:",
-                df["id_registro"].tolist(),
+                df_pagina["id_registro"].tolist(),
                 key=f"select_editar_{nombre_tabla}"
             )
 
-            fila = df[df["id_registro"] == id_seleccionado].iloc[0]
+            fila = df_pagina[df_pagina["id_registro"] == id_seleccionado].iloc[0]
 
             with st.form(f"form_editar_{nombre_tabla}"):
                 data = construir_formulario_amigable(
@@ -1150,19 +1372,19 @@ def render_gestion_tabla(df, nombre_tabla, titulo):
     with tabs[3]:
         st.subheader("Eliminar registro")
 
-        if df.empty:
+        if df_pagina.empty:
             st.warning("No hay registros para eliminar.")
         else:
             id_eliminar = st.selectbox(
                 "Selecciona el ID a eliminar:",
-                df["id_registro"].tolist(),
+                df_pagina["id_registro"].tolist(),
                 key=f"select_eliminar_{nombre_tabla}"
             )
 
-            fila_eliminar = df[df["id_registro"] == id_eliminar]
+            fila_eliminar = df_pagina[df_pagina["id_registro"] == id_eliminar]
 
             st.write("Registro seleccionado:")
-            st.dataframe(fila_eliminar, use_container_width=True)
+            st.dataframe(construir_vista_legible(fila_eliminar), use_container_width=True)
 
             st.warning("Esta acción eliminará el registro seleccionado.")
 
@@ -1182,11 +1404,11 @@ def render_gestion_tabla(df, nombre_tabla, titulo):
                 else:
                     st.error("Marca la confirmación antes de eliminar.")
 
-    # CARGAR CSV
+    # CARGA MASIVA
     with tabs[4]:
-        st.subheader("Agregar datos desde CSV")
+        st.subheader("Carga masiva de registros")
 
-        st.info("El CSV debe tener las mismas columnas que la tabla original.")
+        st.info("Carga administrativa para importar o actualizar registros por lote desde fuentes externas. Para registros individuales, usa las pestañas Agregar o Editar. El archivo CSV debe respetar la estructura de columnas de la tabla seleccionada.")
 
         archivo = st.file_uploader(
             "Sube un archivo CSV",
@@ -1203,9 +1425,9 @@ def render_gestion_tabla(df, nombre_tabla, titulo):
 
                 archivo.seek(0)
 
-                if st.button("Agregar CSV a la base de datos", key=f"btn_csv_{nombre_tabla}"):
+                if st.button("Importar registros a la base de datos", key=f"btn_csv_{nombre_tabla}"):
                     agregar_csv_a_tabla(nombre_tabla, archivo)
-                    st.success("CSV agregado correctamente.")
+                    st.success("Carga masiva completada correctamente.")
                     limpiar_cache_y_recargar()
 
             except Exception as e:
@@ -1213,8 +1435,8 @@ def render_gestion_tabla(df, nombre_tabla, titulo):
 
 
 # =====================================================
-# EJECUCION PRINCIPAL
 # =====================================================
+# EJECUCIÓN PRINCIPAL
 
 def main():
     df_clinico, df_inv = load_data()
