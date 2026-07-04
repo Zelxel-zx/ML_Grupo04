@@ -269,7 +269,7 @@ def predecir_demanda_logistica_por_producto(df_inventario):
     X = preparar_features_logisticas(ultimos, features)
     ultimos = ultimos.copy()
     ultimos["Demanda_Predicha"] = modelo.predict(X)
-    ultimos["Demanda_Predicha"] = ultimos["Demanda_Predicha"].clip(lower=0)
+    ultimos["Demanda_Predicha"] = ultimos["Demanda_Predicha"].clip(lower=0).round().astype(int)
 
     predicciones = ultimos[["name_products", "Demanda_Predicha"]].rename(
         columns={"name_products": "Producto"}
@@ -1310,15 +1310,7 @@ def render_inventory_control(df):
     df_pred["Stock_Actual"] = pd.to_numeric(df_pred["Stock_Actual"], errors="coerce").fillna(0)
     df_pred["Demanda_Predicha"] = pd.to_numeric(df_pred["Demanda_Predicha"], errors="coerce")
     df_pred = df_pred.dropna(subset=["Demanda_Predicha"])
-
-    if "Categoria" in df_pred.columns:
-        resumen_predicciones = (
-            df_pred.groupby("Categoria")["Producto"]
-            .count()
-            .reset_index(name="Productos evaluados por el modelo")
-        )
-        st.caption("Productos con prediccion logistica por categoria:")
-        st.dataframe(resumen_predicciones, use_container_width=True, hide_index=True)
+    df_pred["Demanda_Predicha"] = df_pred["Demanda_Predicha"].round().astype(int)
 
     margen_seguridad = 1.15
     df_pred["Stock_Sugerido"] = (df_pred["Demanda_Predicha"] * margen_seguridad).apply(math.ceil)
@@ -1364,20 +1356,8 @@ def render_inventory_control(df):
             "La demanda esperada se calcula con el modelo logistico. "
             "El stock sugerido considera un margen operativo de 15%."
         )
-        mostrar_evaluados = st.checkbox(
-            "Mostrar tambien productos evaluados sin compra inmediata",
-            value=False
-        )
-        tabla_mostrar = df_pred if mostrar_evaluados else urgentes
-
-        if mostrar_evaluados:
-            tabla_mostrar = tabla_mostrar.sort_values(
-                ["Cantidad_Requerida", "Demanda_Predicha"],
-                ascending=[False, False]
-            )
-
         st.dataframe(
-            tabla_mostrar[columnas_tabla],
+            urgentes[columnas_tabla],
             use_container_width=True
         )
 
