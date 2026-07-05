@@ -948,6 +948,13 @@ def construir_vista_legible(df):
     if columnas_visuales_presentes:
         df_vista = df_vista.drop(columns=columnas_visuales_presentes)
 
+    if "id_registro" in df_vista.columns:
+        columnas_ordenadas = ["id_registro"] + [
+            col for col in df_vista.columns
+            if col != "id_registro"
+        ]
+        df_vista = df_vista[columnas_ordenadas]
+
     for col in df_vista.columns:
         if col in ["id_registro", "Prioridad"]:
             continue
