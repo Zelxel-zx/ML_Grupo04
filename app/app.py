@@ -355,7 +355,25 @@ def predecir_prioridad_paciente(data_paciente, df_clinico):
 
         fila = fila[columnas_modelo]
 
-    prediccion = modelo.predict(fila)[0]
+    for col in fila.columns:
+        fila[col] = pd.to_numeric(fila[col], errors="coerce")
+        mediana = fila[col].median()
+        if pd.isna(mediana):
+            mediana = 0
+        fila[col] = fila[col].fillna(mediana)
+
+    escalador = payload.get("escalador") if isinstance(payload, dict) else None
+    label_encoder = payload.get("label_encoder") if isinstance(payload, dict) else None
+
+    fila_modelo = fila
+
+    if escalador is not None:
+        fila_modelo = escalador.transform(fila)
+
+    prediccion = modelo.predict(fila_modelo)[0]
+
+    if label_encoder is not None:
+        prediccion = label_encoder.inverse_transform([prediccion])[0]
 
     return normalizar_prioridad(prediccion)
 
