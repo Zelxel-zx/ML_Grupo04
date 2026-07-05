@@ -911,6 +911,10 @@ def construir_vista_legible(df):
     df_vista = df.copy()
     grupos_one_hot = detectar_grupos_one_hot(df_vista)
     columnas_a_ocultar = []
+    columnas_visuales_a_ocultar = {
+        "Estado clinico",
+        "Estadio clinico",
+    }
 
     for prefijo, columnas_grupo in grupos_one_hot.items():
         columnas_validas = [col for col in columnas_grupo if col in df_vista.columns]
@@ -935,6 +939,14 @@ def construir_vista_legible(df):
 
     if columnas_a_ocultar:
         df_vista = df_vista.drop(columns=columnas_a_ocultar)
+
+    columnas_visuales_presentes = [
+        col for col in columnas_visuales_a_ocultar
+        if col in df_vista.columns
+    ]
+
+    if columnas_visuales_presentes:
+        df_vista = df_vista.drop(columns=columnas_visuales_presentes)
 
     for col in df_vista.columns:
         if col in ["id_registro", "Prioridad"]:
