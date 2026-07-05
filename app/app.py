@@ -360,6 +360,174 @@ def predecir_prioridad_paciente(data_paciente, df_clinico):
     return normalizar_prioridad(prediccion)
 
 
+RECURSOS_PRIORIZADOS = [
+    {
+        "Producto": "Metotrexato 500mg",
+        "Tipo": "Clinico",
+        "Baja": 0,
+        "Media": 1,
+        "Alta": 2,
+    },
+    {
+        "Producto": "Suero Fisiologico 500ml",
+        "Tipo": "Clinico",
+        "Baja": 1,
+        "Media": 2,
+        "Alta": 4,
+    },
+    {
+        "Producto": "Cateter Endovenoso 24G",
+        "Tipo": "Clinico",
+        "Baja": 0,
+        "Media": 1,
+        "Alta": 2,
+    },
+    {
+        "Producto": "Jeringa 5ml",
+        "Tipo": "Clinico",
+        "Baja": 1,
+        "Media": 2,
+        "Alta": 3,
+    },
+    {
+        "Producto": "Ondansetron 8mg",
+        "Tipo": "Clinico",
+        "Baja": 0,
+        "Media": 1,
+        "Alta": 2,
+    },
+    {
+        "Producto": "Dexametasona 4mg",
+        "Tipo": "Clinico",
+        "Baja": 0,
+        "Media": 1,
+        "Alta": 2,
+    },
+    {
+        "Producto": "Pediasure Plus 200ml",
+        "Tipo": "Clinico",
+        "Baja": 1,
+        "Media": 2,
+        "Alta": 3,
+    },
+    {
+        "Producto": "Huevo de gallina",
+        "Tipo": "Alimento",
+        "Baja": 2,
+        "Media": 4,
+        "Alta": 6,
+    },
+    {
+        "Producto": "Leche evaporada",
+        "Tipo": "Alimento",
+        "Baja": 1,
+        "Media": 3,
+        "Alta": 5,
+    },
+    {
+        "Producto": "Pechuga de pollo",
+        "Tipo": "Alimento",
+        "Baja": 1,
+        "Media": 3,
+        "Alta": 5,
+    },
+    {
+        "Producto": "Arroz extra",
+        "Tipo": "Alimento",
+        "Baja": 2,
+        "Media": 4,
+        "Alta": 6,
+    },
+    {
+        "Producto": "Avena",
+        "Tipo": "Alimento",
+        "Baja": 1,
+        "Media": 3,
+        "Alta": 5,
+    },
+    {
+        "Producto": "Pescado bonito",
+        "Tipo": "Alimento",
+        "Baja": 1,
+        "Media": 2,
+        "Alta": 4,
+    },
+]
+
+
+def obtener_valor_columna(fila, posibles, defecto="No disponible"):
+    for col in posibles:
+        if col in fila.index and not pd.isna(fila[col]):
+            return fila[col]
+    return defecto
+
+
+def calcular_riesgo_integrado(demanda_total, stock_actual):
+    if stock_actual <= 0:
+        return "Alto"
+
+    cobertura = stock_actual / demanda_total if demanda_total > 0 else 1
+
+    if cobertura < 0.8:
+        return "Alto"
+    if cobertura < 1.15:
+        return "Medio"
+    return "Bajo"
+
+
+def construir_recursos_integrados(prioridad, df_inventario):
+    df_pred = predecir_demanda_logistica_por_producto(df_inventario)
+
+    if df_pred.empty:
+        return pd.DataFrame()
+
+    df_pred = df_pred.copy()
+    df_pred["_producto_key"] = df_pred["Producto"].apply(normalizar_texto_producto)
+
+    filas = []
+
+    for recurso in RECURSOS_PRIORIZADOS:
+        demanda_adicional = recurso.get(prioridad, 0)
+
+        if demanda_adicional <= 0:
+            continue
+
+        key = normalizar_texto_producto(recurso["Producto"])
+        coincidencias = df_pred[df_pred["_producto_key"] == key]
+
+        if coincidencias.empty:
+            continue
+
+        item = coincidencias.iloc[0]
+        demanda_historica = convertir_a_numero(item.get("Demanda_Predicha", 0), 0)
+        stock_actual = convertir_a_numero(item.get("Stock_Actual", 0), 0)
+        demanda_total = demanda_historica + demanda_adicional
+
+        filas.append({
+            "Producto": item.get("Producto", recurso["Producto"]),
+            "Tipo": recurso["Tipo"],
+            "Demanda_Predicha": int(round(demanda_historica)),
+            "Demanda_Adicional_Paciente": int(round(demanda_adicional)),
+            "Demanda_Total_Esperada": int(round(demanda_total)),
+            "Stock_Actual": int(round(stock_actual)),
+            "Riesgo_Operativo": calcular_riesgo_integrado(demanda_total, stock_actual),
+        })
+
+    resultado = pd.DataFrame(filas)
+
+    if resultado.empty:
+        return resultado
+
+    orden = {"Alto": 0, "Medio": 1, "Bajo": 2}
+    resultado["_orden"] = resultado["Riesgo_Operativo"].map(orden)
+    resultado = resultado.sort_values(
+        ["_orden", "Demanda_Total_Esperada"],
+        ascending=[True, False]
+    )
+
+    return resultado.drop(columns=["_orden"])
+
+
 # =====================================================
 # COLORES Y CONFIGURACIONES
 # =====================================================
@@ -529,6 +697,16 @@ def es_columna_binaria(serie):
         return False
 
 
+def es_columna_binaria_flexible(serie):
+    try:
+        valores = serie.dropna().astype(str).str.strip().str.lower()
+        if valores.empty:
+            return False
+        return set(valores.unique().tolist()).issubset({"0", "1", "0.0", "1.0", "true", "false"})
+    except Exception:
+        return False
+
+
 def buscar_columna_edad(df):
     posibles = [
         "Age",
@@ -562,7 +740,7 @@ def buscar_columnas_edad_one_hot(df):
         if not (nombre.startswith("age_") or nombre.startswith("edad_")):
             continue
 
-        if pd.api.types.is_numeric_dtype(df[col]) and es_columna_binaria(df[col]):
+        if es_columna_binaria_flexible(df[col]):
             columnas.append(col)
 
     return columnas
@@ -579,6 +757,8 @@ def etiqueta_edad_one_hot(columna):
     texto = texto.replace("to", "a")
     texto = texto.replace("plus", "a mas")
     texto = texto.replace("mas", "a mas")
+    texto = texto.replace("years", "")
+    texto = texto.replace("year", "")
 
     return texto.strip()
 
@@ -658,10 +838,7 @@ def detectar_grupos_one_hot(df):
         if "_" not in col:
             continue
 
-        if not pd.api.types.is_numeric_dtype(df[col]):
-            continue
-
-        if not es_columna_binaria(df[col]):
+        if not es_columna_binaria_flexible(df[col]):
             continue
 
         prefijo = col.split("_")[0]
@@ -681,6 +858,9 @@ def detectar_grupos_one_hot(df):
 
 
 def etiqueta_desde_columna_one_hot(prefijo, columna):
+    if prefijo.lower() in ["age", "edad"]:
+        return etiqueta_edad_one_hot(columna)
+
     texto = columna.replace(prefijo + "_", "")
     texto = texto.replace("_", " ")
     return texto
@@ -720,6 +900,8 @@ def nombre_visual_desde_prefijo(prefijo):
         "Surgery": "Cirugia",
         "Radiation": "Radioterapia",
         "Chemotherapy": "Quimioterapia",
+        "Age": "Rango de edad",
+        "Edad": "Rango de edad",
     }
 
     return nombres.get(prefijo, prefijo.replace("_", " ").title())
@@ -1366,6 +1548,120 @@ def render_inventory_control(df):
 # GESTIÓN DE TABLAS
 # =====================================================
 
+def render_priorizacion_integrada(df_clinico, df_inventario):
+    st.header("Priorizacion Integrada de Recursos")
+    st.caption(
+        "La prioridad clinica del paciente genera una demanda adicional. "
+        "Esa demanda se cruza con la prediccion logistica y el stock actual para estimar riesgo operativo."
+    )
+
+    if df_clinico.empty:
+        st.warning("No hay pacientes disponibles para evaluar.")
+        return
+
+    if df_inventario.empty:
+        st.warning("No hay inventario disponible para cruzar con la prediccion logistica.")
+        return
+
+    col_id = "id_registro" if "id_registro" in df_clinico.columns else None
+    df_opciones, col_edad = preparar_columna_edad_visual(df_clinico)
+
+    if col_id is not None:
+        df_opciones = df_opciones.sort_values(col_id, ascending=False)
+
+    opciones = []
+    for idx, fila in df_opciones.head(1000).iterrows():
+        partes = []
+
+        if col_id is not None:
+            partes.append(f"Paciente {fila[col_id]}")
+        else:
+            partes.append(f"Paciente fila {idx}")
+
+        if col_edad is not None and not pd.isna(fila[col_edad]):
+            partes.append(f"Edad: {fila[col_edad]}")
+
+        survival = obtener_valor_columna(fila, ["Survival_Months", "survival_months"], None)
+        if survival is not None and not pd.isna(survival):
+            partes.append(f"Supervivencia: {int(convertir_a_numero(survival, 0))} meses")
+
+        opciones.append((" | ".join(partes), idx))
+
+    if not opciones:
+        st.warning("No se encontraron pacientes para seleccionar.")
+        return
+
+    etiqueta = st.selectbox(
+        "Selecciona un paciente para evaluar:",
+        [opcion[0] for opcion in opciones]
+    )
+
+    idx_seleccionado = dict(opciones)[etiqueta]
+    paciente = df_opciones.loc[idx_seleccionado]
+    data_paciente = paciente.to_dict()
+
+    try:
+        prioridad_predicha = predecir_prioridad_paciente(data_paciente, df_clinico)
+    except Exception as e:
+        st.error(f"No se pudo predecir la prioridad clinica: {e}")
+        return
+
+    recursos = construir_recursos_integrados(prioridad_predicha, df_inventario)
+
+    c1, c2, c3 = st.columns(3)
+    c1.metric("Prioridad clinica predicha", prioridad_predicha)
+    c2.metric("Recursos priorizados", len(recursos))
+
+    if not recursos.empty:
+        recursos_alto = len(recursos[recursos["Riesgo_Operativo"] == "Alto"])
+    else:
+        recursos_alto = 0
+
+    c3.metric("Recursos con riesgo alto", recursos_alto)
+
+    st.subheader("Flujo de decision")
+    st.info(
+        "Paciente -> clasificacion clinica -> demanda adicional por prioridad -> "
+        "demanda historica predicha -> demanda total esperada -> riesgo operativo."
+    )
+
+    if recursos.empty:
+        st.warning(
+            "No se encontraron recursos priorizados con coincidencia en inventario. "
+            "Revisa que los nombres de productos existan en la tabla inventario y en las features logisticas."
+        )
+        return
+
+    st.subheader("Recursos priorizados para el paciente")
+
+    st.dataframe(
+        recursos,
+        use_container_width=True,
+        hide_index=True
+    )
+
+    resumen = (
+        recursos.groupby(["Tipo", "Riesgo_Operativo"])
+        .size()
+        .reset_index(name="Cantidad")
+    )
+
+    fig = px.bar(
+        resumen,
+        x="Tipo",
+        y="Cantidad",
+        color="Riesgo_Operativo",
+        barmode="group",
+        title="Riesgo operativo por tipo de recurso"
+    )
+    st.plotly_chart(fig, use_container_width=True)
+
+    st.caption(
+        "Las cantidades son unidades operativas de cobertura por paciente. "
+        "No representan dosis medicas; sirven para estimar presion adicional sobre inventario."
+    )
+
+
 def render_gestion_tabla(df, nombre_tabla, titulo):
     st.header(titulo)
     flash_key = f"mensaje_gestion_{nombre_tabla}"
@@ -1632,6 +1928,7 @@ def main():
                 "Resumen General",
                 "Análisis Clínico",
                 "Control de Inventario",
+                "Priorizacion Integrada",
                 "Gestionar Pacientes",
                 "Gestionar Inventario"
             ]
@@ -1645,6 +1942,9 @@ def main():
 
         elif opcion == "Control de Inventario":
             render_inventory_control(df_inv)
+
+        elif opcion == "Priorizacion Integrada":
+            render_priorizacion_integrada(df_clinico, df_inv)
 
         elif opcion == "Gestionar Pacientes":
             render_gestion_tabla(
