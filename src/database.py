@@ -204,6 +204,15 @@ def cargar_pacientes(limit=1000, offset=0):
     return cargar_tabla("pacientes", limit=limit, offset=offset)
 
 
+def cargar_pacientes_completo(max_registros=50000):
+    return cargar_tabla_por_paginas(
+        "pacientes",
+        max_registros=max_registros,
+        page_size=1000,
+        order="id_registro.desc",
+    )
+
+
 def cargar_inventario(limit=1000, offset=0):
     return cargar_tabla("inventario", limit=limit, offset=offset)
 

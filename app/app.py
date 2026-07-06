@@ -96,6 +96,7 @@ importlib.reload(database)
 from database import (
     cargar_tabla,
     cargar_pacientes,
+    cargar_pacientes_completo,
     cargar_inventario,
     cargar_inventario_completo,
     cargar_features_logisticas,
@@ -633,7 +634,7 @@ def load_data():
     try:
         inicializar_bd_si_no_existe()
 
-        df_c = cargar_pacientes()
+        df_c = cargar_pacientes_completo()
         df_i = cargar_inventario_completo()
 
         return df_c, df_i
@@ -1402,11 +1403,13 @@ def render_clinical_analysis(df):
 
         if "Prioridad" in df_clinico.columns:
             pacientes_altos = df_clinico[df_clinico["Prioridad"].astype(str) == "Alta"]
+            pacientes_altos_vista = construir_vista_legible(pacientes_altos.head(30))
 
             columnas_mostrar = []
 
             for col in [
                 "id_registro",
+                "Rango de edad",
                 "Age",
                 "Edad",
                 "Income",
@@ -1417,14 +1420,16 @@ def render_clinical_analysis(df):
             ]:
                 if col in pacientes_altos.columns:
                     columnas_mostrar.append(col)
+                elif col in pacientes_altos_vista.columns:
+                    columnas_mostrar.append(col)
 
             if columnas_mostrar:
                 st.dataframe(
-                    construir_vista_legible(pacientes_altos[columnas_mostrar].head(30)),
+                    pacientes_altos_vista[columnas_mostrar],
                     use_container_width=True
                 )
             else:
-                st.dataframe(construir_vista_legible(pacientes_altos.head(30)), use_container_width=True)
+                st.dataframe(pacientes_altos_vista, use_container_width=True)
         elif col_edad is not None:
             st.warning("No existe la columna 'Prioridad'.")
             st.dataframe(construir_vista_legible(df_clinico.head(30)), use_container_width=True)
@@ -1713,7 +1718,7 @@ def render_gestion_tabla(df, nombre_tabla, titulo):
 
     pagina_actual = st.session_state[pagina_key]
     if pagina_actual == 0:
-        df_pagina = df.copy()
+        df_pagina = df.head(page_size).copy()
     else:
         df_pagina = cargar_tabla(
             nombre_tabla,
