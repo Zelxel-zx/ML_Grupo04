@@ -728,6 +728,7 @@ def es_columna_binaria_flexible(serie):
 
 def buscar_columna_edad(df):
     posibles = [
+        "Rango de edad",
         "Age",
         "Edad",
         "edad",
@@ -740,14 +741,40 @@ def buscar_columna_edad(df):
 
     for col in posibles:
         if col in df.columns:
+            valores = pd.to_numeric(df[col], errors="coerce")
+            if valores.notna().any() and valores.max() > 120:
+                continue
             return col
 
     for col in df.columns:
         nombre = col.lower()
-        if "edad" in nombre or "age" in nombre:
+        if "stage" in nombre or "year" in nombre or "diagnosis" in nombre:
+            continue
+
+        if nombre in ["age", "edad"] or nombre.startswith("edad_") or nombre.startswith("patient_age"):
+            valores = pd.to_numeric(df[col], errors="coerce")
+            if valores.notna().any() and valores.max() > 120:
+                continue
             return col
 
     return None
+
+
+def columna_edad_valida(df, columna):
+    if columna is None or columna not in df.columns:
+        return False
+
+    nombre = columna.lower()
+
+    if "year" in nombre or "diagnosis" in nombre:
+        return False
+
+    valores = pd.to_numeric(df[columna], errors="coerce")
+
+    if valores.notna().any() and valores.max() > 120:
+        return False
+
+    return True
 
 
 def buscar_columnas_edad_one_hot(df):
@@ -774,12 +801,13 @@ def etiqueta_edad_one_hot(columna):
 
     texto = texto.replace("_", " ")
     texto = texto.replace("to", "a")
+    texto = texto.replace("-", " a ")
     texto = texto.replace("plus", "a mas")
     texto = texto.replace("mas", "a mas")
     texto = texto.replace("years", "")
     texto = texto.replace("year", "")
 
-    return texto.strip()
+    return " ".join(texto.split())
 
 
 def preparar_columna_edad_visual(df):
@@ -787,7 +815,7 @@ def preparar_columna_edad_visual(df):
     columnas_edad = buscar_columnas_edad_one_hot(df_vista)
 
     if columnas_edad:
-        col_visual = "Edad"
+        col_visual = "Rango de edad"
         df_vista[col_visual] = df_vista.apply(
             lambda fila: etiqueta_edad_one_hot(
                 obtener_columna_activa_one_hot(fila, columnas_edad)
@@ -796,8 +824,38 @@ def preparar_columna_edad_visual(df):
         )
         return df_vista, col_visual
 
-    col_edad = buscar_columna_edad(df_vista)
-    return df_vista, col_edad
+    # En el dataset clinico actual la edad viene codificada como Age_*.
+    # Evitamos usar columnas como Year si las columnas de edad no estan disponibles.
+    return df_vista, None
+
+
+def construir_distribucion_edad_prioridad(df):
+    columnas_edad = buscar_columnas_edad_one_hot(df)
+
+    if not columnas_edad or "Prioridad" not in df.columns:
+        return pd.DataFrame()
+
+    df_edad = df[["Prioridad"] + columnas_edad].copy()
+
+    for col in columnas_edad:
+        valores = df_edad[col].astype(str).str.strip().str.lower()
+        df_edad[col] = valores.isin(["1", "1.0", "true"]).astype(int)
+
+    df_largo = df_edad.melt(
+        id_vars=["Prioridad"],
+        value_vars=columnas_edad,
+        var_name="columna_edad",
+        value_name="activo"
+    )
+
+    df_largo = df_largo[df_largo["activo"] == 1].copy()
+    df_largo["Rango de edad"] = df_largo["columna_edad"].apply(etiqueta_edad_one_hot)
+
+    return (
+        df_largo.groupby(["Rango de edad", "Prioridad"], as_index=False)
+        .size()
+        .rename(columns={"size": "Cantidad"})
+    )
 
 
 def ordenar_edades_visual(valores):
@@ -1279,38 +1337,36 @@ def render_summary(df_c, df_i):
     with c2:
         st.subheader("Distribución por Edad")
 
-        df_edad_visual, col_edad = preparar_columna_edad_visual(df_c)
+        distribucion_edad = construir_distribucion_edad_prioridad(df_c)
         fig_edad = None
 
-        if col_edad is not None and "Prioridad" in df_edad_visual.columns:
-            orden_edades = ordenar_edades_visual(df_edad_visual[col_edad].unique())
-            fig_edad = px.histogram(
-                df_edad_visual,
-                x=col_edad,
+        if not distribucion_edad.empty:
+            orden_edades = ordenar_edades_visual(distribucion_edad["Rango de edad"].unique())
+            fig_edad = px.bar(
+                distribucion_edad,
+                x="Rango de edad",
+                y="Cantidad",
                 color="Prioridad",
                 barmode="group",
                 title="Pacientes por Edad y Prioridad",
                 color_discrete_map=PRIORIDAD_COLORES,
+                labels={
+                    "Rango de edad": "Rango de edad",
+                    "Cantidad": "Cantidad de pacientes"
+                },
                 category_orders={
-                    col_edad: orden_edades,
+                    "Rango de edad": orden_edades,
                     "Prioridad": PRIORIDAD_ORDEN
                 }
-            )
-        elif col_edad is not None:
-            orden_edades = ordenar_edades_visual(df_edad_visual[col_edad].unique())
-            fig_edad = px.histogram(
-                df_edad_visual,
-                x=col_edad,
-                title="Pacientes por Edad",
-                category_orders={col_edad: orden_edades}
             )
 
         if fig_edad is not None:
             fig_edad.update_layout(
-                xaxis_title="Edad",
+                xaxis_title="Rango de edad",
                 yaxis_title="Cantidad de pacientes",
                 height=430
             )
+            fig_edad.update_xaxes(type="category")
 
             st.plotly_chart(fig_edad, use_container_width=True)
         else:
@@ -1357,42 +1413,41 @@ def render_clinical_analysis(df):
     st.header("🩺 Gestión de Prioridad Oncológica")
 
     df_clinico = df.copy()
-    df_edad_visual, col_edad = preparar_columna_edad_visual(df_clinico)
 
     col1, col2 = st.columns([1, 2])
 
     with col1:
         st.subheader("Pacientes por Edad")
+        distribucion_edad = construir_distribucion_edad_prioridad(df_clinico)
         fig_edad = None
 
-        if col_edad is not None and "Prioridad" in df_edad_visual.columns:
-            orden_edades = ordenar_edades_visual(df_edad_visual[col_edad].unique())
-            fig_edad = px.histogram(
-                df_edad_visual,
-                x=col_edad,
+        if not distribucion_edad.empty:
+            orden_edades = ordenar_edades_visual(distribucion_edad["Rango de edad"].unique())
+            fig_edad = px.bar(
+                distribucion_edad,
+                x="Rango de edad",
+                y="Cantidad",
                 color="Prioridad",
                 barmode="group",
                 title="Distribución por Edad y Prioridad",
                 color_discrete_map=PRIORIDAD_COLORES,
+                labels={
+                    "Rango de edad": "Rango de edad",
+                    "Cantidad": "Cantidad de pacientes"
+                },
                 category_orders={
-                    col_edad: orden_edades,
+                    "Rango de edad": orden_edades,
                     "Prioridad": PRIORIDAD_ORDEN
                 }
-            )
-        elif col_edad is not None:
-            orden_edades = ordenar_edades_visual(df_edad_visual[col_edad].unique())
-            fig_edad = px.histogram(
-                df_edad_visual,
-                x=col_edad,
-                title="Distribución por Edad",
             )
 
         if fig_edad is not None:
             fig_edad.update_layout(
-                xaxis_title="Edad",
-                yaxis_title="Cantidad",
+                xaxis_title="Rango de edad",
+                yaxis_title="Cantidad de pacientes",
                 height=450
             )
+            fig_edad.update_xaxes(type="category")
 
             st.plotly_chart(fig_edad, use_container_width=True)
         else:
@@ -1410,8 +1465,8 @@ def render_clinical_analysis(df):
             for col in [
                 "id_registro",
                 "Rango de edad",
-                "Age",
                 "Edad",
+                "Age",
                 "Income",
                 "income",
                 "Year",
@@ -1430,7 +1485,7 @@ def render_clinical_analysis(df):
                 )
             else:
                 st.dataframe(pacientes_altos_vista, use_container_width=True)
-        elif col_edad is not None:
+        else:
             st.warning("No existe la columna 'Prioridad'.")
             st.dataframe(construir_vista_legible(df_clinico.head(30)), use_container_width=True)
 
